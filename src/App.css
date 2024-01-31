@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.footer {
+  background-color: #f8f9fa; /* Hellgrauer Hintergrund */
+  color: #6c757d; /* Dunkelgraue Textfarbe */
+  text-align: center; /* Zentriert den Text im Footer */
+  padding: 20px 0; /* Fügt oben und unten einen Abstand hinzu */
+  position: relative; /* Oder 'fixed', abhängig von der gewünschten Positionierung */
+  bottom: 0;
+  width: 100%;
+}
+.footer--pin {
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+

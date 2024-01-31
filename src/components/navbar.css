@@ -4,7 +4,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #fcfcfc;
+
+  background-size: cover; /* Deckt den gesamten verfügbaren Raum ab */
+  background-position: center;
 }
 
 .container {
@@ -15,15 +17,20 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  
 }
 
 .navbar {
+  z-index: 10;
   height: 60px;
-  background-color: #fef7e5;
+  background-color: rgb(255, 255, 228); /* Weiß */
+
+  opacity: 0.8; 
   position: relative;
 }
 
 .logo {
+ 
 }
 
 .menu-icon {
@@ -32,6 +39,7 @@ body {
 }
 
 .nav-elements {
+
 }
 
 .nav-elements ul {
@@ -83,7 +91,7 @@ body {
     position: absolute;
     right: 0;
     top: 60px;
-    background-color: #fef7e5;
+    background-color: #ffffff; 
     width: 0px;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;

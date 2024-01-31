@@ -1,0 +1,21 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255,0.5); /* Erbt das Hintergrundbild des übergeordneten Elements */
+  background-size: auto; 
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2; /* Höher als das Pseudo-Element */
+  /* Der Rest der Inhaltsstile, wie Farbe, Polsterung usw. */
+}

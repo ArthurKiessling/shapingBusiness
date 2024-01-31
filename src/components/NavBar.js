@@ -11,7 +11,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="navbar">
+    <nav className="navbar ">
       <div className="container">
         <div className="logo">
         <p>Connecting People - Shaping Business</p>
@@ -19,8 +19,8 @@ const Navbar = () => {
         <div  className="menu-icon" onClick={handleShowNavbar}>
         <Hamburger />
         </div>
-       <div className={`nav-elements  ${showNavbar && 'active'}`}>
-          <ul>
+       <div className={`nav-elements    ${showNavbar && 'active'}`}>
+          <ul className="px-6 py-8 ">
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
