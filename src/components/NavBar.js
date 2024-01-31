@@ -1,34 +1,34 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as Hamburger } from '../images/menu_icon.svg'
-import Logo from '../images/Logo.png'
+import { ReactComponent as LogoSvg } from '../images/image2vector.svg'
+import { useTheme } from './ThemeContext.js'; 
 import './navbar.css'
-
+import './styles.css'; 
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(false)
+  const { themeColor, setThemeColor } = useTheme();
 
+  const [showNavbar, setShowNavbar] = useState(false)
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
-
   return (
-    <nav className="navbar ">
+    <nav style={{ backgroundColor: themeColor }} className="navbar ">
       <div className="container">
         <div>
-        <img src={Logo} alt="Logo" className='logo'/>
+        <LogoSvg className='logo'/>
         </div>
-
-        <p>Connecting People - Shaping Business</p>
+          <p className='textSize'>Connecting People - Shaping Business</p>
         <div  className="menu-icon" onClick={handleShowNavbar}>
         <Hamburger />
         </div>
-       <div className={`nav-elements    ${showNavbar && 'active'}`}>
+       <div style={{ backgroundColor: themeColor }} className={`nav-elements    ${showNavbar && 'active'}`}>
           <ul className="px-6 py-8 ">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink onClick={() => setThemeColor('#87b1bf')} to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/beratung">Beratung</NavLink>
+              <NavLink onClick={() => setThemeColor('green')} to="/beratung">Beratung</NavLink>
             </li>
             <li>
               <NavLink to="/uebermich">Über mich</NavLink>

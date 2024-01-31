@@ -6,20 +6,19 @@ body {
   font-family: 'Poppins', sans-serif;
 
   background-size: cover; /* Deckt den gesamten verfügbaren Raum ab */
-  background-position: center;
+  background-position: left;
 }
 
 .logo{
-  -webkit-filter:invert(1);
-  filter:invert(1);
-  width: 100px; 
-  margin: 10px;
-
+  fill:white;
+  width: 100px;  /* Breite des SVG */
+  height: 120px; 
+  
 }
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,10 +28,8 @@ body {
 
 .navbar {
   z-index: 10;
-  height: 80px;
-  background-color: rgb(255, 255, 228); /* Weiß */
-
-  /*opacity: 0.8; */
+  height: 80px;/* Weiß */
+  color:white;
   position: relative;
 }
 
@@ -50,6 +47,7 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  height: 80px;
 }
 
 .nav-elements ul li:not(:last-child) {
@@ -59,7 +57,8 @@ body {
 .nav-elements ul a {
   font-size: 16px;
   font-weight: 400;
-  color: #2f234f;
+ /* color: #2f234f;*/
+  color:white;
   text-decoration: none;
 }
 
@@ -79,13 +78,13 @@ body {
   background-color: #574c4c;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
   .menu-icon {
     display: block;
     cursor: pointer;
@@ -94,8 +93,8 @@ body {
   .nav-elements {
     position: absolute;
     right: 0;
-    top: 60px;
-   background-color: rgb(255, 255, 228);
+    top: 80px;
+    opacity: 0.8;
     width: 0px;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
@@ -115,4 +114,7 @@ body {
     margin-right: unset;
     margin-top: 22px;
   }
+}
+@media (max-width: 400px) {
+ 
 }

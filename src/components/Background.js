@@ -1,14 +1,17 @@
-import styles from "./Background.module.css";
+import "./Background.css";
+import React from 'react';
 
 import background from "../images/Quer_turkis.jpg";
-import logo from "../images/Logo.png";
-
+import { ReactComponent as Logo } from '../images/image2vector.svg'
+import { useTheme } from './ThemeContext.js'; 
 const Background = () => {
+  const { themeColor, setThemeColor } = useTheme();
   return (
-  <article className={styles.article}>
-      <img className={styles.image} src={background} alt="background" />
-      <h1 className={styles.header}>Connecting People - Shaping Business.</h1>
-      <img  className={styles.logo}src={logo} alt="logo" />
+  <article className="article">
+      <img className="image" src={background} alt="background" />
+      <h1 className="header">Connecting People - Shaping Business.</h1>
+      <Logo style={{ fill: themeColor }} className="logoSvg"></Logo>
+      
     </article>
   );
 };
