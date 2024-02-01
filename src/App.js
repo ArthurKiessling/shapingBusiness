@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar'
 import Footer from './components/Footer'
-import Background from './components/Background'
+import HomePage from './components/HomePage.js'
 import { ThemeProvider } from './components/ThemeContext.js'; 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <BrowserRouter>
           <Navbar />
             <Routes>
-            <Route exact path="/" element={<Background/>}/>
+            <Route exact path="/" element={<HomePage/>}/>
           </Routes>
         </BrowserRouter>
         <div className="mt-auto">
