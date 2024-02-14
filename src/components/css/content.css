@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@font-face {
+    font-family: 'Mogila';
+    src: url('../../fonts/Mogila.otf') format('opentype');
+  }
+
+.content {
+
+     /* Zentriert den Text und setzt einen oberen und unteren Abstand */
+  max-width: 60%; /* Begrenzt die Breite des Fließtextes für bessere Lesbarkeit */
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  text-align: justify; 
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+  }
+  
+  .content.visible {
+    opacity: 1;
+  }
+  
+  /* Container für jeden Abschnitt, um Layout und Abstand zu steuern */
+  .section {
+    margin-bottom: 0%; /* Fügt Abstand zwischen den Abschnitten hinzu */
+  }
+
+  .all{
+    margin-top: 5%;
+  }
+
+  @media (max-width: 600px) {
+    .content { font-size: 10px;
+    }
+   
+  }

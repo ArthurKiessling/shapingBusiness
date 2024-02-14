@@ -3,16 +3,22 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage.js'
+import AboutMe from './components/AboutMe.js'
+import Kontakt from './components/Kontakt.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
 
 const App = () => {
+  
   return (
+    
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
         <BrowserRouter>
           <Navbar />
-            <Routes>
+          <Routes>
             <Route exact path="/" element={<HomePage/>}/>
+            <Route exact path="/uebermich" element={<AboutMe/>}/>
+            <Route exact path="/kontakt" element={<Kontakt/>}/>
           </Routes>
         </BrowserRouter>
         <div className="mt-auto">

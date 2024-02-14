@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Mogila';
+    src: url('../fonts/Mogila.otf') format('opentype');
+  }
+
+.animated-heading {
+ 
+    font-family:'Mogila', sans-serif;
+    font-weight: 200;
+    font-size: 47px;
+    color: black;
+    overflow: hidden; /* Stellt sicher, dass Buchstaben nicht vorzeitig sichtbar sind */
+    white-space: nowrap; /* Verhindert Zeilenumbrüche während der Animation */
+
+    text-align: left; /* Zentriert den Text der Überschrift */
+    margin: 20px 0;
+    
+  }
+
+  .letter {
+    display: inline-block;
+    transform: translateY(100%);
+    animation: slideIn 0.5s forwards;
+    animation-delay: calc(var(--index) * 0.2s);
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @media (max-width: 600px) {
+    .animated-heading {
+
+      font-size: 20px;
+      color: black;
+
+      margin: 20px 0;
+      
+    }
+    
+  }

@@ -16,3 +16,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root {
+  background-color: aliceblue; /* Ersetze #f0f0f0 mit der gewünschten Farbe */
+  min-height: 100vh; /* Stellt sicher, dass der Hintergrund die gesamte Ansichtshöhe abdeckt */
+}

@@ -1,7 +1,7 @@
 'use client';
 
 import { Footer } from 'flowbite-react';
-import './footer.css'
+import './css/footer.css'
 
 export default function Component() {
   return (

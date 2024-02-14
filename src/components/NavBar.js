@@ -3,17 +3,47 @@ import { NavLink } from 'react-router-dom'
 import { ReactComponent as Hamburger } from '../images/menu_icon.svg'
 import { ReactComponent as LogoSvg } from '../images/image2vector.svg'
 import { useTheme } from './ThemeContext.js'; 
-import './navbar.css'
-import './styles.css'; 
+import './css/navbar.css'
+import './css/styles.css'; 
 const Navbar = () => {
   const { themeColor, setThemeColor } = useTheme();
 
   const [showNavbar, setShowNavbar] = useState(false)
+  // State für die Sichtbarkeit der NavBar
+  const [show, setShow] = useState(true);
+  // State für die letzte Scroll-Position
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    // Wenn der aktuelle Scroll kleiner ist als der letzte (nach oben scrollen), zeige die NavBar
+    if (typeof window !== 'undefined') {
+      if (window.scrollY < lastScrollY) {
+        setShow(true);
+      } else if (window.scrollY > lastScrollY) {
+        // Wenn der aktuelle Scroll größer ist als der letzte (nach unten scrollen), verstecke die NavBar
+        setShow(false);
+      }
+      // Aktualisiere die letzte Scroll-Position
+      setLastScrollY(window.scrollY);
+    }
+  };
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // Cleanup-Funktion, um den Event-Listener zu entfernen
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
+
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
   return (
-    <nav style={{ backgroundColor: themeColor }} className="navbar ">
+    <nav style={{ backgroundColor: themeColor}} className={`navbar ${!show && 'hide'}`}>
       <div className="container">
         <div>
         <LogoSvg className='logo'/>
