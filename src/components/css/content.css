@@ -10,13 +10,14 @@
 .content {
 
      /* Zentriert den Text und setzt einen oberen und unteren Abstand */
-  max-width: 60%; /* Begrenzt die Breite des Fließtextes für bessere Lesbarkeit */
+  max-width: auto; /* Begrenzt die Breite des Fließtextes für bessere Lesbarkeit */
   opacity: 0;
+  margin-left: auto;
   transition: opacity 1s ease-out;
-  text-align: justify; 
+  text-align: left; 
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
-    font-size: 19px;
+    font-size:1.1vw; 
   }
   
   .content.visible {
@@ -29,7 +30,10 @@
   }
 
   .all{
-    margin-top: 5%;
+    max-width: 80%; /* oder einen bestimmten Prozentsatz */
+    margin: 0 auto; /* Zentriert den Container */
+    padding: 20px;
+    margin-top: 2%;
   }
 
   @media (max-width: 600px) {

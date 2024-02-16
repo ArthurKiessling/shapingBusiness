@@ -1,19 +1,19 @@
-
 .highlight-bar {
   position: absolute;
   left: 50%; /* Zentriere den Balken */
   width: 2px; /* Balkenbreite */
-  background-color:#87b1bf; /* Semi-transparent blue */
+  background-color: #87b1bf; /* Semi-transparent blue */
   z-index: 2;
 }
 
 .highlight-point {
   position: absolute;
   margin-top: 20px;
-  left: 49.3%; /* Positioniere Punkte links vom Balken */
+  left: 50%; /* Beginne bei 50% des Elternelements */
   width: 30px; /* Punktgröße */
   height: 30px;
   border-radius: 50%;
   background-color: #87b1bf; /* Farbe der Punkte */
-  z-index: 100; 
+  z-index: 100;
+  transform: translateX(-48%); /* Verschiebe den Punkt um 50% seiner eigenen Breite zurück */
 }

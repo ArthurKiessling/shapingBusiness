@@ -39,7 +39,7 @@
 .leftText{
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
-    font-size: 40px;
+    font-size: clamp(22px, 2vw, 40px);
     margin-left: 20%;
     text-align: center;
 
@@ -80,7 +80,7 @@
     align-items: center; /* Elemente links ausrichten */
     font-family:'Nunito', sans-serif;
     font-weight: 300;
-    font-size: 90px;
+    font-size: clamp(32px, 5vw, 90px);
     color: white;
     position: absolute;
     top: 65%;
@@ -101,7 +101,7 @@
 
 .scroll-down-arrow {
     position: absolute;
-    bottom: 50px; /* Anpassen basierend auf Ihrem Layout */
+    bottom: 40px; /* Anpassen basierend auf Ihrem Layout */
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px; /* Größe des Pfeils anpassen */
@@ -114,7 +114,23 @@
     bottom: -50px;
     stroke:black;
   }
-  
+  .arrow-third{
+
+    transform:translateY(-350%)translateX(-48%); 
+    bottom: 50px;
+    stroke:#87b1bf;
+    z-index: 100;
+
+    position: absolute;
+    margin-top: 20px;
+    left: 50%; /* Beginne bei 50% des Elternelements */
+  }
+  .mid-part{
+    display: flex;
+  flex-direction: column;
+  position: relative;
+  }
+
 
   .final-section {
     padding: 20px;
@@ -127,14 +143,14 @@
 .philo{
     
     text-align: center;
-    margin-top: -20%;
+   margin-top: 10%;
     margin-bottom: 20%;
-
+  
 }
-.heading{
+.heading2{
     font-family:'Mogila', sans-serif;
     font-weight: 300;
-    font-size: 70px;
+    font-size: 3.5vw;
 }
 .containe {
     display: flex;
@@ -165,16 +181,29 @@
     font-size: larger;
     font-family:'Mogila', sans-serif;
     font-weight: 200;
-    font-size: 20px;
   }
   .main-text {
     margin: 5%;
     margin-top: 10%;
     max-width: 40%; /* Maximale Breite des Fließtextes */
     text-align: center; /* Zentrierter Text */
-    margin-bottom: 40px; /* Abstand zum unteren Inhalt */
+    margin-bottom: 1vw; /* Abstand zum unteren Inhalt */
     font-weight: 200;
-    font-size: 20px;
+    font-size: clamp(15px, 1vw, 27px);
+  }
+  
+  .end-text {
+    margin: 5%;
+
+    max-width: 40%; /* Maximale Breite des Fließtextes */
+    text-align: center; /* Zentrierter Text */
+    margin-bottom: 40px; /* Abstand zum unteren Inhalt */
+    font-weight: 500;
+    font-size: 1vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-62%) translateY(700%);
+
   }
   
   .center-title {

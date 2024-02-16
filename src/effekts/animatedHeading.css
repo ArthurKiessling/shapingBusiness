@@ -7,14 +7,14 @@
  
     font-family:'Mogila', sans-serif;
     font-weight: 200;
-    font-size: 47px;
+    font-size: 2.3vw;
     color: black;
     overflow: hidden; /* Stellt sicher, dass Buchstaben nicht vorzeitig sichtbar sind */
     white-space: nowrap; /* Verhindert Zeilenumbrüche während der Animation */
-
+    
     text-align: left; /* Zentriert den Text der Überschrift */
     margin: 20px 0;
-    
+    margin-left: auto;
   }
 
   .letter {
