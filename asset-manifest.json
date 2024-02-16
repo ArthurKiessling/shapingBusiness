@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/shapingBusiness/static/css/main.f366682a.css",
+    "main.js": "/shapingBusiness/static/js/main.bf3ee777.js",
+    "static/js/592.121ad07b.chunk.js": "/shapingBusiness/static/js/592.121ad07b.chunk.js",
+    "static/media/ganz_sitz.jpg": "/shapingBusiness/static/media/ganz_sitz.6dbd402c8e72b24959ea.jpg",
+    "static/media/Quer_turkis.jpg": "/shapingBusiness/static/media/Quer_turkis.88f43267ceb90f285815.jpg",
+    "static/media/hoch_sitz.jpg": "/shapingBusiness/static/media/hoch_sitz.bb785a7a6a7726188cc0.jpg",
+    "static/media/Mogila.otf": "/shapingBusiness/static/media/Mogila.568ffadaaac9b4946a15.otf",
+    "static/media/whiteboard.png": "/shapingBusiness/static/media/whiteboard.450416fc5f6b0a043f9b.png",
+    "static/media/image2vector.svg": "/shapingBusiness/static/media/image2vector.6e08c2d357bc0a74f40b55fe24c9ed71.svg",
+    "static/media/menu_icon.svg": "/shapingBusiness/static/media/menu_icon.9b12eec0dcda3e351856ee4ad6abbd45.svg",
+    "index.html": "/shapingBusiness/index.html",
+    "static/media/downarrow.svg": "/shapingBusiness/static/media/downarrow.5ed5618495e90c3920ca83e0a462e419.svg",
+    "main.f366682a.css.map": "/shapingBusiness/static/css/main.f366682a.css.map",
+    "main.bf3ee777.js.map": "/shapingBusiness/static/js/main.bf3ee777.js.map",
+    "592.121ad07b.chunk.js.map": "/shapingBusiness/static/js/592.121ad07b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f366682a.css",
+    "static/js/main.bf3ee777.js"
+  ]
+}
