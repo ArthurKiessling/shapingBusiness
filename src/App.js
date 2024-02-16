@@ -10,7 +10,7 @@ import { ThemeProvider } from './components/ThemeContext.js';
 const App = () => {
   
   return (
-    
+    <BrowserRouter basename="/shapingBusiness/">
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
         <BrowserRouter>
@@ -26,6 +26,7 @@ const App = () => {
         </div>
       </div>
     </ThemeProvider>
+    </BrowserRouter>
   );
 };
 
