@@ -37,10 +37,10 @@
   @media (max-width: 600px) {
     .animated-heading {
 
-      font-size: 20px;
+      font-size: 30px;
       color: black;
 
-      margin: 20px 0;
+      margin-bottom: 5px;
       
     }
     

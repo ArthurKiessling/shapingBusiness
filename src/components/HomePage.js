@@ -16,6 +16,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
 import seedrandom from 'seedrandom';
 
+import Philosophie from "./Philosophie";
 import Content from "./Content.js";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 
@@ -149,19 +150,17 @@ const HomePage = () => {
         <img className="second" src={Upside}></img>
 
       </div >
-      <div className="mid-part">
-      
-        <div id="point2" ref={targetRef2} className="grid w-full grid-cols-2 gap-8 px-6 md:grid-cols-2 bottom-0 alltop" >
-          <img className="second third" src={Upside}></img>
+      <div ref={targetRef2} className="mid-part">
+
           <Content />
           <div className=" arrow-third" onClick={handleScroll3}><DownArrow width="80" height="80" /></div>
-        </div>
-     
       </div>
       <div id="point3" className="banner alltop" ref={targetRef3}></div>
+
+      
       <div class="philo"  >
 
-        <PhilosophySection />
+        <Philosophie/>
 
       </div>
 
@@ -171,7 +170,6 @@ const HomePage = () => {
         endElementId="endElement"
         pointElementIds={["point1", "point2", "point3"]}
       />
-
     </div>
   );
 };

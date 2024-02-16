@@ -17,3 +17,14 @@
   z-index: 100;
   transform: translateX(-48%); /* Verschiebe den Punkt um 50% seiner eigenen Breite zurück */
 }
+
+@media (max-width: 768px) {
+
+  .highlight-point {
+    left: 10%;
+  }
+  .highlight-bar{
+    left: 10%;
+  }
+
+}

@@ -8,16 +8,16 @@
   }
 
 .content {
-
      /* Zentriert den Text und setzt einen oberen und unteren Abstand */
-  max-width: auto; /* Begrenzt die Breite des Fließtextes für bessere Lesbarkeit */
-  opacity: 0;
-  margin-left: auto;
-  transition: opacity 1s ease-out;
-  text-align: left; 
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
-    font-size:1.1vw; 
+     max-width: auto; /* Begrenzt die Breite des Fließtextes für bessere Lesbarkeit */
+     opacity: 0;
+     margin-left: auto;
+     transition: opacity 1s ease-out;
+     text-align: left; 
+       font-family: 'Nunito', sans-serif;
+       font-weight: 300;
+       font-size:1.1vw; 
+
   }
   
   .content.visible {
@@ -25,19 +25,82 @@
   }
   
   /* Container für jeden Abschnitt, um Layout und Abstand zu steuern */
-  .section {
-    margin-bottom: 0%; /* Fügt Abstand zwischen den Abschnitten hinzu */
-  }
 
   .all{
     max-width: 80%; /* oder einen bestimmten Prozentsatz */
-    margin: 0 auto; /* Zentriert den Container */
+    margin: 20 auto; /* Zentriert den Container */
     padding: 20px;
     margin-top: 2%;
   }
+  .alltop {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Teilt den Container in zwei Spalten mit unterschiedlichen Größen */
+    grid-template-areas: 
+      "image text";
+  }
+  .section {
+    grid-area: text;
+    margin-left: 8%;
+    max-width: 80%;
+  }  
+  
+  .third{
+    grid-area: image;
+    height: 80vh;
+    width: auto;
+    margin-left: 20%;
+    margin-top: 0%;
+    justify-self: center;
+}
+  
+
+/* Stellen Sie sicher, dass die Text-Container die korrekten Bereiche zugewiesen bekommen */
+.text1 { grid-area: text; }
+.text2 { grid-area: text; }
+.text3 { grid-area: text; }
+
+@media (max-width: 768px) {
+  .third{
+    margin-left: 0%;
+    height: 80%;
+    width: auto;
+    grid-area: image;
+   justify-self: center;
+    margin-top: 5%;
+}
+
+/* Basierend auf Ihrer vorhandenen Klasse für das Grid-Layout */
+
+.alltop { 
+  margin-left: 14%;
+  max-width: 80%;
+  margin-top: 20%;
+  grid-template-columns: 1fr; /* Eine einzelne Spalte für mobile Geräte */
+  grid-template-areas:
+    "text"
+    "image";
+}
+.content { 
+  font-size: 20px;
+}
+
+.section{
+  grid-area: text;
+}
+
+/* Stellen Sie sicher, dass die Text-Container die korrekten Bereiche zugewiesen bekommen */
+.text1 { grid-area: text2; }
+.text2 { grid-area: text2; }
+.text3 { grid-area: text2; }
+
+.content {
+  font-size: 2vw;
+}
+
+}
 
   @media (max-width: 600px) {
-    .content { font-size: 10px;
+    .content { font-size: 19px;
     }
    
   }
