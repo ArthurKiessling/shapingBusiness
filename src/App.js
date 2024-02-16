@@ -13,12 +13,12 @@ const App = () => {
     
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
-        <BrowserRouter basename="/shapingBusiness">
+        <BrowserRouter basename="/shapingBusiness/">
           <Navbar />
           <Routes>
-            <Route exact path="/" element={<HomePage/>}/>
-            <Route exact path="/uebermich" element={<AboutMe/>}/>
-            <Route exact path="/kontakt" element={<Kontakt/>}/>
+            <Route path="/" element={<HomePage/>}/>
+            <Route  path="/uebermich" element={<AboutMe/>}/>
+            <Route  path="/kontakt" element={<Kontakt/>}/>
           </Routes>
         </BrowserRouter>
         <div className="mt-auto">
