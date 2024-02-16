@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shapingBusiness/static/css/main.f366682a.css",
-    "main.js": "/shapingBusiness/static/js/main.bf3ee777.js",
+    "main.js": "/shapingBusiness/static/js/main.4ef06843.js",
     "static/js/592.121ad07b.chunk.js": "/shapingBusiness/static/js/592.121ad07b.chunk.js",
     "static/media/ganz_sitz.jpg": "/shapingBusiness/static/media/ganz_sitz.6dbd402c8e72b24959ea.jpg",
     "static/media/Quer_turkis.jpg": "/shapingBusiness/static/media/Quer_turkis.88f43267ceb90f285815.jpg",
@@ -13,11 +13,11 @@
     "index.html": "/shapingBusiness/index.html",
     "static/media/downarrow.svg": "/shapingBusiness/static/media/downarrow.5ed5618495e90c3920ca83e0a462e419.svg",
     "main.f366682a.css.map": "/shapingBusiness/static/css/main.f366682a.css.map",
-    "main.bf3ee777.js.map": "/shapingBusiness/static/js/main.bf3ee777.js.map",
+    "main.4ef06843.js.map": "/shapingBusiness/static/js/main.4ef06843.js.map",
     "592.121ad07b.chunk.js.map": "/shapingBusiness/static/js/592.121ad07b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f366682a.css",
-    "static/js/main.bf3ee777.js"
+    "static/js/main.4ef06843.js"
   ]
 }
