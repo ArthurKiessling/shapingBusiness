@@ -10,10 +10,10 @@ import { ThemeProvider } from './components/ThemeContext.js';
 const App = () => {
   
   return (
-    <BrowserRouter basename="/shapingBusiness/">
+    
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
-        <BrowserRouter>
+        <BrowserRouter basename="/shapingBusiness/">
           <Navbar />
           <Routes>
             <Route exact path="/" element={<HomePage/>}/>
@@ -26,7 +26,7 @@ const App = () => {
         </div>
       </div>
     </ThemeProvider>
-    </BrowserRouter>
+
   );
 };
 
