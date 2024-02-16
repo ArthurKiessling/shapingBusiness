@@ -16,7 +16,7 @@ const App = () => {
         <BrowserRouter basename="/shapingBusiness/">
           <Navbar />
           <Routes>
-            <Route exact path="/" element={<HomePage/>}/>
+            <Route exact path="" element={<HomePage/>}/>
             <Route exact path="/uebermich" element={<AboutMe/>}/>
             <Route exact path="/kontakt" element={<Kontakt/>}/>
           </Routes>
