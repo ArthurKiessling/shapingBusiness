@@ -40,10 +40,10 @@ const sections = [
 
 const Content = () => {
   return (
-    <div id="point2"  className="alltop" >
-      <div className='section'>
-      {sections.map((section, index) => (
-        <Section key={index} heading={section.heading} content={section.content} />
+    <div  className="alltop" >
+      <div id="point2" className='section'>
+      {sections.map((section, index)  => (
+        <Section  key={index} heading={section.heading} content={section.content} />
       ))}
       </div>
       <img className="third" src={Upside}></img>

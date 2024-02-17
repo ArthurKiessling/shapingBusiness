@@ -1,101 +1,187 @@
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Mittlere Spalte doppelt so breit */
-    grid-template-rows: repeat(3, 1fr); /* Drei Zeilen mit gleicher Höhe */
-    gap: 10px; /* Abstand zwischen den Zellen */
-    align-items: start; /* Beginnt Inhalte am Anfang der Zelle */
-    margin-bottom: 20%;
-    
-  }
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* Mittlere Spalte doppelt so breit */
+  grid-template-rows: repeat(3, 1fr);
+  /* Drei Zeilen mit gleicher Höhe */
+  gap: 10px;
+  /* Abstand zwischen den Zellen */
+  align-items: start;
+  /* Beginnt Inhalte am Anfang der Zelle */
   
-  /* Linke Spalte */
-  .grid-container > .left {
-    grid-column: 1;
+
+}
+
+/* Linke Spalte */
+.grid-container>.left {
+  grid-column: 1;
+  margin-left: 12%;
+}
+
+/* Mittlere Spalte */
+.grid-container>.center {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  /* Überschrift und Text nehmen alle drei Zeilen ein */
+  display: flex;
+  flex-direction: column;
+  /* Stapelt Überschrift und Text vertikal */
+}
+
+/* Rechte Spalte */
+.grid-container>.right {
+  grid-column: 3;
+  align-items: center;
+  margin-left: 12%;
+}
+
+
+
+.left.top {
+  grid-row: 1;
+}
+
+/* Nimmt Zeile 1 und 2 ein */
+.left.middle {
+  grid-row: 2;
+}
+
+/* Beginnt in Zeile 2 und geht bis Zeile 3 */
+.left.bottom {
+  grid-row: 3;
+}
+
+/* Nur Zeile 3 */
+
+/* Rechte Spalte - versetzt */
+.right.top {
+  grid-row: 1;
+}
+
+/* Nur Zeile 1 */
+.right.middle {
+  grid-row: 2;
+}
+
+/* Beginnt in Zeile 2 und geht bis Zeile 3 */
+.right.bottom {
+  grid-row: 3;
+}
+
+.colum {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+
+.felder {
+  text-align: center;
+  max-width: 80%;
+  padding: 13px;
+  margin: 10px 0;
+  /* Für Abstand zwischen den Feldern */
+  background-color: #87b1bf;
+  color: white;
+  border-radius: 20px;
+  font-size: 24px;
+  font-family: 'Mogila', sans-serif;
+  font-weight: 200;
+}
+
+.main {
+  margin: 5%;
+  /* Maximale Breite des Fließtextes */
+  text-align: center;
+  /* Zentrierter Text */
+  
+  /* Abstand zum unteren Inhalt */
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.end {
+  text-align: center;
+  /* Zentrierter Text */
+ 
+  /* Abstand zum unteren Inhalt */
+  font-weight: 500;
+  font-size: 1.5vw;
+
+}
+
+.center-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-45%) translateY(-80%);
+}
+
+.heading3 {
+  margin-top: 0%;
+  font-family: 'Mogila', sans-serif;
+  font-weight: 300;
+  font-size: 3.5vw;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+
+  .heading3 {
+    font-size: 8vw;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Mittlere Spalte doppelt so breit */
+    /* Drei Zeilen mit gleicher Höhe */
+    gap: 10px;
+    /* Abstand zwischen den Zellen */
+    align-items: center;
+    margin-bottom: 0%;
+
+  }
+
+  .grid-container>.left {
+    grid-column: 3;
     margin-left: 12%;
   }
 
   /* Mittlere Spalte */
-  .grid-container > .center {
-    grid-column: 2;
-    grid-row: 1 / span 3; /* Überschrift und Text nehmen alle drei Zeilen ein */
+  .grid-container>.center {
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1 / -1;
+    /* Annahme, dass es sich um eine 3-Spalten-Grid handelt */
+    grid-row: 1;
     display: flex;
-    flex-direction: column; /* Stapelt Überschrift und Text vertikal */
+    flex-direction: column;
+    /* Stapelt Kinder vertikal */
+    justify-content: center;
+    /* Zentriert Kinder vertikal im Flex-Container */
+    align-items: center;
+    /* Stapelt Überschrift und Text vertikal */
+
   }
-  
+
   /* Rechte Spalte */
-  .grid-container > .right {
+  .grid-container>.right {
+    display: none;
     grid-column: 3;
     align-items: center;
     margin-left: 12%;
   }
 
-  
 
-  .left.top { grid-row: 1; } /* Nimmt Zeile 1 und 2 ein */
-.left.middle { grid-row: 2; } /* Beginnt in Zeile 2 und geht bis Zeile 3 */
-.left.bottom { grid-row: 3; } /* Nur Zeile 3 */
+  .grid-container>.left {
+    display: none;
+    grid-column: 2;
+  }
 
-/* Rechte Spalte - versetzt */
-.right.top { grid-row: 1; } /* Nur Zeile 1 */
-.right.middle { grid-row: 2; } /* Beginnt in Zeile 2 und geht bis Zeile 3 */
-.right.bottom { grid-row: 3 ; }
-  
-  .colum {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-  }
-  
-  
-  .felder {
-    text-align: center;
-    max-width: 80%;
-    padding: 13px;
-    margin:10px 0; /* Für Abstand zwischen den Feldern */
-    background-color: #87b1bf;
-    color:white;
-    border-radius: 20px;
-    font-size: 24px;
-    font-family:'Mogila', sans-serif;
-    font-weight: 200;
-  }
-  .main {
-    margin: 5%;
-     /* Maximale Breite des Fließtextes */
-    text-align: center; /* Zentrierter Text */
-    margin-bottom: 1vw; /* Abstand zum unteren Inhalt */
-    font-weight: 300;
-    font-size: 18px;
-  }
-  
   .end {
-    text-align: center; /* Zentrierter Text */
-    margin-bottom: 40px; /* Abstand zum unteren Inhalt */
-    font-weight: 500;
-    font-size: 1.5vw;
-
-   
+    font-size: 4vw;
 
   }
-  
-  .center-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-45%) translateY(-80%);
-  }  
-
-  .heading3{
-    margin-top: 0%;
-    font-family:'Mogila', sans-serif;
-    font-weight: 300;
-    font-size: 3.5vw;
-    align-self: center;
-}
-
-@media (max-width: 768px) {
-    .grid-container > .left {
-        grid-column: 2;
-      }
 
 }

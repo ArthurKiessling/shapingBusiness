@@ -24,31 +24,17 @@
 .banner{
     height: 20px;
 }
-.second{
-    height: 60%;
-    width: auto;
-    margin-left: 20%;
-}
+
 
 .alltop{
     margin-top: -20%;
   }
 
-.leftText{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
-    font-size: clamp(22px, 2vw, 40px);
-    margin-left: 20%;
-    text-align: center;
-
-}
 
 
-.motionDiv{
- 
-    margin-top: 30%;
-  
-}
+
+
+
 
 .logoSvg {
     width: 30%;
@@ -211,7 +197,88 @@
     transform: translateX(-45%) translateY(-80%);
   }
   
-@media (max-width: 600px) {
+  .first-part {
+    max-width: 80%; /* oder einen bestimmten Prozentsatz */
+    margin-left: 12%; /* Zentriert den Container */
+
+    margin-top: 5%;
+    margin-bottom: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Teilt den Container in zwei Spalten mit unterschiedlichen Größen */
+    grid-template-areas: 
+      "text image";
+  }
+  .section-text {
+    grid-area: text;
+    margin-right: 20%;
+    margin-top: 10%;
+  }  
+  
+    .second{
+      grid-area: image;
+      height: 80vh;
+      width: auto;
+      
+      margin-top: 0%;
+      justify-self: center;
+  }
+
+
+  .leftText{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: clamp(22px, 2vw, 40px);
+  
+    text-align: center;
+
+}
+
+@media (max-width: 768px) {
+
+  .first-part{
+    max-width: 80%;
+    margin-left: 14%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    grid-template-columns: 1fr; /* Eine einzelne Spalte für mobile Geräte */
+    grid-template-areas:
+      "text"
+      "image";
+  }
+  
+  .section-text {
+    
+  
+    margin-right: 0%;
+    margin-bottom: 10%;
+  }  
+  .leftText{
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+  .second{
+    display: none;
+  
+  }
+  
+  .arrow-third{
+
+    transform:translateY(100%)translateX(-40%); 
+    bottom: 50px;
+    stroke:#87b1bf;
+    z-index: 100;
+
+    position: absolute;
+    margin-top: 20px;
+    left: 50%; /* Beginne bei 50% des Elternelements */
+  }
+
+  
     .header { 
         font-size: 40px;
         text-align: center;
@@ -244,16 +311,14 @@
     left: 50%;
    
     }
-    .leftText{
 
-        font-size: 15px;
+    .philo{
+      text-align: center;
+     margin-top: 20%;
+      margin-bottom: 0%;
+    
+  }
 
-    }
-
-    .second{
-        height: 100%;
-        width: auto;
-    }
 }
 
   

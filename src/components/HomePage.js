@@ -110,18 +110,16 @@ const HomePage = () => {
       <div id="startElement" style={{ backgroundColor: themeColor }} className="banner"></div>
 
 
-      <div id="point1" className="grid w-full grid-cols-2 gap-8 px-6 py-10 md:grid-cols-2  bottom-0" ref={targetRef}>
-
-        <section ref={ref}>
+      <div id="point1" className="first-part" ref={targetRef}>
+        <div ref={ref} className="section-text">
           <span
             style={{
-              transform: isInView ? "none" : "translateX(-200px)",
+              transform: isInView ? "none" : "none",
               opacity: isInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
           >
             <motion.div
-              className="motionDiv"
             >
               {[...Array(9)].map((_, i) => (
                 <motion.h1
@@ -144,9 +142,7 @@ const HomePage = () => {
               ))}
             </motion.div>
           </span>
-
-        </section>
-
+        </div>
         <img className="second" src={Upside}></img>
 
       </div >

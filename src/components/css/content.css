@@ -74,7 +74,7 @@
 .alltop { 
   margin-left: 14%;
   max-width: 80%;
-  margin-top: 20%;
+  margin-top: 5%;
   grid-template-columns: 1fr; /* Eine einzelne Spalte für mobile Geräte */
   grid-template-areas:
     "text"
@@ -85,6 +85,7 @@
 }
 
 .section{
+  margin-top: 20%;
   grid-area: text;
 }
 
