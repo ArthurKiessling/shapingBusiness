@@ -2,7 +2,7 @@
   "name": "shaping_business",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://arthurkiessling.github.io/shapingBusiness/",
+  "homepage":"https://85.215.128.128/",
   "dependencies": {
     "@floating-ui/react": "^0.26.9",
     "@testing-library/jest-dom": "^5.17.0",

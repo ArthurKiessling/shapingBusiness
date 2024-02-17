@@ -13,7 +13,7 @@ const App = () => {
     
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
-        <BrowserRouter basename="/shapingBusiness">
+        <BrowserRouter basename="/">
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage/>}/>
