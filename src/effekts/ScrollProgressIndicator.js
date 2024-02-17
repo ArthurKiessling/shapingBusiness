@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './ScrollProgressIndicator.css';
 
-const ScrollProgressIndicator = ({ startElementId, endElementId, pointElementIds }) => {
+const ScrollProgressIndicator = ({themeColor, startElementId, endElementId, pointElementIds }) => {
     const [barPosition, setBarPosition] = useState({ top: 0, bottom: 0 });
     const [pointPositions, setPointPositions] = useState([]);
   
@@ -46,9 +46,9 @@ const ScrollProgressIndicator = ({ startElementId, endElementId, pointElementIds
   
     return (
       <div>
-        <div className="highlight-bar" style={{ top: `${barPosition.top}px`, height: `${barPosition.bottom - barPosition.top}px` }}></div>
+        <div className="highlight-bar"  style={{backgroundColor: themeColor,top: `${barPosition.top}px`, height: `${barPosition.bottom - barPosition.top}px` }}></div>
         {pointPositions.map(point => (
-          <div key={point.id} className="highlight-point" style={{ top: `${point.top}px` }}></div>
+          <div key={point.id} className="highlight-point" style={{ backgroundColor: themeColor, top: `${point.top}px` }}></div>
         ))}
       </div>
     );

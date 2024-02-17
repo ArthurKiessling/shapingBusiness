@@ -14,7 +14,7 @@
   height: 30px;
   border-radius: 50%;
   background-color: #87b1bf; /* Farbe der Punkte */
-  z-index: 100;
+  z-index: 2;
   transform: translateX(-48%); /* Verschiebe den Punkt um 50% seiner eigenen Breite zurück */
 }
 

@@ -38,10 +38,10 @@ const sections = [
   // Weitere Abschnitte hinzufügen
 ];
 
-const Content = () => {
+const Content = ({targetRef}) => {
   return (
-    <div  className="alltop" >
-      <div id="point2" className='section'>
+    <div id="point2" ref={targetRef} className="alltop" >
+      <div className='section'>
       {sections.map((section, index)  => (
         <Section  key={index} heading={section.heading} content={section.content} />
       ))}

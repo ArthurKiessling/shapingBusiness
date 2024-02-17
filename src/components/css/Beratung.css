@@ -1,0 +1,24 @@
+.article2 {
+    margin-top:5%;
+    height: 80%;
+    
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+.header2 {
+    display: flex;
+    flex-direction: column; /* Elemente vertikal anordnen */
+    align-items: center; /* Elemente links ausrichten */
+    font-family:'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: clamp(32px, 5vw, 90px);
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    /* Zentriert den .header horizontal */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

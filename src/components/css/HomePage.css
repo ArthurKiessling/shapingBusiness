@@ -103,7 +103,7 @@
     transform:translateY(-350%)translateX(-48%); 
     bottom: 50px;
     stroke:#87b1bf;
-    z-index: 100;
+    z-index: 1;
 
     position: absolute;
     margin-top: 20px;
@@ -271,7 +271,7 @@
     transform:translateY(100%)translateX(-40%); 
     bottom: 50px;
     stroke:#87b1bf;
-    z-index: 100;
+    z-index: 1;
 
     position: absolute;
     margin-top: 20px;

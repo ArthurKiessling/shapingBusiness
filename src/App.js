@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import HomePage from './components/HomePage.js'
 import AboutMe from './components/AboutMe.js'
 import Kontakt from './components/Kontakt.js';
+import Beratung from './components/Beratung.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage/>}/>
+            <Route path="/beratung" element={<Beratung/>}/>
             <Route  path="/uebermich" element={<AboutMe/>}/>
             <Route  path="/kontakt" element={<Kontakt/>}/>
           </Routes>

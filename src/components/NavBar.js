@@ -58,7 +58,7 @@ const Navbar = () => {
               <NavLink onClick={() => setThemeColor('#87b1bf')} to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => setThemeColor('green')} to="/beratung">Beratung</NavLink>
+              <NavLink onClick={() => setThemeColor('#d3a700')} to="/beratung">Beratung</NavLink>
             </li>
             <li>
               <NavLink to="/uebermich">Über mich</NavLink>

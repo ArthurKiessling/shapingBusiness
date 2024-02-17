@@ -1,9 +1,5 @@
-import "./css/HomePage.css";
+import "./css/Beratung.css";
 import React from 'react';
-
-import background from "../images/Quer_turkis.jpg";
-import Upside from "../images/hoch_sitz.jpg";
-import Whiteboard from "../images/whiteboard.png";
 
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
 
@@ -11,6 +7,10 @@ import { ReactComponent as Logo } from '../images/image2vector.svg'
 import { useTheme } from './ThemeContext.js';
 import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 
+
+import background from "../images/sitz_gelb.png";
+import Upside from "../images/sitz_gelb.png";
+import Whiteboard from "../images/whiteboard.png";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
@@ -96,9 +96,9 @@ const HomePage = () => {
   return (
 
     <div>
-      <article className="article">
+      <article className="article2">
         <img className="first" src={background} />
-        <div className="header">
+        <div className="header2">
           <h1 className="conn">CONNECTING PEOPLE,</h1>
           <h1 className="shap">SHAPING BUSINESS.</h1>
         </div>
@@ -161,7 +161,8 @@ const HomePage = () => {
       </div>
 
       <div style={{ backgroundColor: themeColor }}  className="banner"></div>
-      <ScrollProgressIndicator style={{ backgroundColor: themeColor }}
+      <ScrollProgressIndicator 
+        themeColor={themeColor}
         startElementId="startElement"
         endElementId="endElement"
         pointElementIds={["point1", "point2", "point3"]}
