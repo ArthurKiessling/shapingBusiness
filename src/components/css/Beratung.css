@@ -29,8 +29,7 @@
   .services-list ul li {
     font-family:'Nunito', sans-serif;
     font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -92,4 +91,47 @@
 
 .alltop2{
   margin-bottom: 20%;
+}
+
+@media (max-width: 768px) {
+  .leistung{
+    font-family:'Mogila', sans-serif;
+    font-weight: 300;
+    font-size:35px;
+}
+  .adjustLeft .highlight-bar {
+    left: 5% !important; /* Verschiebe den Balken nach ganz links */
+  }
+  
+  .adjustLeft .highlight-point {
+    left: 5% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
+  }
+  
+  .adjustRight .highlight-bar {
+    left: 95% !important; /* Verschiebe den Balken nach ganz links */
+  }
+  
+  .adjustRight .highlight-point {
+    left: 95% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
+  }
+
+  .logoSvg{
+    
+    left: 50% !important;
+    top: 20%;
+    }
+
+    .header2 { 
+      font-size: 40px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: fit-content;
+      margin: auto;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);;
+     
+  }
 }

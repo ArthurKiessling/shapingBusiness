@@ -21,7 +21,7 @@ const Navbar = () => {
   const controlNavbar = () => {
     // Wenn der aktuelle Scroll kleiner ist als der letzte (nach oben scrollen), zeige die NavBar
     if (typeof window !== 'undefined') {
-      if (window.scrollY < lastScrollY || window.scrollY === 0) {
+      if (window.scrollY < lastScrollY || window.scrollY === 100) {
         setShow(true);
       } else if (window.scrollY > lastScrollY) {
         // Wenn der aktuelle Scroll größer ist als der letzte (nach unten scrollen), verstecke die NavBar
