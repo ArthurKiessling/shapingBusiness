@@ -19,12 +19,17 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    // Wenn der aktuelle Scroll kleiner ist als der letzte (nach oben scrollen), zeige die NavBar
     if (typeof window !== 'undefined') {
-      if (window.scrollY < lastScrollY || window.scrollY === 100) {
+      // Zeige die Navbar immer an, wenn der Benutzer ganz oben auf der Seite ist
+      if (window.scrollY <= 0) {
         setShow(true);
-      } else if (window.scrollY > lastScrollY) {
-        // Wenn der aktuelle Scroll größer ist als der letzte (nach unten scrollen), verstecke die NavBar
+      } 
+      // Wenn der aktuelle Scroll kleiner ist als der letzte (nach oben scrollen), zeige die NavBar
+      else if (window.scrollY < lastScrollY) {
+        setShow(true);
+      } 
+      // Wenn der aktuelle Scroll größer ist als der letzte (nach unten scrollen), verstecke die NavBar
+      else if (window.scrollY > lastScrollY) {
         setShow(false);
       }
       // Aktualisiere die letzte Scroll-Position
