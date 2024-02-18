@@ -6,6 +6,10 @@ import { useTheme } from './ThemeContext.js';
 import './css/navbar.css'
 import './css/styles.css'; 
 const Navbar = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  
   const { themeColor, setThemeColor } = useTheme();
 
   const [showNavbar, setShowNavbar] = useState(false)
@@ -17,7 +21,7 @@ const Navbar = () => {
   const controlNavbar = () => {
     // Wenn der aktuelle Scroll kleiner ist als der letzte (nach oben scrollen), zeige die NavBar
     if (typeof window !== 'undefined') {
-      if (window.scrollY < lastScrollY) {
+      if (window.scrollY < lastScrollY || window.scrollY === 0) {
         setShow(true);
       } else if (window.scrollY > lastScrollY) {
         // Wenn der aktuelle Scroll größer ist als der letzte (nach unten scrollen), verstecke die NavBar
@@ -55,19 +59,19 @@ const Navbar = () => {
        <div style={{ backgroundColor: themeColor }} className={`nav-elements    ${showNavbar && 'active'}`}>
           <ul className="px-6 py-8 ">
             <li>
-              <NavLink onClick={() => setThemeColor('#87b1bf')} to="/">Home</NavLink>
+              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => setThemeColor('#d3a700')} to="/beratung">Beratung</NavLink>
+              <NavLink onClick={() =>{setThemeColor('#d3a700'); scrollToTop();}} to="/beratung">Beratung</NavLink>
             </li>
             <li>
-              <NavLink to="/uebermich">Über mich</NavLink>
+              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/uebermich">Über mich</NavLink>
             </li>
             <li>
-              <NavLink to="/kontakt">Kontakt</NavLink>
+              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/kontakt">Kontakt</NavLink>
             </li>
             <li>
-              <NavLink to="/kontakt">de | en</NavLink>
+              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/kontakt">de | en</NavLink>
             </li>
           </ul>
         </div>

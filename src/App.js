@@ -9,7 +9,7 @@ import Beratung from './components/Beratung.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
 
 const App = () => {
-  
+
   return (
     
     <ThemeProvider>
