@@ -99,6 +99,9 @@
     font-weight: 300;
     font-size:35px;
 }
+  .adjustRight{
+    display: none;
+  }
   .adjustLeft .highlight-bar {
     left: 5% !important; /* Verschiebe den Balken nach ganz links */
   }

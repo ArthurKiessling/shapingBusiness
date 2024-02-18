@@ -51,6 +51,7 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
+  {/*Interresant Farbe:#989292*/}
   return (
     <nav style={{ backgroundColor: themeColor}} className={`navbar ${!show && 'hide'}`}>
       <div className="container">
@@ -70,7 +71,7 @@ const Navbar = () => {
               <NavLink onClick={() =>{setThemeColor('#d3a700'); scrollToTop();}} to="/beratung">Beratung</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/uebermich">Über mich</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/uebermich">Über mich</NavLink>
             </li>
             <li>
               <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/kontakt">Kontakt</NavLink>

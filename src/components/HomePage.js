@@ -134,9 +134,9 @@ const HomePage = () => {
                   {i === 1 && "Erfolg liegt in der Kraft der Menschen,"}
                   {i === 2 && "Die gemeinsam an einem Strang ziehen."}
                   {i === 3 && "Dabei sind drei Faktoren wesentlich:"}
-                  {i === 4 && "Klarheit"}
-                  {i === 5 && "Konsequenz"}
-                  {i === 6 && "Kommunikation"}
+                  {i === 4 && "- Klarheit"}
+                  {i === 5 && "- Konsequenz"}
+                  {i === 6 && "- Kommunikation"}
                   {i === 7 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
                 </motion.h1>
               ))}

@@ -6,7 +6,7 @@ import './css/Philosophie.css';
 
 const Philosophie = () => {
     const textsLeft = ["Klarheit", "Konsequenz", "Kommunikation"];
-    const textsRight = ["Effizienz", "Effektivität", "Erfolg"];
+    const textsRight = ["Effektivität", "Empathie", "Erfolg"];
     const mainText = "Klarheit in der Zielsetzung, Konsequenz in der Umsetzung, erfolgreiche Kommunikation und Einbindung relevanter Stakeholder führen zu Effizienz und Effektivität bei der Erreichung von persönlichen und unternehmerischen Zielen. Meinen Kund*innen stelle ich meine langjährige Erfahrung aus erfolgreich umgesetzten Projekten in Industrie, Konzernstruktur und Start-Up Organisation sowie meine Expertise in strategischer Planung, allen Disziplinen moderner Kommunikation sowie professionellem Stakeholdermanagement zur Verfügung.";
     const endText = "Dafür steht Connecting People, Shaping Business.";
     

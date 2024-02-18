@@ -111,7 +111,7 @@ const HomePage = () => {
 
       <div id="point1"  ref={targetRef}>
       <div className="services-list">
-      <h2 className="leistung">Unsere Leistungen</h2>
+      <h2 className="leistung">Meine Leistungen</h2>
       <ul>
         <li>Strategieberatung: Business Development, Gestaltung & Begleitung von Change-Prozessen, Unternehmenskultur, Innovationskultur</li>
         <li>Kommunikationsberatung: Entwicklung von smarten Kommunikationsstrategien & -Konzepten für integrierte Kommunikation (intern, extern), Krisenkommunikation</li>
