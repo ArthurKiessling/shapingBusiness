@@ -7,6 +7,49 @@
     z-index: 2;
 }
 
+.services-list {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  
+  }
+  
+  .services-list h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .services-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .services-list ul li {
+    font-family:'Nunito', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+  }
+  
+  .services-list ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+  .services-list ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .services-list ul li:last-child {
+    margin-bottom: 0;
+  }
+  
 
 .header2 {
     display: flex;
@@ -18,7 +61,35 @@
     color: white;
     position: absolute;
     top: 55%;
-    left: 40%;
+    left: 50%;
     /* Zentriert den .header horizontal */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
+    margin-bottom: 20px;
+}
+
+.leistung{
+    font-family:'Mogila', sans-serif;
+    font-weight: 300;
+    font-size: 3.5vw;
+}
+
+.adjustLeft .highlight-bar {
+  left: 25% !important; /* Verschiebe den Balken nach ganz links */
+}
+
+.adjustLeft .highlight-point {
+  left: 25% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
+}
+
+.adjustRight .highlight-bar {
+  left: 75% !important; /* Verschiebe den Balken nach ganz links */
+}
+
+.adjustRight .highlight-point {
+  left: 75% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
+}
+
+.alltop2{
+  margin-bottom: 20%;
 }

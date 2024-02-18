@@ -1,4 +1,4 @@
-import "./css/Beratung.css";
+import  "./css/Beratung.css";
 import React from 'react';
 
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
@@ -99,8 +99,7 @@ const HomePage = () => {
       <article className="article2">
         <img className="first" src={background} />
         <div className="header2">
-          <h1 className="conn">CONNECTING PEOPLE,</h1>
-          <h1 className="shap">SHAPING BUSINESS.</h1>
+          <h1 className="conn">BERATUNG</h1>
         </div>
 
         <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
@@ -110,118 +109,42 @@ const HomePage = () => {
       <div id="startElement" style={{ backgroundColor: themeColor }} className="banner"></div>
 
 
-      <div id="point1" className="first-part" ref={targetRef}>
-        <div ref={ref} className="section-text">
-          <span
-            style={{
-              transform: isInView ? "none" : "none",
-              opacity: isInView ? 1 : 0,
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-            }}
-          >
-            <motion.div
-            >
-              {[...Array(9)].map((_, i) => (
-                <motion.h1
-                  ref={ref}
-                  key={i}
-                  custom={i} // Übergabe der Reihenfolge des Elements als custom Prop
-                  variants={containerVariants}
-                  initial="hidden"
-                  animate={animateState}
-                  className="leftText"
-                >
-                  {i === 1 && "Erfolg liegt in der Kraft der Menschen,"}
-                  {i === 2 && "Die gemeinsam an einem Strang ziehen."}
-                  {i === 3 && "Dabei sind drei Faktoren wesentlich:"}
-                  {i === 4 && "Klarheit"}
-                  {i === 5 && "Konsequenz"}
-                  {i === 6 && "Kommunikation"}
-                  {i === 7 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
-                </motion.h1>
-              ))}
-            </motion.div>
-          </span>
-        </div>
-        <img className="second" src={Upside}></img>
+      <div id="point1"  ref={targetRef}>
+      <div className="services-list">
+      <h2 className="leistung">Unsere Leistungen</h2>
+      <ul>
+        <li>Strategieberatung: Business Development, Gestaltung & Begleitung von Change-Prozessen, Unternehmenskultur, Innovationskultur</li>
+        <li>Kommunikationsberatung: Entwicklung von smarten Kommunikationsstrategien & -Konzepten für integrierte Kommunikation (intern, extern), Krisenkommunikation</li>
+        <li>Beratung zu Public Affairs, Interessensvertretung, strategischem Stakeholdermanagement</li>
+        <li>Reputation- und Markenmanagement für Organisationen (inkl. Employer Branding), Standorte, Personen</li>
+        <li>Executive Coaching & Sparring</li>
+      </ul>
+    </div>
+    <div id="point2" className="banner alltop2"></div>
 
       </div >
-      <div  className="mid-part">
+ 
 
-          <Content targetRef={targetRef2} />
-          <div className=" arrow-third" onClick={handleScroll3}><DownArrow width="80" height="80" /></div>
-      </div>
-      <div id="point3" className="banner alltop" ref={targetRef3}></div>
-
-      
-      <div class="philo"  >
-
-        <Philosophie/>
-
-      </div>
-
-      <div style={{ backgroundColor: themeColor }}  className="banner"></div>
+      <div style={{ backgroundColor: themeColor }}  className="banner" id="endElement"></div>
+        <div className="adjustLeft">
       <ScrollProgressIndicator 
         themeColor={themeColor}
         startElementId="startElement"
         endElementId="endElement"
-        pointElementIds={["point1", "point2", "point3"]}
+        pointElementIds={["point1","point2"]}
       />
+      </div>
+      <div className="adjustRight">
+      <ScrollProgressIndicator 
+        themeColor={themeColor}
+        startElementId="startElement"
+        endElementId="endElement"
+        pointElementIds={["point1","point2"]}
+      />
+      </div>
     </div>
   );
 };
 
 export default HomePage;
-
-const PhilosophySection = () => {
-  const textsLeft = ["Klarheit", "Konsequenz", "Kommunikation"];
-  const textsRight = ["Effizienz", "Effektivität", "Erfolg"];
-  const mainText = "Klarheit in der Zielsetzung, Konsequenz in der Umsetzung, erfolgreiche Kommunikation und Einbindung relevanter Stakeholder führen zu Effizienz und Effektivität bei der Erreichung von persönlichen und unternehmerischen Zielen. Meinen Kund*innen stelle ich meine langjährige Erfahrung aus erfolgreich umgesetzten Projekten in Industrie, Konzernstruktur und Start-Up Organisation sowie meine Expertise in strategischer Planung, allen Disziplinen moderner Kommunikation sowie professionellem Stakeholdermanagement zur Verfügung.";
-  const endText = "Dafür steht Connecting People, Shaping Business.";
-  // Funktion, um die Verschiebung für jedes Feld zu berechnen
-  const calculateOffset = (index, isLeftColumn) => {
-    // Basisverschiebung für alle Felder
-    let xOffset = 0;
-    let yOffset = index * 50; // Vertikale Position basierend auf dem Index
-
-    // Zusätzliche Verschiebung für das mittlere Feld
-    if (index === 1) {
-      xOffset = isLeftColumn ? -100 : 100; // Links verschieben für linke Spalte, rechts für rechte Spalte
-    }
-
-    return { xOffset, yOffset };
-  };
-
-  return (
-    <div className="containe">
-      <div className="colum">
-        {textsLeft.map((text, index) => {
-          const { xOffset, yOffset } = calculateOffset(index, true);
-          return (
-            <div key={`left-${index}`} className="text" style={{
-              transform: `translate(${xOffset}px, ${yOffset}px)`
-            }}>
-              {text}
-            </div>
-          );
-        })}
-      </div>
-      <h1 className="heading2 center-title" id="endElement">Philosophie</h1>
-      <div className="main-text">{mainText}</div>
-      <div className="end-text ">{endText}</div>
-      <div className="colum">
-        {textsRight.map((text, index) => {
-          const { xOffset, yOffset } = calculateOffset(index, false);
-          return (
-            <div key={`right-${index}`} className="text" style={{
-              transform: `translate(${xOffset}px, ${yOffset}px)`
-            }}>
-              {text}
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
 

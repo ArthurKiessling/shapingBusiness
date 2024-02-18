@@ -64,9 +64,6 @@ const Navbar = () => {
               <NavLink to="/uebermich">Über mich</NavLink>
             </li>
             <li>
-              <NavLink to="/philosopie">Philosophie</NavLink>
-            </li>
-            <li>
               <NavLink to="/kontakt">Kontakt</NavLink>
             </li>
             <li>

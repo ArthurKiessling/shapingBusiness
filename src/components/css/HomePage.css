@@ -268,7 +268,7 @@
   
   .arrow-third{
 
-    transform:translateY(100%)translateX(-40%); 
+    transform:translateY(200%)translateX(-40%); 
     bottom: 50px;
     stroke:#87b1bf;
     z-index: 1;
