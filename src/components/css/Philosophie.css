@@ -226,8 +226,18 @@
   }
 
   .end {
-    font-size: 4vw;
-
+    text-align: center;
+    font-family:"Julius Sans One", sans-serif;
+    /* Zentrierter Text */
+    transform:  translateY(-10%);
+    /* Abstand zum unteren Inhalt */
+    font-weight: 500;
+    font-size: 5.5vw;
+  
+  }
+  .endslogan{
+    transform:  translateY(-0%);
+    font-size: 8vw;
   }
 
 }
