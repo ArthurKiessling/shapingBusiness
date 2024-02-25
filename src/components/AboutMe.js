@@ -139,8 +139,8 @@ const AboutMe = () => {
       </article>
 
       <div id="startElement" style={{ backgroundColor: themeColor }} className="banner"></div>
-      <div className={styles['about-me-container']}>
-        <h1 className={styles.h1}>Dafür stehe Ich</h1>
+      <div ref={targetRef} className={styles['about-me-container']}>
+        <h1  className={styles.h1}>Dafür stehe Ich</h1>
 
         {tableElements.map((row, rowIndex) => (
           <div key={rowIndex} className={styles.row}>
