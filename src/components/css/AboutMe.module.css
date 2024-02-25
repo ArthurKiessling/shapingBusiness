@@ -11,7 +11,22 @@
   padding: 20px;
   font-family: 'Lato', sans-serif;
 }
+.imagecontainer {
+  width: 100%; /* oder eine spezifische Breite */
+  height: 100vh; /* Höhe des Containers, passt die Abschneidehöhe an */
+  overflow: hidden; /* Verbirgt den überstehenden Teil des Bildes */
+  position: relative; /* Ermöglicht die absolute Positionierung des Kind-Elements */
+  display: flex;
+  justify-content: center; /* Zentriert das Bild horizontal */
+}
 
+.coverPicture {
+  position: absolute;
+  top: 50%; /* Zentriert das Bild vertikal */
+  transform: translateY(-32%); /* Verschiebt das Bild zurück, um es zu zentrieren */
+  min-width: 100%; /* Stellt sicher, dass das Bild mindestens so breit wie der Container ist */
+  height: auto; /* Erhält das Seitenverhältnis des Bildes */
+}
 .icon {
   display: flex;
   justify-content: center;
@@ -64,6 +79,10 @@
 }
 
 @media (max-width: 768px) {
+  .h1 {
+    font-size: 7.5vw;
+
+  }
   .row {
     flex-direction: column;
     align-items: center;
@@ -71,5 +90,22 @@
 
   .tableElement {
     width: 80%; /* Breitere Elemente auf kleineren Bildschirmen */
+  }
+
+  .imagecontainer {
+    margin-top: -40%;
+    width: 100%; /* oder eine spezifische Breite */
+    height: 100vh; /* Höhe des Containers, passt die Abschneidehöhe an */
+    overflow: hidden; /* Verbirgt den überstehenden Teil des Bildes */
+    position: relative; /* Ermöglicht die absolute Positionierung des Kind-Elements */
+    display: flex;
+    justify-content: center; /* Zentriert das Bild horizontal */
+  }
+  
+  .coverPicture {
+    position: absolute;
+ /* Zentriert das Bild vertikal *//* Verschiebt das Bild zurück, um es zu zentrieren */
+    min-width: 100%; /* Stellt sicher, dass das Bild mindestens so breit wie der Container ist */
+    height: auto; /* Erhält das Seitenverhältnis des Bildes */
   }
 }
