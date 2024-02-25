@@ -134,9 +134,11 @@ const HomePage = () => {
                   {i === 1 && "Erfolg liegt in der Kraft der Menschen,"}
                   {i === 2 && "Die gemeinsam an einem Strang ziehen."}
                   {i === 3 && "Dabei sind drei Faktoren wesentlich:"}
-                  {i === 4 && "- Klarheit"}
-                  {i === 5 && "- Konsequenz"}
-                  {i === 6 && "- Kommunikation"}
+                  <ul className="custom-ul" style={{ listStyleType: 'none', paddingLeft: '20px' }}>
+                    {i === 4 && <li className="custom-li">Klarheit</li>}
+                    {i === 5 && <li className="custom-li">Konsequenz</li>}
+                    {i === 6 && <li className="custom-li">Kommunikation</li>}
+                  </ul>
                   {i === 7 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
                 </motion.h1>
               ))}
@@ -146,21 +148,21 @@ const HomePage = () => {
         <img className="second" src={Upside}></img>
 
       </div >
-      <div  className="mid-part">
+      <div className="mid-part">
 
-          <Content targetRef={targetRef2} />
-          <div className=" arrow-third" onClick={handleScroll3}><DownArrow width="80" height="80" /></div>
+        <Content targetRef={targetRef2} />
+        <div className=" arrow-third" onClick={handleScroll3}><DownArrow width="80" height="80" /></div>
       </div>
       <div id="point3" className="banner alltop" ref={targetRef3}></div>
 
-      
+
       <div class="philo"  >
 
-        <Philosophie/>
+        <Philosophie />
 
       </div>
 
-      <div style={{ backgroundColor: themeColor }}  className="banner"></div>
+      <div style={{ backgroundColor: themeColor }} className="banner"></div>
       <ScrollProgressIndicator style={{ backgroundColor: themeColor }}
         startElementId="startElement"
         endElementId="endElement"

@@ -1,140 +1,232 @@
 .article2 {
-    margin-top:5%;
-    height: 80%;
-    
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
+  margin-top: -2%;
+  height: 60%;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  height: 105vh;
+  object-position: center top;
 }
 
 .services-list {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-  
-  }
-  
-  .services-list h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .services-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .services-list ul li {
-    font-family:'Nunito', sans-serif;
-    font-size: 18px;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-  }
-  
-  .services-list ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  }
-  
-  .services-list ul li:not(:last-child) {
-    border-bottom: 1px solid #eee;
-  }
-  
-  .services-list ul li:last-child {
-    margin-bottom: 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 10px auto;
+  padding: 10px;
+
+}
+
+.services-list h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 
 .header2 {
-    display: flex;
-    flex-direction: column; /* Elemente vertikal anordnen */
-    align-items: center; /* Elemente links ausrichten */
-    font-family:'Nunito', sans-serif;
-    font-weight: 300;
-    font-size: clamp(32px, 5vw, 90px);
-    color: white;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    /* Zentriert den .header horizontal */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Elemente vertikal anordnen */
+  align-items: center;
+  /* Elemente links ausrichten */
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: clamp(32px, 5vw, 90px);
+  color: white;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  /* Zentriert den .header horizontal */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  margin-bottom: 20px;
 }
 
-.leistung{
-    font-family:'Mogila', sans-serif;
-    font-weight: 300;
-    font-size: 3.5vw;
+.leistung {
+  font-family: 'Mogila', sans-serif;
+  font-weight: 300;
+  font-size: 3.5vw;
 }
 
-.adjustLeft .highlight-bar {
-  left: 25% !important; /* Verschiebe den Balken nach ganz links */
-}
-
-.adjustLeft .highlight-point {
-  left: 25% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
-}
-
-.adjustRight .highlight-bar {
-  left: 75% !important; /* Verschiebe den Balken nach ganz links */
-}
-
-.adjustRight .highlight-point {
-  left: 75% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
-}
-
-.alltop2{
+.alltop2 {
   margin-bottom: 20%;
 }
 
-@media (max-width: 768px) {
-  .leistung{
-    font-family:'Mogila', sans-serif;
-    font-weight: 300;
-    font-size:35px;
+
+
+.felder-beratung {
+
+  width: 90%;
+  /* Stellt sicher, dass die Felder die volle Breite ihrer Spalte einnehmen */
+  border: 2px solid #d3a700;
+  border-radius: 20px;
+  margin: 10px 0;
+  /* Angepasster vertikaler Abstand */
+  margin-left: 5%;
+  overflow: hidden;
+  font-size: 30px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s, background-color 1s;
+  transform: scale(1);
 }
-  .adjustRight{
-    display: none;
+
+.icon-wrapper-beratung {
+  border-bottom: 2px solid #d3a700;
+  /* Farbe der Linie zwischen Logo und Text */
+  padding: 20px;
+  /* Abstand innerhalb des Logo-Bereiches */
+  text-align: center;
+  transition: background-color 1s;
+}
+
+
+.title-wrapper-beratung {
+  font-size: 24px;
+  /* Anpassen nach Bedarf */
+  font-weight: 700;
+  /* Für eine kräftige Überschrift */
+  color: #d3a700;
+  /* Farbanpassung */
+  text-align: center;
+  padding: 10px;
+  /* Abstand */
+}
+
+.text-wrapper-beratung {
+  background-color: #d3a700;
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  padding: 10px;
+  font-size: 22px;
+  /* Anpassen nach Bedarf */
+}
+
+
+.icon-style-beratung {
+  font-size: 48px;
+  /* Größe des Icons */
+  color: #d3a700;
+  /* Farbe des Icons */
+}
+
+.felder-beratung:hover {
+  transform: scale(1.03);
+  /* Skaliert das Element leicht */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Fügt einen Schatten hinzu */
+}
+
+.felder-beratung:hover .icon-wrapper-beratung {
+  background-color: #d3a700;
+  /* Farbe des Textfeldes wird zum Logo-Hintergrund */
+}
+
+.felder-beratung:hover .text-wrapper-beratung {
+  background-color: transparent;
+  /* Text-Hintergrund wird transparent */
+  color: #d3a700;
+  /* Textfarbe ändert sich zur Umrandungsfarbe */
+}
+
+.felder-beratung:hover .icon-style-beratung {
+  color: white;
+  /* Icon-Farbe wird zu weiß */
+}
+
+.grid-container-beratung {
+  display: flex;
+  justify-content: center;
+  /* Zentriert den Container */
+  flex-wrap: wrap;
+  /* Erlaubt den Elementen, in die nächste Zeile zu fließen */
+  gap: 20px;
+  /* Abstand zwischen den Elementen */
+  max-width: 1200px;
+  /* Oder eine Breite nach Wahl */
+  margin: auto;
+  /* Zentriert den Container im übergeordneten Element */
+}
+
+.column-beratung {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Vertikaler Abstand zwischen den Feldern */
+  width: 48%;
+  /* Passt die Breite jeder Spalte an, um etwas Raum zwischen ihnen zu lassen */
+}
+
+.leftShift {
+  margin-top: 10%;
+}
+.IndicatorMobil{
+  display: none;
+}
+@media (max-width: 768px) {
+  .IndicatorMobil{
+    display: block;
   }
-  .adjustLeft .highlight-bar {
-    left: 5% !important; /* Verschiebe den Balken nach ganz links */
+  .leistung {
+    font-family: 'Mogila', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
   }
+  .services-list {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding:0;
   
-  .adjustLeft .highlight-point {
-    left: 5% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
-  }
-  
-  .adjustRight .highlight-bar {
-    left: 95% !important; /* Verschiebe den Balken nach ganz links */
-  }
-  
-  .adjustRight .highlight-point {
-    left: 95% !important; /* Passt die Verschiebung des Punktes an, falls nötig */
   }
 
-  .logoSvg{
-    
+  .grid-container-beratung {
+    flex-direction: column;
+    align-items: center;
+    /* Zentriert die Felder in der einzelnen Spalte */
+  }
+
+  .column {
+    width: 100%;
+    /* Die Spalten nehmen die volle Breite ein, sodass sie zu einer Spalte werden */
+  }
+
+  .felder-beratung {
+    width: 160%;
+    margin-left: -20%;
+    /* Optional: Anpassung der Breite der Felder für Mobilgeräte */
+  }
+
+  .leftShift {
+    margin-top: 0%;
+  }
+
+  .logoSvg {
+
     left: 50% !important;
     top: 20%;
-    }
+  }
 
-    .header2 { 
-      font-size: 40px;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: fit-content;
-      margin: auto;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);;
-     
+  .header2 {
+    font-size: 60px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    margin: auto;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    ;
+
   }
 }

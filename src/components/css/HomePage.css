@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 @font-face {
     font-family: 'Mogila';
     src: url('../../fonts/Mogila.otf') format('opentype');
@@ -31,11 +31,6 @@
   }
 
 
-
-
-
-
-
 .logoSvg {
     width: 30%;
     height: auto;
@@ -62,12 +57,12 @@
     display: flex;
     flex-direction: column; /* Elemente vertikal anordnen */
     align-items: center; /* Elemente links ausrichten */
-    font-family:'Nunito', sans-serif;
+    font-family:"Julius Sans One", sans-serif;
     font-weight: 300;
-    font-size: clamp(32px, 5vw, 90px);
+    font-size: clamp(32px, 5vw, 90px) !important;
     color: white;
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: 40%;
     /* Zentriert den .header horizontal */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -211,7 +206,7 @@
   .section-text {
     grid-area: text;
     margin-right: 20%;
-    margin-top: 10%;
+    margin-top: 20%;
   }  
   
     .second{
@@ -223,13 +218,31 @@
       justify-self: center;
   }
 
+  .custom-ul {
+    list-style-type: none; /* Entfernt die standardmäßigen Bullet Points */
+    padding-left: 20px; /* Fügt etwas Platz auf der linken Seite hinzu */
+    font-weight: 500;
+  }
+  
+  .custom-li::before {
+    margin-bottom: 8px;
+    content: ''; /* Kein Inhalt, da der Bullet Point rein stilistisch ist */
+    display: inline-block;
+    margin-right: 8px; /* Abstand zwischen dem Bullet Point und dem Text */
+    margin-left: -20px; /* Positioniert den Bullet Point innerhalb der Einrückung der Liste */
+    width: 6px; /* Breite des Bullet Points */
+    height: 6px; /* Höhe des Bullet Points */
+    background-color: black; /* Farbe des Bullet Points */
+    border-radius: 50%; /* Erzeugt einen perfekten Kreis */
+  }
+  
 
   .leftText{
     font-family: 'Nunito', sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     font-size: clamp(22px, 2vw, 40px);
   
-    text-align: center;
+    text-align: start;
 
 }
 

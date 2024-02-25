@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DeineSchriftart:wght@400;500;700&display=swap");
+
 
 .grid-container {
   display: grid;
@@ -78,21 +80,59 @@
 
 
 .felder {
-  text-align: center;
-  max-width: 80%;
-  padding: 13px;
-  margin: 10px 0;
-  /* Für Abstand zwischen den Feldern */
-  background-color: #87b1bf;
-  color: white;
+  border: 2px solid #87b1bf; /* Farbe der Umrandung des gesamten Feldes */
   border-radius: 20px;
-  font-size: 24px;
   font-family: 'Mogila', sans-serif;
-  font-weight: 200;
+  margin: 10px auto;
+  max-width: 80%;
+  overflow: hidden;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family:"Julius Sans One", sans-serif;
+  font-weight: 200;/* Verhindert, dass Inhalte außerhalb der Grenzen angezeigt werden */
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s, background-color 1s;
+  transform: scale(1);
+}
+
+.icon-wrapper {
+  border-bottom: 2px solid #87b1bf; /* Farbe der Linie zwischen Logo und Text */
+  padding: 20px; /* Abstand innerhalb des Logo-Bereiches */
+  text-align: center;
+  transition: background-color 1s; 
+}
+
+
+.text-wrapper {
+  background-color: #87b1bf; /* Hintergrundfarbe des Textbereichs */
+  color: white; /* Textfarbe */
+  text-align: center;
+  transition: background-color 1s, color 1s;
+}
+
+.icon-style {
+  font-size: 48px; /* Größe des Icons */
+  color: #87b1bf; /* Farbe des Icons */
+}
+.felder:hover {
+  transform: scale(1.2); /* Skaliert das Element leicht */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Fügt einen Schatten hinzu */
+}
+
+.felder:hover .icon-wrapper {
+  background-color: #87b1bf; /* Farbe des Textfeldes wird zum Logo-Hintergrund */
+}
+
+.felder:hover .text-wrapper {
+  background-color: transparent; /* Text-Hintergrund wird transparent */
+  color: #87b1bf; /* Textfarbe ändert sich zur Umrandungsfarbe */
+}
+
+.felder:hover .icon-style {
+  color: white; /* Icon-Farbe wird zu weiß */
 }
 
 .main {
-  margin: 5%;
+  margin: 3%;
   /* Maximale Breite des Fließtextes */
   text-align: center;
   /* Zentrierter Text */
@@ -104,12 +144,17 @@
 
 .end {
   text-align: center;
+  font-family:"Julius Sans One", sans-serif;
   /* Zentrierter Text */
- 
+  transform:  translateY(-100%);
   /* Abstand zum unteren Inhalt */
   font-weight: 500;
   font-size: 1.5vw;
 
+}
+.endslogan{
+  transform:  translateY(-150%);
+  font-size: 2vw;
 }
 
 .center-title {
@@ -119,9 +164,9 @@
 }
 
 .heading3 {
-  margin-top: 0%;
-  font-family: 'Mogila', sans-serif;
-  font-weight: 300;
+  margin-top: 10%;
+  font-family:"Julius Sans One", sans-serif;
+  font-weight: 500;
   font-size: 3.5vw;
   align-self: center;
 }

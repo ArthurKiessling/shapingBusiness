@@ -2,12 +2,13 @@
     font-family: 'Mogila';
     src: url('../fonts/Mogila.otf') format('opentype');
   }
+  @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 
 .animated-heading {
  
-    font-family:'Mogila', sans-serif;
+    font-family:"Julius Sans One", sans-serif;
     font-weight: 200;
-    font-size: 2.3vw;
+    font-size: 2.9vw;
     color: black;
     overflow: hidden; /* Stellt sicher, dass Buchstaben nicht vorzeitig sichtbar sind */
     white-space: nowrap; /* Verhindert Zeilenumbrüche während der Animation */
@@ -15,18 +16,22 @@
     text-align: left; /* Zentriert den Text der Überschrift */
     margin: 20px 0;
     margin-left: auto;
+    opacity: 0; /* Starte unsichtbar, bis inView wahr ist */
+    transition: opacity 1s ease-out; /* Weiche Übergänge für das Einblenden */
   }
 
-  .letter {
-    display: inline-block;
-    transform: translateY(100%);
-    animation: slideIn 0.5s forwards;
-    animation-delay: calc(var(--index) * 0.2s);
+  .heading-wrapper {
+    min-height: 60px;
   }
   
-  @keyframes slideIn {
+  
+  .animated-heading.animate {
+    opacity: 1;
+  }
+  
+  @keyframes fadeInUp {
     from {
-      transform: translateY(100%);
+      transform: translateY(20%);
       opacity: 0;
     }
     to {
@@ -40,8 +45,11 @@
       font-size: 30px;
       color: black;
 
-      margin-bottom: ;
+      margin-bottom: 0px;
       
+    }
+    .heading-wrapper {
+      min-height: 50px;
     }
     
   }

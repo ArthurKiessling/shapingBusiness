@@ -2,9 +2,12 @@
   "name": "shaping_business",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://85.215.128.128/",
+  "homepage": "https://85.215.128.128/",
   "dependencies": {
     "@floating-ui/react": "^0.26.9",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -23,13 +26,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +58,4 @@
     "gh-pages": "^6.1.1",
     "tailwindcss": "^3.4.1"
   }
-
-  
 }

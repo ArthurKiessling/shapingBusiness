@@ -17,13 +17,13 @@
        font-family: 'Nunito', sans-serif;
        font-weight: 300;
        font-size:1.1vw; 
-
+       transition: opacity 3s ease-out;
   }
   
   .content.visible {
     opacity: 1;
   }
-  
+
   /* Container für jeden Abschnitt, um Layout und Abstand zu steuern */
 
   .all{
@@ -41,7 +41,7 @@
   .section {
     grid-area: text;
     margin-left: 8%;
-    max-width: 80%;
+    max-width: 90%;
   }  
   
   .third{
