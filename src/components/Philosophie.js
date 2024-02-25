@@ -33,10 +33,12 @@ const Philosophie = () => {
 
     return { xOffset, yOffset };
   };
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+
 
   return (
     <div class="grid-container">
-      <div className='left'>
+      <div  ref={ref} className={`left ${inView ? 'fade-in fade-in-delay-2'  : 'initial-hide'}`}>
         {textsLeft.map((item, index) => {
           const { xOffset, yOffset } = calculateOffset(index, true);
           return (
@@ -54,12 +56,16 @@ const Philosophie = () => {
         })}
       </div>
       <div class="center">
+        <div ref={ref} className={`${inView ? 'fade-in fade-in-delay-1'  : 'initial-hide'}`}>
         <h1 className='heading3' id="endElement">Philosophie</h1>
         <p className='main'>{mainText}</p>
+        </div>
+        <div  ref={ref} className={`${inView ? 'fade-in fade-in-delay-3'  : 'initial-hide'}`}>
         <p className='main end'>Dafür Steht</p>
         <p className='main end endslogan'>{endText}</p>
+        </div>
       </div>
-      <div className='right'>
+      <div  ref={ref} className={`right ${inView ? 'fade-in fade-in-delay-2'  : 'initial-hide'}`}>
         {textsRight.map((item, index) => {
           const { xOffset, yOffset } = calculateOffset(index, false);
           return (

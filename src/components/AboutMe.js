@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
 import { FaHeartbeat, FaBrain, FaHandshake, FaSeedling, FaRocket, FaUsers } from 'react-icons/fa';
+import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 
 const AboutMe = () => {
   const tableElements = [
@@ -159,6 +160,8 @@ const AboutMe = () => {
           Die Kombination aus Know How, interdisziplinärer Erfahrung und einem sehr guten persönlichen Netzwerk  in Industrie, Wirtschaft und öffentlicher Hand in Österreich und über die Grenzen hinaus bringe ich in die Beratung und Begleitung von Veränderungen ein.
         </p>
       </div>
+      <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
+   
     </div>
   );
 };

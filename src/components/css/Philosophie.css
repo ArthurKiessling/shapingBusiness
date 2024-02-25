@@ -241,3 +241,29 @@
   }
 
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Startposition leicht nach unten für den Einblende-Effekt */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Endposition */
+  }
+}
+
+.initial-hide {
+  opacity: 0;
+  transform: translateY(20px); /* Stellen Sie sicher, dass Elemente ursprünglich verschoben sind */
+  visibility: hidden;
+  animation-fill-mode: forwards; /* Behält den Endzustand der Animation bei */
+}
+
+.fade-in {
+  /* Anwenden der Animation mit Dauer und Verzögerung */
+  visibility: visible; /* Stellen Sie sicher, dass das Element während der Animation sichtbar wird */
+}
+.fade-in-delay-1 { animation: fadeIn 1s ease-out forwards;  }
+.fade-in-delay-2 {animation-delay: 5s; animation: fadeIn 1s ease-out forwards;  }
+.fade-in-delay-3 {animation-delay: 10s; animation: fadeIn 5s ease-out forwards;  }
+.fade-in-delay-4 { animation-delay: 2s; }
