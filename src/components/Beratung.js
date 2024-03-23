@@ -8,7 +8,7 @@ import { useTheme } from './ThemeContext.js';
 import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb, faStream, faComments, faBusinessTime, faRocket, faHeart, faTrophy } from '@fortawesome/free-solid-svg-icons';
-import background from "../images/sitz_gelb.png";
+import background from "../images/sitz_gelb_v2.jpg";
 import Upside from "../images/sitz_gelb.png";
 import Whiteboard from "../images/whiteboard.png";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -51,7 +51,7 @@ const HomePage = () => {
     hidden: { opacity: 0, y: 100 },
     visible: i => ({
       opacity: 1,
-      y: 20,
+      y: 0,
       transition: {
         delay: i * 1,
         duration: 1,
@@ -93,34 +93,29 @@ const HomePage = () => {
 
   const services = [
     {
-      title: "Strategieberatung",
+      title: "Strategie & Change",
       description: "Unterstützung bei der Entwicklung und Implementierung von Business-Strategien, Change-Management-Prozessen, Kulturgestaltung und Innovationsförderung.",
       icon: faBusinessTime,
       id:"tab1"
     },
     {
-      title: "Kommunikationsberatung",
+      title: "Kommunikation & Reputation",
       description: "Erarbeitung integrierter Kommunikationsstrategien und -konzepte, die sowohl interne als auch externe Kanäle umfassen, einschließlich Krisenkommunikation.",
       icon: faComments,
       id:"tab2"
     },
     {
-      title: "Public Affairs & Stakeholdermanagement",
+      title: "Stakeholder Management",
       description: "Beratung zur Interessensvertretung und zum strategischen Management von Stakeholderbeziehungen, um Ihre Unternehmensziele effektiv zu unterstützen.",
       icon: faComments,
       id:"tab3"
     },
-    {
-      title: "Reputation- und Markenmanagement",
-      description: "Stärkung der Markenidentität und Verbesserung der Reputation für Organisationen, Standorte und Personen durch gezielte Maßnahmen, inklusive Employer Branding.",
-      icon: faComments,
-      id:"tab4"
-    },
+    
     {
       title: "Executive Coaching",
       description: "Individuelles Coaching und Sparring für Führungskräfte zur Steigerung der persönlichen Effektivität und zur Bewältigung spezifischer Führungs- und Managementherausforderungen.",
       icon: faComments,
-      id:"tab5"
+      id:"tab4"
     },
     // Füge bei Bedarf weitere Dienstleistungen mit Icons hinzu
   ];
@@ -134,7 +129,7 @@ const HomePage = () => {
       <article className="article2">
         <img className="cover" src={background} />
         <div className="header2">
-          <h1 className="conn">BERATUNG</h1>
+          <h1 className="conn">ZUKUNFT GESTALTEN</h1>
         </div>
 
         <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
@@ -153,9 +148,7 @@ const HomePage = () => {
           <div className="column-beratung">
             {leftColumnServices.map((service, index) => (
               <div key={`left-${index}`} className="felder-beratung" >
-                <div className="icon-wrapper-beratung">
-                  <FontAwesomeIcon icon={service.icon} className="icon-style-beratung" />
-                </div>
+                
                 <div id={service.id}className="title-wrapper-beratung">
                   {service.title} {/* Überschrift hinzugefügt */}
                 </div>
@@ -169,9 +162,7 @@ const HomePage = () => {
           <div className="column-beratung leftShift" >
             {rightColumnServices.map((service, index) => (
               <div key={`right-${index}`} className="felder-beratung" >
-             <div className="icon-wrapper-beratung">
-                  <FontAwesomeIcon icon={service.icon} className="icon-style-beratung" />
-                </div>
+            
                 <div id={service.id}className="title-wrapper-beratung">
                   {service.title} {/* Überschrift hinzugefügt */}
                 </div>

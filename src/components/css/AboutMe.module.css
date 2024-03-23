@@ -75,9 +75,18 @@
   height: auto;
 }
 
-.fullWidthText {
+.twocolumnscontainer {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin-top: 40px;
+  max-width: 100%; /* Maximale Breite des Containers */
+  margin: auto; /* Zentriert den Container */
+}
+
+.column {
+  
+  flex: 1; /* Lässt beide Spalten den verfügbaren Platz gleichmäßig aufteilen */
+  padding: 20px; /* Fügt innen Abstand hinzu */
 }
 
 @media (max-width: 768px) {

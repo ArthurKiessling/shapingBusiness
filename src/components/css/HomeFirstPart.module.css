@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+.centered {
+  margin-inline: auto;
+  width: 80%;
+  margin-top:20%;
+  margin-bottom: 20%;
+ margin-bottom: 5%;
+  text-align: center;
+  font-family:"Julius Sans One", sans-serif; /* Modern und schlicht */
+}
+
+.slogan{
+  font-weight: 300;
+  margin-bottom: 3%;
+  font-size: clamp(32px, 3vw, 40px) !important;
+}
+
+
+.fließContent{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: clamp(15px, 3vw, 20px) !important;
+  margin-bottom: 2%;
+  display: block;
+}
+
+.boxesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start; /* Stellt sicher, dass alle Boxen oben ausgerichtet sind */
+}
+
+.box {
+  width: 70%;
+  margin: 10px;
+  margin-top: 10%;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+  transition: box-shadow 0.3s ease, transform 0.3s, background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  /* Definiert eine feste Höhe für die geschlossenen Boxen */
+   /* Diese Höhe sollte die Höhe des Headers plus etwas Puffer sein */
+  display: flex;
+  flex-direction: column; /* Organisiert Inhalt vertikal */
+}
+
+/* Stil für den Header, der immer sichtbar ist */
+.header {
+  background-color: #87b1bf;
+  color: white;
+  padding: 5px;
+  font-size: clamp(25px, 3vw, 30px);
+  border-radius: 18px 18px 0 0; /* Abgerundete Ecken am oberen Teil der Box */
+  display: flex;
+  justify-content: center; /* Zentriert den Titel horizontal */
+  align-items: center; /* Zentriert den Titel vertikal */
+  height: 50px; /* Definierte Höhe für den Header */
+}
+
+/* Stil für den Inhalt, der beim Klicken ein-/ausgeblendet wird */
+.content {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: clamp(18px, 3vw, 20px) !important;
+
+  padding: 10px;
+  color: #333;
+  /* Content nimmt den verfügbaren Raum ein */
+  flex-grow: 1;
+  display: none; /* Standardmäßig ausgeblendet */
+}
+
+/* Ändert den Stil, wenn die Box geöffnet ist */
+.box.open .content {
+  display: flex; /* Zeigt den Inhalt, wenn die Box geöffnet ist */
+  flex-direction: column; /* Organisiert Inhalt vertikal */
+  height: auto; /* Ermöglicht es dem Inhalt, die Höhe basierend auf dem Inhalt einzunehmen */
+}
+
+.box:hover {
+  color: #87b1bf;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Farbe der Umrandung beim Hovern */
+}
+.box:hover .header  {  color: #87b1bf;
+  background-color: #fff; /* Weiße Textfarbe beim Hovern */
+
+}
+/* Veränderte Farbe bei geöffneter Box */
+.open .header { 
+}
+
+.icon {
+  margin-right:5px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabbuttons button {
+  border: 2px solid #cccccc;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.tabbuttons button.active {
+  border-color: #007bff;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.tabcontent {
+  text-align: center;
+}
+.tabscontainer {
+  width: 70%;
+  margin: auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  border: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tabcontent {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .boxesContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+}

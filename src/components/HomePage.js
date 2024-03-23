@@ -1,7 +1,7 @@
 import "./css/HomePage.css";
 import React from 'react';
 
-import background from "../images/Quer_turkis.jpg";
+import background from "../images/ganz_sitz.jpg";
 import Upside from "../images/hoch_sitz.jpg";
 import Whiteboard from "../images/whiteboard.png";
 
@@ -19,6 +19,7 @@ import seedrandom from 'seedrandom';
 import Philosophie from "./Philosophie";
 import Content from "./Content.js";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
+import HomeFirstPart from "./HomeFirstPart";
 
 const HomePage = () => {
   const targetRef = useRef(null);
@@ -96,21 +97,24 @@ const HomePage = () => {
   return (
 
     <div>
+ 
       <article className="article">
-        <img className="first" src={background} />
+        <div className="imagecontainer">
+      <img className="first" src={background} />
+      </div>
         <div className="header">
-          <h1 className="conn">CONNECTING PEOPLE,</h1>
-          <h1 className="shap">SHAPING BUSINESS.</h1>
+          <h1 className="conn">Angelika</h1>
+          <h1 className="shap">Kiessling-Kranzelmayer</h1>
         </div>
+
 
         <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
         <div className="scroll-down-arrow" onClick={handleScroll}><DownArrow width="40" height="40" /></div>
       </article>
+      <div  style={{ backgroundColor: themeColor }} id="startElement"className="banner"></div>
 
-      <div id="startElement" style={{ backgroundColor: themeColor }} className="banner"></div>
 
-
-      <div id="point1" className="first-part" ref={targetRef}>
+      {/*<div id="point1" className="first-part" ref={targetRef}>
         <div ref={ref} className="section-text">
           <span
             style={{
@@ -147,14 +151,56 @@ const HomePage = () => {
         </div>
         <img className="second" src={Upside}></img>
 
+      </div >*/}
+              
+    
+    <div id="point1" className="first-part" ref={targetRef}>
+        <div ref={ref} className="section-text">
+          <span
+            style={{
+              transform: isInView ? "none" : "none",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          >
+            <motion.div
+            >
+              {[...Array(9)].map((_, i) => (
+                <motion.h1
+                  ref={ref}
+                  key={i}
+                  custom={i} // Übergabe der Reihenfolge des Elements als custom Prop
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate={animateState}
+                  className="leftText"
+                >
+                  {i === 1 && "Erfolg liegt in der Kraft der Menschen,"}
+                  {i === 2 && "Die gemeinsam an einem Strang ziehen."}
+                  {i === 3 && "Dabei sind drei Faktoren wesentlich:"}
+                  <ul className="custom-ul" style={{ listStyleType: 'none', paddingLeft: '20px' }}>
+                    {i === 4 && <li className="custom-li">Klarheit</li>}
+                    {i === 5 && <li className="custom-li">Konsequenz</li>}
+                    {i === 6 && <li className="custom-li">Kommunikation</li>}
+                  </ul>
+                  {i === 7 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
+                </motion.h1>
+              ))}
+            </motion.div>
+          </span>
+        </div>
+        <HomeFirstPart ></HomeFirstPart>
+
       </div >
+    {/*<div style={{ backgroundColor: themeColor }} className="banner"></div>
+  {/*
       <div className="mid-part">
 
         <Content targetRef={targetRef2} />
-        <div className=" arrow-third" onClick={handleScroll3}><DownArrow width="80" height="80" /></div>
+        <div className="arrow-third" onClick={handleScroll3}><DownArrow width="80" height="80" /></div>
       </div>
-      <div id="point3" className="banner alltop" ref={targetRef3}></div>
-
+      <div id="point2" className="banner alltop" ref={targetRef3}></div>
+*/}
 
       <div class="philo"  >
 
@@ -162,11 +208,11 @@ const HomePage = () => {
 
       </div>
 
-      <div style={{ backgroundColor: themeColor }} className="banner"></div>
+      <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
       <ScrollProgressIndicator style={{ backgroundColor: themeColor }}
         startElementId="startElement"
         endElementId="endElement"
-        pointElementIds={["point1", "point2", "point3"]}
+        pointElementIds={["point2"]}
       />
     </div>
   );

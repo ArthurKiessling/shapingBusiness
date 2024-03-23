@@ -65,19 +65,19 @@ const Navbar = () => {
        <div style={{ backgroundColor: themeColor }} className={`nav-elements    ${showNavbar && 'active'}`}>
           <ul className="px-6 py-8 ">
             <li>
-              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/">Home</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink onClick={() =>{setThemeColor('#d3a700'); scrollToTop();}} to="/beratung">Beratung</NavLink>
+              <NavLink onClick={() =>{setThemeColor('#c1b3a5'); scrollToTop();}} to="/beratung">Beratung</NavLink>
             </li>
             <li>
               <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/uebermich">Über mich</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/kontakt">Kontakt</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/kontakt">Kontakt</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#87b1bf'); scrollToTop();}} to="/kontakt">de | en</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/kontakt">de | en</NavLink>
             </li>
           </ul>
         </div>
