@@ -6,7 +6,7 @@
   width: 50%;
   margin-top:2%;
 
- margin-bottom: 5%;
+ margin-bottom: 10%;
   text-align: center;
   font-family:"Julius Sans One", sans-serif; /* Modern und schlicht */
 }
@@ -58,6 +58,7 @@
 }
 .tabscontainer {
   width: 70%;
+  max-width: 80%;
   margin: auto;
 }
 
@@ -70,30 +71,38 @@
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
   font-size: clamp(23px, 3vw, 30px) !important;
+
+  color: #2E4053;
 }
 
 .tab {
   border: none;
   width: 40%;
+  max-width: 50%;
   margin-inline: 2%;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
-  background-color: transparent;
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 30px;
-  cursor: pointer;
+  font-family:"Julius Sans One", sans-serif;
   outline: none;
-  transition: background-color 0.3s;
   background-color: #f0f0f0;
-  padding: 5px;
+  font-weight: 400;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; 
+  transform: scale(1.0);
 }
 
 .tab.active {
   border: solid 1px;
   background-color: #bfbfbf;;
   color: white;
+
+}
+.tab:hover{
+  background-color: #bfbfbf;;
+  transform: scale(1.05);
 }
 
 .tabcontent {
@@ -106,15 +115,15 @@
 @media (max-width: 768px) {
   .tabcontent {
     width: 120%;
-    margin-inline:-10%;
+ 
   }
 .tabs{
   display: list-item;
-  width: 120%;
-margin-inline:-10%;}
+  width: 150%;
+margin-inline:-25%;}
     .tab {
       margin-top:3%;
-      width: 80%;
+      width: 90%;
       margin-inline: none;}
 
       .tabscontainer {

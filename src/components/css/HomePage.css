@@ -67,15 +67,15 @@
     display: flex;
     flex-direction: column;
     /* Elemente vertikal anordnen */
-    align-items: center;
+    align-items: left;
     /* Elemente links ausrichten */
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     font-size: clamp(32px, 5vw, 90px) !important;
     color: white;
     position: absolute;
-    top: 60%;
-    left: 20%;
+    top: 30%;
+    left: 3%;
     /* Zentriert den .header horizontal */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   
@@ -87,6 +87,16 @@
     transform: translateX(-50%); 
     margin-bottom: 20px;
     /* Keine zusätzliche Anpassung nötig, wenn dieses Element linksbündig sein soll */
+}
+.firstHead {
+  font-size: clamp(32px, 4vw, 90px) !important;
+  /* Keine zusätzliche Anpassung nötig, wenn dieses Element linksbündig sein soll */
+}
+.secondHead{
+ 
+  margin-bottom: 20px;
+  font-size: clamp(32px, 3.5vw, 90px) !important;
+  /* Keine zusätzliche Anpassung nötig, wenn dieses Element linksbündig sein soll */
 }
 
 .shap {/* Verschiebt das zweite Element nach rechts */
@@ -105,19 +115,11 @@
     text-shadow: 0 0 8px rgba(0,0,0,0.5); /* Sorgt für bessere Lesbarkeit auf unterschiedlichen Hintergründen */
   }
   .arrow-second{
-   
     stroke:black;
   }
   .arrow-third{
-
-    transform:translateY(-350%)translateX(-48%); 
-    bottom: 50px;
-    stroke:#87b1bf;
-    z-index: 1;
-
-    position: absolute;
-    margin-top: 20px;
-    left: 50%; /* Beginne bei 50% des Elternelements */
+  
+    stroke:black;
   }
   .mid-part{
     display: flex;
@@ -212,6 +214,7 @@
      /* Zentriert den Container */
     margin-inline: auto;
     text-align: center;
+    margin-bottom: 20%;
      /* Teilt den Container in zwei Spalten mit unterschiedlichen Größen */
 
   }
@@ -229,24 +232,7 @@
       justify-self: center;
   }
 
-  .custom-ul {
-    list-style-type: none; /* Entfernt die standardmäßigen Bullet Points */
-    padding-left: 20px; /* Fügt etwas Platz auf der linken Seite hinzu */
-    font-weight: 500;
-  }
-  
-  .custom-li::before {
-    margin-bottom: 8px;
-    content: ''; /* Kein Inhalt, da der Bullet Point rein stilistisch ist */
-    display: inline-block;
-    margin-right: 8px; /* Abstand zwischen dem Bullet Point und dem Text */
-    margin-left: -20px; /* Positioniert den Bullet Point innerhalb der Einrückung der Liste */
-    width: 6px; /* Breite des Bullet Points */
-    height: 6px; /* Höhe des Bullet Points */
-    background-color: black; /* Farbe des Bullet Points */
-    border-radius: 50%; /* Erzeugt einen perfekten Kreis */
-  }
-  
+
 
   .leftText{
     font-family: 'Nunito', sans-serif;
@@ -295,17 +281,11 @@
     display: none;
   
   }
-
+.listli::marker{
+  color: rgba(0, 0, 0, 0);
+}
   .arrow-third{
-
-    transform:translateY(200%)translateX(-40%); 
-    bottom: 50px;
-    stroke:#87b1bf;
-    z-index: 1;
-
-    position: absolute;
-    margin-top: 20px;
-    left: 50%; /* Beginne bei 50% des Elternelements */
+/* Beginne bei 50% des Elternelements */
   }
 
   

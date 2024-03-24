@@ -10,13 +10,14 @@
 .content {
      /* Zentriert den Text und setzt einen oberen und unteren Abstand */
      max-width: auto; /* Begrenzt die Breite des Fließtextes für bessere Lesbarkeit */
+     
      opacity: 0;
      margin-left: auto;
      transition: opacity 1s ease-out;
      text-align: left; 
        font-family: 'Nunito', sans-serif;
        font-weight: 300;
-       font-size:1.1vw; 
+       font-size: clamp(23px, 2vw, 25px) !important;
        transition: opacity 3s ease-out;
   }
   
@@ -33,15 +34,12 @@
     margin-top: 2%;
   }
   .alltop {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Teilt den Container in zwei Spalten mit unterschiedlichen Größen */
-    grid-template-areas: 
-      "image text";
+  
   }
   .section {
-    grid-area: text;
-    margin-left: 8%;
-    max-width: 90%;
+    margin-bottom: 5%;
+    margin-inline: auto;
+    max-width: 50%;
   }  
   
   .third{
@@ -76,12 +74,14 @@
     "image";
 }
 .content { 
-  font-size: 20px;
+  
 }
 
 .section{
   margin-top: 20%;
+  margin-bottom: 30%;
   grid-area: text;
+  max-width: 100%;
 }
 
 /* Stellen Sie sicher, dass die Text-Container die korrekten Bereiche zugewiesen bekommen */
@@ -89,14 +89,10 @@
 .text2 { grid-area: text2; }
 .text3 { grid-area: text2; }
 
-.content {
-  font-size: 2vw;
-}
 
 }
 
   @media (max-width: 600px) {
-    .content { font-size: 19px;
-    }
+
    
   }

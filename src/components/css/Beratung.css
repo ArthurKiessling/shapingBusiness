@@ -19,7 +19,7 @@
   font-family: Arial, sans-serif;
   margin: 10px auto;
   padding: 10px;
-
+margin-top: 5%;
 }
 
 .services-list h2 {
@@ -57,7 +57,7 @@
 }
 
 .alltop2 {
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 
 }
 
@@ -105,9 +105,9 @@
 .text-wrapper-beratung {
   background-color: #c1b3a5;
   color: white;
-  text-align: center;
+  text-align: left;
   font-weight: 300;
-  padding: 10px;
+  padding: 20px;
   font-size: 22px;
   /* Anpassen nach Bedarf */
 }
@@ -173,6 +173,42 @@
 .IndicatorMobil{
   display: none;
 }
+.h3 { 
+  font-family:"Julius Sans One", sans-serif;
+  font-weight: 300;
+  font-size: clamp(38px, 5vw, 50px);
+color: #2E4053;
+text-align: center;
+margin-inline: auto;
+margin-top: 5%;
+padding-inline: 20px;
+max-width: 70%;
+margin-bottom: 10px;
+transition: transform 0.3s ease;
+}
+.h3:hover { 
+  transform: scale(1.05) ;
+
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+ul.custom-list {
+  list-style-type: none; /* Entfernt Standard-Listensymbole */
+  padding-left: 0; /* Entfernt Standard-Padding der Liste */
+}
+ul.custom-list li {
+  position: relative; /* Ermöglicht die korrekte Positionierung des ::before Inhalts */
+  text-indent: 0; /* Zieht die erste Zeile jedes Listenelements nach links */
+  padding-left: 1em; /* Fügt links Padding hinzu, damit der Text nicht über den Bindestrich geht */
+}
+ul.custom-list li::before {
+  content: "-"; /* Fügt den Bindestrich hinzu */
+  position: absolute; /* Ermöglicht die absolute Positionierung des Bindestrichs */
+  left: 0; /* Positioniert den Bindestrich am Anfang des Elements */
+}
+
+
 @media (max-width: 768px) {
   .IndicatorMobil{
     display: block;

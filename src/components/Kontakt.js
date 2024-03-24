@@ -43,23 +43,23 @@ const Kontakt = () => {
     <div className="contact-info">
     <div className="felder-beratung">
         <div className="title-wrapper-beratung">{content[language].email}</div>
-        <div className="text-wrapper-beratung">
+        <div className="text-wrapper-kontakt">
           <a href={`mailto:${content[language].emailAddress}`}>{content[language].emailAddress}</a>
         </div>
       </div>
       <div className="felder-beratung">
         <div className="title-wrapper-beratung">{content[language].telefon}</div>
-        <div className="text-wrapper-beratung">{content[language].phone}</div>
+        <div className="text-wrapper-kontakt">{content[language].phone}</div>
       </div>
     
       <div className="felder-beratung">
         <div className="title-wrapper-beratung">{content[language].anschrift}</div>
-        <div className="text-wrapper-beratung">{content[language].address}</div>
+        <div className="text-wrapper-kontakt">{content[language].address}</div>
       </div>
       <div className="felder-beratung">
   
         <div className="title-wrapper-beratung">      <FaLinkedin/>{content[language].linkedin}</div>
-        <div className="text-wrapper-beratung">{content[language].linkedinName}</div>
+        <div className="text-wrapper-kontakt">{content[language].linkedinName}</div>
       </div>
     </div>
     <div  style={{ backgroundColor: '#c1b3a5' }} className="banner"></div>

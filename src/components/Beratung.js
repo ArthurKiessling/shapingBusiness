@@ -92,38 +92,58 @@ const HomePage = () => {
   const content = {
     de: {
         heading:"ZUKUNFT GESTALTEN",
-        secondheading:"Meine Leistungen", },
+        secondheading:"Meine Leistungen",
+        contact:"Zu meinen Kontaktdaten"
+       },
     en:  {
       heading:"SHAPING FUTURE",
       secondheading:"My services",
+      contact:"To my contact details"
     },
   };
   const services = {de:[
     {
       title: "Strategie & Change",
-      description: "Unterstützung bei der Entwicklung und Implementierung von Business-Strategien, Change-Management-Prozessen, Kulturgestaltung und Innovationsförderung.",
+      description:(<ul className="custom-list">
+        <li>Planung und Begleitung von Change- und Transformationsprozessen</li>
+        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur.</li>
+        <li>Entwicklung und Implementierung von Geschäftsstrategien.</li>
+      </ul>) 
+      ,
       icon: faBusinessTime,
       id:"tab1"
     },
     {
       title: "Kommunikation & Reputation",
-      description: "Erarbeitung integrierter Kommunikationsstrategien und -konzepte, die sowohl interne als auch externe Kanäle umfassen, einschließlich Krisenkommunikation.",
-      icon: faComments,
+      description: (<ul className="custom-list">
+        <li>Erarbeitung integrierter Kommunikationsstrategien und -konzepte für interne und externe Zielgruppen.</li>
+        <li>Professionelle Krisenkommunikation bei kritischen Ereignissen</li>
+        <li>Positionierung von Personen, Organisationen, Standorten, Produkten & Dienstleitungen  inklusive Employer Branding</li>
+      </ul>) 
+      ,icon: faComments,
       id:"tab2"
     },
     {
-      title: "Stakeholder Management",
-      description: "Beratung zur Interessensvertretung und zum strategischen Management von Stakeholderbeziehungen, um Ihre Unternehmensziele effektiv zu unterstützen.",
-      icon: faComments,
+      title: "Executive Coaching",
+      description: (<ul className="custom-list">
+        <li>Sparring und Begleitung für Führungskräfte</li>
+        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur.</li>
+        <li>Entwicklung und Implementierung von Geschäftsstrategien.</li>
+      </ul>) 
+      , icon: faComments,
       id:"tab3"
     },
-    
     {
-      title: "Executive Coaching",
-      description: "Individuelles Coaching und Sparring für Führungskräfte zur Steigerung der persönlichen Effektivität und zur Bewältigung spezifischer Führungs- und Managementherausforderungen.",
-      icon: faComments,
+      title: "Stakeholder Management",
+      description: (<ul className="custom-list">
+        <li>Public Affairs Consulting</li>
+        <li>Individuelle Beratung bei Change- und Krisenthemen</li>
+      </ul>) 
+      ,icon: faComments,
       id:"tab4"
     },
+    
+   
     // Füge bei Bedarf weitere Dienstleistungen mit Icons hinzu
   ],
   en:[
@@ -211,28 +231,14 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-        <div id="point3" className="banner alltop2"></div>
+        
 
       </div >
 
-
+      <a href="/kontakt" ><h1 className="h3" >{content[language].contact}</h1></a>
+      <div id="point3" className="banner alltop2"></div>
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
-      <div className="">
-        <ScrollProgressIndicator
-          themeColor={themeColor}
-          startElementId="startElement"
-          endElementId="endElement"
-          pointElementIds={[, "tab1", "tab2","tab3","tab4","tab5"]}
-        />
-      </div>
-      <div className="IndicatorMobil">
-        <ScrollProgressIndicator
-          themeColor={themeColor}
-          startElementId="startElementMobil"
-          endElementId="endElement"
-          pointElementIds={["tab1", "tab2","tab3","tab4","tab5",]}
-        />
-      </div>
+      
     </div>
   );
 };

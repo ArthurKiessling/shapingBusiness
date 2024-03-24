@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './css/HomeFirstPart.module.css';
 import { useLanguage } from '../effekts/LanguageProvider.js';
+import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 const HomeFirstPart = ({ startAnimation }) => {
   const { language, toggleLanguage } = useLanguage();
   const initialTab = language === 'en' ? 'Klarheit' : 'Klarheit';
@@ -9,9 +10,9 @@ const HomeFirstPart = ({ startAnimation }) => {
 // Verwendung von initialTab als initialer Zustand für activeTab
 const [activeTab, setActiveTab] = useState(initialTab);
   const tabNames = {
-    Klarheit: { de: 'Klarheit', en: 'Clarity' },
-    Konsequenz: { de: 'Konsequenz', en: 'Consistency' },
-    Kommunikation: { de: 'Kommunikation', en: 'Communication' },
+    Klarheit: { de: 'KLARHEIT', en: 'Clarity' },
+    Konsequenz: { de: 'KONSEQUENZ', en: 'Consistency' },
+    Kommunikation: { de: 'KOMMUNIKATION', en: 'Communication' },
   };
 
   const containerVariants = {
@@ -31,9 +32,9 @@ const [activeTab, setActiveTab] = useState(initialTab);
 
   const TabContent = ({ lang,tab}) => {
     const contents ={de: {
-      Klarheit: "Wo soll es hingehen, was ist eigentlich das Ziel? Das ist eine der wichtigsten Fragen, wenn es um Erfolg geht. Ich unterstütze Menschen und Organisationen, Klarheit in ihrer Zielsetzung zu finden, um den Weg zum Ziel konsequent beschreiten zu können.",
-      Konsequenz: "Am Weg zum Ziel gibt es unzählige Weggabelungen, Stolpersteine und Ablenkungen. Welcher Weg ist der richtige, wie treffe ich Entscheidungen und wie finde ich in einer sich dynamisch verändernden komplexen Welt den Weg zum Ziel? Mit analytischem und gleichzeitig agilem Vorgehen helfe ich, den richtigen Weg zu finden und diesen kraftvoll und zielstrebig zu beschreiten.",
-      Kommunikation: "Wen brauche ich, um meine Ziele zu erreichen, wer hat Einfluss auf meinen Erfolg? Mit der Definition relevanter Stakeholder, dem Aufbau tragfähiger Beziehungen sowie einem aktiven Stakeholdermanagement helfe ich, Brücken zu relevanten Stakeholdern zu bauen, um eine Kultur des Miteinanders und „An-einem-Strang-Ziehens“ zu etablieren. Dazu braucht es Botschaften, die ankommen.",
+      Klarheit: "Wo soll es eigentlich hingehen? Eine der wichtigsten Fragen, wenn es um Erfolg geht. Ich unterstütze Menschen und Organisationen, Klarheit in ihrer Zielsetzung zu finden, um den Weg zum Ziel konsequent beschreiten zu können.",
+      Konsequenz: "Mit analytischem und gleichzeitig agilem Vorgehen helfe ich, den richtigen Weg zu finden und diesen kraftvoll und zielstrebig zu beschreiten.",
+      Kommunikation: "Mit der Definition relevanter Stakeholder und einem aktivem Stakeholder Management helfe ich, Brücken zu relevanten Stakeholdern zu bauen, um eine Kultur des Miteinanders und „An-einem-Strang-Ziehens“ zu etablieren. Dazu braucht es Botschaften, die ankommen.",
     },
     en:
     {
@@ -54,15 +55,18 @@ const [activeTab, setActiveTab] = useState(initialTab);
             key={tabKey} 
             custom={index} 
             variants={itemVariants} 
-            onClick={() => setActiveTab(tabKey)}
-            className={`${styles.tab} ${activeTab === tabKey ? styles.active : ''}`}
+            onClick={() => {
+              const element = document.getElementById(tabKey);
+              if (element) {
+                const targetY = getElementY(element);
+                smoothScrollTo(targetY, 1000);
+              }
+            }}
+            className={`${styles.tab} ${activeTab === tabKey ? '' : ''}`}
           >
             {tabNames[tabKey][language]}
           </motion.button>
         ))}
-      </motion.div>
-      <motion.div className={styles.tabcontent} variants={contentVariants}>
-        <TabContent tab={activeTab} lang={language} />
       </motion.div>
     </motion.div>
   );

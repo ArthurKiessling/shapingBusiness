@@ -36,9 +36,9 @@ const Philosophie = () => {
   const { language, toggleLanguage } = useLanguage();
   const texts = {
     de: {
-      mainText: "Klarheit in der Zielsetzung, Konsequenz in der Umsetzung, erfolgreiche Kommunikation und Einbindung relevanter Stakeholder führen zu Effizienz und Effektivität bei der Erreichung von persönlichen und unternehmerischen Zielen. Meinen Kund*innen stelle ich meine langjährige Erfahrung aus erfolgreich umgesetzten Projekten in Industrie, Konzernstruktur und Start-Up Organisation sowie meine Expertise in strategischer Planung, allen Disziplinen moderner Kommunikation sowie professionellem Stakeholdermanagement zur Verfügung.",
+      mainText: "In einer dynamischen Zeit mit Veränderungen in Geopolitik, Klimawandel, digitaler Transformation unterstütze ich Organisationen und Entscheider dabei, Komplexität zu reduzieren, Strategien für die Geschäftsentwicklung zu erarbeiten, relevante Stakeholder einzubinden und diese durch professionelle Kommunikationsmaßnahmen auf den gemeinsamen Weg mitzunehmen. Die Kombination aus Know-How, interdisziplinärer Erfahrung und einem sehr guten persönlichen Netzwerk in Industrie, Wirtschaft und öffentlicher Hand in Österreich und über die Grenzen hinaus bringe ich in die Beratung und in die Begleitung von Veränderungen ein.",
       endText: "Connecting People, Shaping Business.",
-      philosophy: "Philosophie",
+      philosophy: "Pilosophie",
       standsFor: "Dafür Steht",
     },
     en: {

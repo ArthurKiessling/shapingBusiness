@@ -11,7 +11,7 @@ import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
-import { FaHeartbeat, FaBrain, FaHandshake, FaSeedling, FaRocket, FaUsers } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { MdCompost } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
 import { PiCompassToolBold } from "react-icons/pi";
@@ -24,8 +24,11 @@ const AboutMe = () => {
     [
       {
         title: "MIT HERZ & HIRN",
-        description: "Empathisch, herzlich, mutig, offen. Analytisch, strukturiert, ergebnis-, lösungsorientiert. Kollaborativ, kommunikations-, umsetzungsstark.",
-        icon:  <img 
+        description: (<ul className="about-list">
+        <li>empathisch, herzlich, mutig, offen</li>
+        <li>analytisch, strukturiert, ergebnis-, lösungsorientiert</li>
+        <li>kollaborativ, kommunikations-, umsetzungsstark</li>
+      </ul>), icon:  <img 
         src={heartbrain}
         alt="Herz- und Gehirn-Icon" 
         color='white'
@@ -34,21 +37,33 @@ const AboutMe = () => {
       },
       {
         title: "FACHLICH KOMPETENT",
-        description: "Kommunikation & Public Affairs. Reputation-, Stakeholder Management. Change – und Krisenmanagement. Nachhaltigkeit & Digitalisierung. Technologie & Innovation.",
-        icon: <PiCompassToolBold />
+        description: (<ul className="about-list">
+        <li>Kommunikation & Public Affairs</li>
+        <li>Reputation-, Stakeholder Management</li>
+        <li>Change - und Krisenmanagement</li>
+        <li>Nachhaltigkeit & Digitalisierung</li>
+        <li>Technologie & Innovationk</li>
+      </ul>),icon: <PiCompassToolBold />
       },
      
     ],
     [
       {
         title: "ERFAHREN",
-        description: "Konzernorganisation & Start-Up, Konsolidierung & Entwicklung von Standorten New Work, Digitale Transformation, Krisenmanagement, Vereinbarkeit von Beruf & Familie.",
-        icon: <GiJourney />
+        description: (<ul className="about-list">
+        <li>Konzernorganisation & Start-Up</li>
+        <li>Konsolidierung & Entwicklung von Standorten</li>
+        <li>New Work, Digitale Transformation, Krisenmanagement</li>
+        <li>Vereinbarkeit von Beruf & Familie</li>
+      </ul>), icon: <GiJourney />
       },
       {
         title: "ZUKUNFTSORIENTIERT",
-        description: "Entwicklung von Standort-, Nachhaltigkeitsstrategien Gestaltung & Begleitung von Organisationsänderungen Bildung, Nachwuchsförderung, Innovationskultur, Diversität.",
-        icon: <MdCompost />
+        description: (<ul className="about-list">
+        <li>Entwicklung von Standort-, Nachhaltigkeitsstrategien</li>
+        <li>Gestaltung & Begleitung von Organisationsänderungen</li>
+        <li>Bildung, Nachwuchsförderung, Innovationskultur, Diversität</li>
+      </ul>),icon: <MdCompost />
       },
      
     ]
@@ -95,12 +110,16 @@ const content = {
       secondheading:"Dafür stehe Ich",
       firstcolm:" In mehr als 25 Jahren Erfahrung aus erfolgreicher Corporate Career, mehr als 15 davon in leitenden Management-Funktionen im internationalen Technologie- und Dienstleistungsunternehmen, prägen die Gestaltung von Zukunftsfeldern im Forschungs-, Technologie- und Bildungsumfeld sowie in der Standortentwicklung mein berufliches Engagement.",
       secondcolm:"Mit ganzheitlichem, strategischem, unternehmerischem Denken und Handeln sowie innovativem Mindset und ausgeprägten Problemlösungskompetenzen habe ich eine Vielzahl von Projekten den Bereichen in Technologie & Digitalisierung, Innovation & Nachhaltigkeit sowie Marketing & Sales erfolgreich umgesetzt.",
-  },
+      sprachenHeading:"Sprachen",
+      sprachen:"Deutsch, Englisch"
+    },
   en:  {
     heading:"ABOUT ME",
     secondheading:"That's what I stand for",
     firstcolm:"In more than 25 years of experience from a successful corporate career, more than 15 of them in leading management positions in international technology and service companies, the shaping of future fields in the research, technology and education environment as well as in location development characterize my professional commitment.",
      secondcolm:"With holistic, strategic, entrepreneurial thinking and action as well as an innovative mindset and strong problem-solving skills, I have successfully implemented a large number of projects in the areas of technology & digitization, innovation & sustainability and marketing & sales."
+    ,sprachenHeading:"Languages",
+     sprachen:"German, English"
     },
 };
 const { language } = useLanguage(); // 'de' oder 'en'
@@ -217,14 +236,19 @@ const { language } = useLanguage(); // 'de' oder 'en'
        </div>
     </div>
       </div>
-      <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
-      <ScrollProgressIndicator
-          themeColor={themeColor}
-          startElementId="startElement"
-          endElementId="endElement"
-          pointElementIds={[, "tab1", "tab2","tab3","tab4","tab5"]}
-        />
+   
+
+   <div>
+   <h1  className={styles.hLang} >{content[language].sprachenHeading}</h1>
+  <h1  className={styles.h3} >{content[language].sprachen}</h1>
+   <a href="https://www.linkedin.com/in/angelika-kiessling-kranzelmayer-20b62a93" className={styles.hLinked} ><FaLinkedin /> </a>
+      
+   
+   </div>
+   <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
     </div>
+
+
   );
 };
 

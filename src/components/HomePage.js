@@ -42,7 +42,7 @@ const HomePage = () => {
   const handleScroll3 = () => {
     if (targetRef3.current) {
       const targetY = getElementY(targetRef3.current);
-      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+      smoothScrollTo(targetY-170, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
 
@@ -100,16 +100,16 @@ const HomePage = () => {
   const content = {
     de: {
       animatedLines: {
-        one:"Erfolg liegt in der Kraft der Menschen",
-        two:"Die gemeinsam an einem Strang ziehen.",
+        one:"Erfolg liegt in der Kraft der Menschen,",
+        two:"die gemeinsam an einem Strang ziehen.",
         three:"Dabei sind drei Faktoren wesentlich:",
       },
      
     },
     en: {
       animatedLines: {
-        one:"Success lies in the power of people",
-        two:"Who pull together in the same direction.",
+        one:"Success lies in the power of people,",
+        two:"who pull together in the same direction.",
         three:"Three factors are essential here:",
       },
     }
@@ -123,8 +123,8 @@ const HomePage = () => {
       <img className="first" src={background} />
       </div>
         <div className="header">
-          <h1 className="conn">Angelika</h1>
-          <h1 className="shap">Kiessling-Kranzelmayer</h1>
+          <h1 className="firstHead">Angelika</h1>
+          <h1 className="secondHead">Kiessling-Kranzelmayer</h1>
         </div>
 
 
@@ -198,13 +198,10 @@ const HomePage = () => {
                 >
                   {i === 1 && content[language].animatedLines.one}
                   {i === 2 && content[language].animatedLines.two}
-                  {i === 3 && content[language].animatedLines.three}
-                 {/*<ul className="custom-ul" style={{ listStyleType: 'none', paddingLeft: '20px' }}>
-                    {i === 4 && <li className="custom-li">Klarheit</li>}
-                    {i === 5 && <li className="custom-li">Konsequenz</li>}
-                    {i === 6 && <li className="custom-li">Kommunikation</li>}
-                  </ul>*/} 
-                  {i === 4 && <HomeFirstPart startAnimation={startAnimation} />}
+                  {i === 3 && <li className="listli"></li> }
+                  {i === 4 && content[language].animatedLines.three}
+             
+                  {i === 5 && <HomeFirstPart startAnimation={startAnimation} />}
                   {i === 10 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
                  
                 </motion.h1>
@@ -216,27 +213,23 @@ const HomePage = () => {
 
       </div >  
     {/*<div style={{ backgroundColor: themeColor }} className="banner"></div>
-  {/*
-      <div className="mid-part">
+  {/**/}
+      <div className="mid-part" ref={targetRef2} >
 
-        <Content targetRef={targetRef2} />
-        <div className="arrow-third" onClick={handleScroll3}><DownArrow width="80" height="80" /></div>
+        <Content />
+        <div className="scroll-down-arrow arrow-third" onClick={handleScroll3}><DownArrow width="40" height="40" /></div>
       </div>
-      <div id="point2" className="banner alltop" ref={targetRef3}></div>
-*/}
 
-      <div class="philo" ref={targetRef2} >
+
+
+      <div class="philo" ref={targetRef3} >
 
         <Philosophie />
 
       </div>
 
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
-      <ScrollProgressIndicator style={{ backgroundColor: themeColor }}
-        startElementId=""
-        endElementId="endElement"
-        pointElementIds={["point2"]}
-      />
+     
     </div>
   );
 };
