@@ -82,16 +82,16 @@ const Navbar = () => {
        <div style={{ backgroundColor: themeColor }} className={`nav-elements    ${showNavbar && 'active'}`}>
           <ul className="px-6 py-8 ">
             <li>
-              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/">{content[language].home}</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();handleShowNavbar();}} to="/">{content[language].home}</NavLink>
             </li>
             <li>
-              <NavLink onClick={() =>{setThemeColor('#c1b3a5'); scrollToTop();}} to="/beratung">{content[language].beratung}</NavLink>
+              <NavLink onClick={() =>{setThemeColor('#c1b3a5'); scrollToTop();handleShowNavbar();}} to="/beratung">{content[language].beratung}</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/uebermich">{content[language].mich}</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();handleShowNavbar();}} to="/uebermich">{content[language].mich}</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/kontakt">{content[language].kontakt}</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();handleShowNavbar();}} to="/kontakt">{content[language].kontakt}</NavLink>
             </li>
             <li>
             <button onClick={() =>toggleLanguage('de')}className={ language === 'de' ? 'selected-lang' : ''}> de</button> | <button onClick={() => toggleLanguage('en')}className={ language === 'en' ? 'selected-lang' : ''} >en</button>

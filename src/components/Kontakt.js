@@ -17,8 +17,8 @@ const Kontakt = () => {
       anschrift: 'Anschrift',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
-      address: 'Musterstraße 1, 12345 Musterstadt',
+      emailAddress: 'office@angelikakiessling.com',
+      address: 'Leopold Gattringerstraße 25 2345 Brunn am Gebirge',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
     },
     en: {
@@ -28,8 +28,8 @@ const Kontakt = () => {
       anschrift: 'Address',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
-      address: 'Sample Street 1, 12345 Sample City',
+      emailAddress: 'office@angelikakiessling.com',
+      address: 'Leopold Gattringerstraße 25 2345 Brunn am Gebirge',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
     }
   };
@@ -41,22 +41,24 @@ const Kontakt = () => {
     <h2 className='heading'>{content[language].heading}</h2>
  
     <div className="contact-info">
-      <div className="felder-beratung">
-        <div className="title-wrapper-beratung">{content[language].telefon}</div>
-        <div className="text-wrapper-beratung">{content[language].phone}</div>
-      </div>
-      <div className="felder-beratung">
+    <div className="felder-beratung">
         <div className="title-wrapper-beratung">{content[language].email}</div>
         <div className="text-wrapper-beratung">
           <a href={`mailto:${content[language].emailAddress}`}>{content[language].emailAddress}</a>
         </div>
       </div>
       <div className="felder-beratung">
+        <div className="title-wrapper-beratung">{content[language].telefon}</div>
+        <div className="text-wrapper-beratung">{content[language].phone}</div>
+      </div>
+    
+      <div className="felder-beratung">
         <div className="title-wrapper-beratung">{content[language].anschrift}</div>
         <div className="text-wrapper-beratung">{content[language].address}</div>
       </div>
       <div className="felder-beratung">
-        <div className="title-wrapper-beratung">{content[language].linkedin}</div>
+  
+        <div className="title-wrapper-beratung">      <FaLinkedin/>{content[language].linkedin}</div>
         <div className="text-wrapper-beratung">{content[language].linkedinName}</div>
       </div>
     </div>

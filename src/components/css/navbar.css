@@ -47,10 +47,12 @@ body {
 .navbar.hide {
   transform: translateY(-100%);
   pointer-events: none;/* Stelle sicher, dass dies ausreicht, um die Navbar vollständig zu verstecken */
+  transition: 1s ease;
 }
 
 .navbar.show {
-  transform: translateY(0); 
+  transition: transform 0.5s ease;
+  transform: translateY(0);
 }
 
 .menu-icon {

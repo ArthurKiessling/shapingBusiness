@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import HomePage from './components/HomePage.js'
 import AboutMe from './components/AboutMe.js'
 import Kontakt from './components/Kontakt.js';
+import AGB from './components/AGB.js';
 import Beratung from './components/Beratung.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
 import { LanguageProvider } from './effekts/LanguageProvider.js';
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/beratung" element={<Beratung/>}/>
             <Route  path="/uebermich" element={<AboutMe/>}/>
             <Route  path="/kontakt" element={<Kontakt/>}/>
+            <Route  path="/AGB" element={<AGB/>}/>
           </Routes>
         </BrowserRouter>
         <div className="mt-auto">

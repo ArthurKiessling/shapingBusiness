@@ -33,3 +33,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: inline-block; /* Stellt sicher, dass der Hintergrund und die Polsterung richtig angewendet werden */
 }
+@media (max-width: 768px) {
+  .contact-info{
+    width: 50%;
+    margin-inline: 20%;
+  }
+  .heading {
+    margin-top: 30%;
+    font-size: clamp(50px, 5vw, 50px);
+}
+}

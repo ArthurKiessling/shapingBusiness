@@ -205,7 +205,7 @@ const HomePage = () => {
                     {i === 6 && <li className="custom-li">Kommunikation</li>}
                   </ul>*/} 
                   {i === 4 && <HomeFirstPart startAnimation={startAnimation} />}
-                  {i === 11 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
+                  {i === 10 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
                  
                 </motion.h1>
               ))}
