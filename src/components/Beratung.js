@@ -19,7 +19,7 @@ import seedrandom from 'seedrandom';
 import Philosophie from "./Philosophie";
 import Content from "./Content.js";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
-
+import { useLanguage } from '../effekts/LanguageProvider.js';
 const HomePage = () => {
   const targetRef = useRef(null);
   const targetRef2 = useRef(null);
@@ -90,8 +90,16 @@ const HomePage = () => {
       }
     };
   }, []);
-
-  const services = [
+  const content = {
+    de: {
+        heading:"ZUKUNFT GESTALTEN",
+        secondheading:"Meine Leistungen", },
+    en:  {
+      heading:"SHAPING FUTURE",
+      secondheading:"My services",
+    },
+  };
+  const services = {de:[
     {
       title: "Strategie & Change",
       description: "Unterstützung bei der Entwicklung und Implementierung von Business-Strategien, Change-Management-Prozessen, Kulturgestaltung und Innovationsförderung.",
@@ -118,18 +126,47 @@ const HomePage = () => {
       id:"tab4"
     },
     // Füge bei Bedarf weitere Dienstleistungen mit Icons hinzu
-  ];
+  ],
+  en:[
+    {
+      title: "Strategy & Change",
+      description: "Support in the development and implementation of business strategies, change management processes, cultural design and innovation promotion.",
+      icon: faBusinessTime,
+      id:"tab1"
+    },
+    {
+      title: "Communication & Reputation",
+      description: "Development of integrated communication strategies and concepts covering both internal and external channels, including crisis communication.                          a]",
+      icon: faComments,
+      id:"tab2"
+    },
+    {
+      title: "Stakeholder Management",
+      description: "Advice on advocacy and strategic management of stakeholder relationships to effectively support your business objectives.",
+      icon: faComments,
+      id:"tab3"
+    },
+    
+    {
+      title: "Executive Coaching",
+      description: "Individual coaching and sparring for managers to increase personal effectiveness and overcome specific leadership and management challenges. ",
+      icon: faComments,
+      id:"tab4"
+    },
+    // Füge bei Bedarf weitere Dienstleistungen mit Icons hinzu
+  ]};
 
-
-  const leftColumnServices = services.filter((_, index) => index % 2 === 0);
-  const rightColumnServices = services.filter((_, index) => index % 2 !== 0);
+  const { language } = useLanguage(); // 'de' oder 'en'
+  const currentElements = services[language]; 
+  const leftColumnServices = currentElements.filter((_, index) => index % 2 === 0);
+  const rightColumnServices = currentElements.filter((_, index) => index % 2 !== 0);
   return (
 
     <div>
       <article className="article2">
         <img className="cover" src={background} />
         <div className="header2">
-          <h1 className="conn">ZUKUNFT GESTALTEN</h1>
+          <h1 className="conn">{content[language].heading}</h1>
         </div>
 
         <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
@@ -141,7 +178,9 @@ const HomePage = () => {
 
       <div >
         <div className="services-list" >
-          <h2 id="startElement" ref={targetRef} className="leistung">Meine Leistungen</h2>
+          <h2 id="startElement" ref={targetRef} className="leistung"> {content[language].secondheading}</h2>
+          {/*<h1 className={styles.slogan}>{slogan}</h1>
+      <p className={styles.fließContent}>{fließContent}</p>*/}
           <div id="point1" style={{ backgroundColor: "" }} className="banner"></div>
         </div>
         <div className="grid-container-beratung">

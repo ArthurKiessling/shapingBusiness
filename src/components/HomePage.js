@@ -20,8 +20,9 @@ import Philosophie from "./Philosophie";
 import Content from "./Content.js";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import HomeFirstPart from "./HomeFirstPart";
-
+import { useLanguage } from '../effekts/LanguageProvider.js';
 const HomePage = () => {
+
   const targetRef = useRef(null);
   const targetRef2 = useRef(null);
   const targetRef3 = useRef(null);
@@ -93,7 +94,27 @@ const HomePage = () => {
   }, []);
 
 
+  const [startAnimation, setStartAnimation] = useState(false);
+  const ref3 = useRef(null);
+  const { language, toggleLanguage } = useLanguage();
 
+  const content = {
+    de: {
+      animatedLines: {
+        one:"Erfolg liegt in der Kraft der Menschen",
+        two:"Die gemeinsam an einem Strang ziehen.",
+        three:"Dabei sind drei Faktoren wesentlich:",
+      },
+     
+    },
+    en: {
+      animatedLines: {
+        one:"Success lies in the power of people",
+        two:"Who pull together in the same direction.",
+        three:"Three factors are essential here:",
+      },
+    }
+  };
   return (
 
     <div>
@@ -111,7 +132,7 @@ const HomePage = () => {
         <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
         <div className="scroll-down-arrow" onClick={handleScroll}><DownArrow width="40" height="40" /></div>
       </article>
-      <div  style={{ backgroundColor: themeColor }} id="startElement"className="banner"></div>
+      <div  style={{ backgroundColor: themeColor }} id="startElement"className="banner"ref={targetRef}></div>
 
 
       {/*<div id="point1" className="first-part" ref={targetRef}>
@@ -154,7 +175,7 @@ const HomePage = () => {
       </div >*/}
               
     
-    <div id="point1" className="first-part" ref={targetRef}>
+    <div id="point1" className="first-part" >
         <div ref={ref} className="section-text">
           <span
             style={{
@@ -165,7 +186,7 @@ const HomePage = () => {
           >
             <motion.div
             >
-              {[...Array(9)].map((_, i) => (
+              {[...Array(12)].map((_, i) => (
                 <motion.h1
                   ref={ref}
                   key={i}
@@ -174,24 +195,27 @@ const HomePage = () => {
                   initial="hidden"
                   animate={animateState}
                   className="leftText"
+                  onAnimationComplete={() => i === 4 && setStartAnimation(true)}
                 >
-                  {i === 1 && "Erfolg liegt in der Kraft der Menschen,"}
-                  {i === 2 && "Die gemeinsam an einem Strang ziehen."}
-                  {i === 3 && "Dabei sind drei Faktoren wesentlich:"}
-                  <ul className="custom-ul" style={{ listStyleType: 'none', paddingLeft: '20px' }}>
+                  {i === 1 && content[language].animatedLines.one}
+                  {i === 2 && content[language].animatedLines.two}
+                  {i === 3 && content[language].animatedLines.three}
+                 {/*<ul className="custom-ul" style={{ listStyleType: 'none', paddingLeft: '20px' }}>
                     {i === 4 && <li className="custom-li">Klarheit</li>}
                     {i === 5 && <li className="custom-li">Konsequenz</li>}
                     {i === 6 && <li className="custom-li">Kommunikation</li>}
-                  </ul>
-                  {i === 7 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
+                  </ul>*/} 
+                  {i === 4 && <HomeFirstPart startAnimation={startAnimation} />}
+                  {i === 11 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
+                 
                 </motion.h1>
               ))}
             </motion.div>
           </span>
         </div>
-        <HomeFirstPart ></HomeFirstPart>
+      
 
-      </div >
+      </div >  
     {/*<div style={{ backgroundColor: themeColor }} className="banner"></div>
   {/*
       <div className="mid-part">
@@ -202,7 +226,7 @@ const HomePage = () => {
       <div id="point2" className="banner alltop" ref={targetRef3}></div>
 */}
 
-      <div class="philo"  >
+      <div class="philo" ref={targetRef2} >
 
         <Philosophie />
 
@@ -210,7 +234,7 @@ const HomePage = () => {
 
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
       <ScrollProgressIndicator style={{ backgroundColor: themeColor }}
-        startElementId="startElement"
+        startElementId=""
         endElementId="endElement"
         pointElementIds={["point2"]}
       />

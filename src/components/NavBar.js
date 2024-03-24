@@ -5,6 +5,8 @@ import { ReactComponent as LogoSvg } from '../images/image2vector.svg'
 import { useTheme } from './ThemeContext.js'; 
 import './css/navbar.css'
 import './css/styles.css'; 
+import { useLanguage } from '../effekts/LanguageProvider.js';
+
 const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -51,6 +53,21 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
+  const { language, toggleLanguage } = useLanguage();
+  const content = {
+    de: {
+      home: 'Home',
+      beratung: 'Beratung',
+      mich: 'Über mich',
+      kontakt: 'Kontakt'
+    },
+    en: {
+      home: 'Home',
+      beratung: 'Consulting',
+      mich: 'About Me',
+      kontakt: 'Contact'
+    }
+  };
   {/*Interresant Farbe:#989292*/}
   return (
     <nav style={{ backgroundColor: themeColor}} className={`navbar ${!show && 'hide'}`}>
@@ -65,20 +82,21 @@ const Navbar = () => {
        <div style={{ backgroundColor: themeColor }} className={`nav-elements    ${showNavbar && 'active'}`}>
           <ul className="px-6 py-8 ">
             <li>
-              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/">Home</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/">{content[language].home}</NavLink>
             </li>
             <li>
-              <NavLink onClick={() =>{setThemeColor('#c1b3a5'); scrollToTop();}} to="/beratung">Beratung</NavLink>
+              <NavLink onClick={() =>{setThemeColor('#c1b3a5'); scrollToTop();}} to="/beratung">{content[language].beratung}</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/uebermich">Über mich</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/uebermich">{content[language].mich}</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/kontakt">Kontakt</NavLink>
+              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/kontakt">{content[language].kontakt}</NavLink>
             </li>
             <li>
-              <NavLink onClick={() => {setThemeColor('#c1b3a5'); scrollToTop();}} to="/kontakt">de | en</NavLink>
-            </li>
+            <button onClick={() =>toggleLanguage('de')}className={ language === 'de' ? 'selected-lang' : ''}> de</button> | <button onClick={() => toggleLanguage('en')}className={ language === 'en' ? 'selected-lang' : ''} >en</button>
+        </li>
+           
           </ul>
         </div>
       </div>

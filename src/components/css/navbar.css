@@ -97,7 +97,12 @@ body {
   background-color: #574c4c;
   
 }
-
+.selected-lang {
+  color: #574c4c;/* Unterstreicht das ausgewählte Sprachelement */
+  padding-bottom: 2px; /* Erhöht den Abstand zum Unterstrich */
+  border-bottom: 2px solid currentColor; /* Macht den Unterstrich dicker */
+ 
+}
 @media (max-width: 1280px) {
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;

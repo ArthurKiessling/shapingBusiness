@@ -57,6 +57,7 @@
 
 .alltop2 {
   margin-bottom: 20%;
+
 }
 
 
@@ -65,9 +66,9 @@
 
   width: 90%;
   /* Stellt sicher, dass die Felder die volle Breite ihrer Spalte einnehmen */
-  border: 2px solid #d3a700;
+  border: 2px solid #c1b3a5;
   border-radius: 20px;
-  margin: 10px 0;
+  margin: 10% 0;
   /* Angepasster vertikaler Abstand */
   margin-left: 5%;
   overflow: hidden;
@@ -79,7 +80,7 @@
 }
 
 .icon-wrapper-beratung {
-  border-bottom: 2px solid #d3a700;
+  border-bottom: 2px solid #c1b3a5;
   /* Farbe der Linie zwischen Logo und Text */
   padding: 20px;
   /* Abstand innerhalb des Logo-Bereiches */
@@ -93,7 +94,7 @@
   /* Anpassen nach Bedarf */
   font-weight: 700;
   /* Für eine kräftige Überschrift */
-  color: #d3a700;
+  color: #c1b3a5;
   /* Farbanpassung */
   text-align: center;
   padding: 10px;
@@ -101,7 +102,7 @@
 }
 
 .text-wrapper-beratung {
-  background-color: #d3a700;
+  background-color: #c1b3a5;
   color: white;
   text-align: center;
   font-weight: 300;
@@ -114,7 +115,7 @@
 .icon-style-beratung {
   font-size: 48px;
   /* Größe des Icons */
-  color: #d3a700;
+  color: #c1b3a5;
   /* Farbe des Icons */
 }
 
@@ -126,14 +127,14 @@
 }
 
 .felder-beratung:hover .icon-wrapper-beratung {
-  background-color: #d3a700;
+  background-color: #c1b3a5;
   /* Farbe des Textfeldes wird zum Logo-Hintergrund */
 }
 
 .felder-beratung:hover .text-wrapper-beratung {
   background-color: transparent;
   /* Text-Hintergrund wird transparent */
-  color: #d3a700;
+  color: #c1b3a5;
   /* Textfarbe ändert sich zur Umrandungsfarbe */
 }
 

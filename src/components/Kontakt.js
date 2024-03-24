@@ -1,19 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import KontaktForm from './KontaktForm.js'; // Pfad anpassen
 import './css/kontakt.css'; // Stellen Sie sicher, dass Sie diese CSS-Datei für das Styling erstellen
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from '../effekts/LanguageProvider.js';
+
+// Inhalte für jede Sprache
+
 
 const Kontakt = () => {
+  const { language } = useLanguage();
+  const content = {
+    de: {
+      heading:"Kontaktieren Sie uns",
+      telefon: 'Telefon',
+      email: 'E-Mail',
+      anschrift: 'Anschrift',
+      linkedin: 'LinkedIn',
+      phone: '+43 664 426 85 08',
+      emailAddress: 'office@shapingbusiness.at',
+      address: 'Musterstraße 1, 12345 Musterstadt',
+      linkedinName: 'Angelika Kiessling-Kranzelmayer',
+    },
+    en: {
+      heading:"Get in touch with us",
+      telefon: 'Phone',
+      email: 'Email',
+      anschrift: 'Address',
+      linkedin: 'LinkedIn',
+      phone: '+43 664 426 85 08',
+      emailAddress: 'office@shapingbusiness.at',
+      address: 'Sample Street 1, 12345 Sample City',
+      linkedinName: 'Angelika Kiessling-Kranzelmayer',
+    }
+  };
+  
+  // Funktion zum Ändern der Sprache
+
   return (
-    <div className="contact-page">
-      <h2 className='heading'>Kontaktieren Sie uns</h2>
-      <div className="contact-info">
-        <p>Wenn Sie Fragen haben, zögern Sie nicht uns zu kontaktieren:</p>
-        <p>Email: office@shapingbusiness.at</p>
-        <p>Telefon: +43 664 426 85 08</p>
-        {/* Optional: Soziale Medien-Links hinzufügen */}
+    <div>
+    <h2 className='heading'>{content[language].heading}</h2>
+ 
+    <div className="contact-info">
+      <div className="felder-beratung">
+        <div className="title-wrapper-beratung">{content[language].telefon}</div>
+        <div className="text-wrapper-beratung">{content[language].phone}</div>
       </div>
-      <KontaktForm />
+      <div className="felder-beratung">
+        <div className="title-wrapper-beratung">{content[language].email}</div>
+        <div className="text-wrapper-beratung">
+          <a href={`mailto:${content[language].emailAddress}`}>{content[language].emailAddress}</a>
+        </div>
+      </div>
+      <div className="felder-beratung">
+        <div className="title-wrapper-beratung">{content[language].anschrift}</div>
+        <div className="text-wrapper-beratung">{content[language].address}</div>
+      </div>
+      <div className="felder-beratung">
+        <div className="title-wrapper-beratung">{content[language].linkedin}</div>
+        <div className="text-wrapper-beratung">{content[language].linkedinName}</div>
+      </div>
     </div>
+    <div  style={{ backgroundColor: '#c1b3a5' }} className="banner"></div>
+  </div>
+
+    
   );
 };
 

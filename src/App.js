@@ -7,11 +7,12 @@ import AboutMe from './components/AboutMe.js'
 import Kontakt from './components/Kontakt.js';
 import Beratung from './components/Beratung.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
+import { LanguageProvider } from './effekts/LanguageProvider.js';
 
 const App = () => {
 
   return (
-    
+    <LanguageProvider>
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
         <BrowserRouter basename="/">
@@ -28,7 +29,7 @@ const App = () => {
         </div>
       </div>
     </ThemeProvider>
-
+    </LanguageProvider>
   );
 };
 

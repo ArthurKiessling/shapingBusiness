@@ -4,9 +4,10 @@ import AnimatedHeading from '../effekts/AnimatedHeading.js';
 import './css/Philosophie.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb, faStream, faComments, faRocket, faHeart, faTrophy } from '@fortawesome/free-solid-svg-icons';
-
+import { useLanguage } from '../effekts/LanguageProvider.js';
 
 const Philosophie = () => {
+ 
   const textsLeft = [
     { text: "Klarheit", icon: faLightbulb },
     { text: "Konsequenz", icon: faStream },
@@ -18,8 +19,6 @@ const Philosophie = () => {
     { text: "Empathie", icon: faHeart },
     { text: "Erfolg", icon: faTrophy },
   ];
-  const mainText = "Klarheit in der Zielsetzung, Konsequenz in der Umsetzung, erfolgreiche Kommunikation und Einbindung relevanter Stakeholder führen zu Effizienz und Effektivität bei der Erreichung von persönlichen und unternehmerischen Zielen. Meinen Kund*innen stelle ich meine langjährige Erfahrung aus erfolgreich umgesetzten Projekten in Industrie, Konzernstruktur und Start-Up Organisation sowie meine Expertise in strategischer Planung, allen Disziplinen moderner Kommunikation sowie professionellem Stakeholdermanagement zur Verfügung.";
-  const endText = "Connecting People, Shaping Business.";
 
   const calculateOffset = (index, isLeftColumn) => {
     // Basisverschiebung für alle Felder
@@ -34,7 +33,21 @@ const Philosophie = () => {
     return { xOffset, yOffset };
   };
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
-
+  const { language, toggleLanguage } = useLanguage();
+  const texts = {
+    de: {
+      mainText: "Klarheit in der Zielsetzung, Konsequenz in der Umsetzung, erfolgreiche Kommunikation und Einbindung relevanter Stakeholder führen zu Effizienz und Effektivität bei der Erreichung von persönlichen und unternehmerischen Zielen. Meinen Kund*innen stelle ich meine langjährige Erfahrung aus erfolgreich umgesetzten Projekten in Industrie, Konzernstruktur und Start-Up Organisation sowie meine Expertise in strategischer Planung, allen Disziplinen moderner Kommunikation sowie professionellem Stakeholdermanagement zur Verfügung.",
+      endText: "Connecting People, Shaping Business.",
+      philosophy: "Philosophie",
+      standsFor: "Dafür Steht",
+    },
+    en: {
+      mainText: "Clarity in setting goals, consistency in implementation, successful communication, and involvement of relevant stakeholders lead to efficiency and effectiveness in achieving personal and corporate goals. I offer my clients my extensive experience from successfully implemented projects in industry, corporate structures, and start-up organizations, as well as my expertise in strategic planning, all disciplines of modern communication, and professional stakeholder management.",
+      endText: "Connecting People, Shaping Business.",
+      philosophy: "Philosophy",
+      standsFor: "Stands For",
+    }
+  };
 
   return (
     <div class="grid-container">
@@ -55,16 +68,16 @@ const Philosophie = () => {
           );
         })}
       </div>*/}
-      <div class="center">
-        <div ref={ref} className={`${inView ? 'fade-in fade-in-delay-1'  : 'initial-hide'}`}>
-        <h1 className='heading3' id="endElement">Philosophie</h1>
-        <p className='main'>{mainText}</p>
-        </div>
-        <div  ref={ref} className={`${inView ? 'fade-in fade-in-delay-3'  : 'initial-hide'}`}>
-        <p className='main end'>Dafür Steht</p>
-        <p className='main end endslogan'>{endText}</p>
-        </div>
+     <div className="center">
+      <div ref={ref} className={`${inView ? 'fade-in fade-in-delay-1' : 'initial-hide'}`}>
+        <h1 className='heading3' id="endElement">{texts[language].philosophy}</h1>
+        <p className='main'>{texts[language].mainText}</p>
       </div>
+      <div ref={ref} className={`${inView ? 'fade-in fade-in-delay-3' : 'initial-hide'}`}>
+        <p className='main end'>{texts[language].standsFor}</p>
+        <p className='main end endslogan'>{texts[language].endText}</p>
+      </div>
+    </div>
       {/*<div  ref={ref} className={`right ${inView ? 'fade-in fade-in-delay-2'  : 'initial-hide'}`}>
         {textsRight.map((item, index) => {
           const { xOffset, yOffset } = calculateOffset(index, false);
