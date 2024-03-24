@@ -2,7 +2,6 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import AnimatedHeading from '../effekts/AnimatedHeading.js';
 import './css/content.css';
-import Upside from "../images/hoch_sitz.jpg";
 
 
 // Separate Komponente für jeden Inhaltsabschnitt
