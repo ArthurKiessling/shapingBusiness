@@ -2,8 +2,7 @@ import "./css/HomePage.css";
 import React from 'react';
 
 import background from "../images/ganz_sitz.jpg";
-import Upside from "../images/hoch_sitz.jpg";
-import Whiteboard from "../images/whiteboard.png";
+
 
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
 

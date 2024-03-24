@@ -9,8 +9,7 @@ import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb, faStream, faComments, faBusinessTime, faRocket, faHeart, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import background from "../images/sitz_gelb_v2.jpg";
-import Upside from "../images/sitz_gelb.png";
-import Whiteboard from "../images/whiteboard.png";
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";

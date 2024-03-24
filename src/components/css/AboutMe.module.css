@@ -25,7 +25,7 @@
 .coverPicture {
   position: absolute;
   top: 50%; /* Zentriert das Bild vertikal */
-  transform: translateY(-32%); /* Verschiebt das Bild zurück, um es zu zentrieren */
+  transform: translateY(-35%); /* Verschiebt das Bild zurück, um es zu zentrieren */
   min-width: 100%; /* Stellt sicher, dass das Bild mindestens so breit wie der Container ist */
   height: auto; /* Erhält das Seitenverhältnis des Bildes */
 }
@@ -120,7 +120,8 @@
   }
 
   .imagecontainer {
-    margin-bottom: -20%;
+ 
+    margin-bottom: -8%;
     width: 100%; /* oder eine spezifische Breite */
      /* Höhe des Containers, passt die Abschneidehöhe an */
     overflow: hidden; /* Verbirgt den überstehenden Teil des Bildes */
@@ -135,9 +136,11 @@
     min-width: 100%; /* Stellt sicher, dass das Bild mindestens so breit wie der Container ist */
     height: auto; /* Erhält das Seitenverhältnis des Bildes */
   }
-  .coverPicture {
+  .coverPicture { 
+
+    transform: translateY(0%); 
     position: absolute;
-    top: 30%; /* Zentriert das Bild vertikal */
+    top: 10%; /* Zentriert das Bild vertikal */
     transform: 0; /* Verschiebt das Bild zurück, um es zu zentrieren */
     min-width: 100%; /* Stellt sicher, dass das Bild mindestens so breit wie der Container ist */
     height: auto; /* Erhält das Seitenverhältnis des Bildes */

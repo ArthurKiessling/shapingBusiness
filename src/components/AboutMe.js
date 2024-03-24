@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './css/AboutMe.module.css'; // Stelle sicher, dass der Pfad korrekt ist
 import ganzSitzBild from '../images/ganz_sitz.jpg';
-import background from "../images/ganz_sitz.jpg";
+import background from "../images/hoch_ganz.jpg";
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
 
 import { ReactComponent as Logo } from '../images/image2vector.svg'
