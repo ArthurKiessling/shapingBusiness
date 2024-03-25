@@ -72,7 +72,7 @@
   text-align: center;
     padding: 10px;
     white-space: nowrap;
-    font-size: clamp(20px, 5vw, 30px);
+    font-size: clamp(30px, 5vw, 30px);
     color: #2E4053;
     text-align: center;
     margin: auto ;

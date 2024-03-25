@@ -121,7 +121,7 @@ body {
     position: absolute;
     right: 0;
     top: 80px;
-    opacity: 0.8;
+    opacity: 1;
     width: 0px;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
@@ -131,7 +131,8 @@ body {
   .nav-elements.active {
     width: 270px;
   }
-
+  .nav-elements ul a {
+    font-size: 18px;}
   .nav-elements ul {
     display: flex;
     flex-direction: column;

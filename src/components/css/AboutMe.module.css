@@ -57,7 +57,7 @@
 
 .h2 {  white-space: nowrap;
     font-family:'Nunito', sans-serif;
-  font-size: clamp(20px, 5vw, 30px);
+  font-size: clamp(30px, 5vw, 30px);
   color: #2E4053;
   text-align: center;
   background-color: #f0f0f0;
@@ -72,7 +72,7 @@
 .h3 { 
 
   font-family:'Nunito', sans-serif;
-font-size: clamp(20px, 5vw, 30px);
+font-size: clamp(30px, 5vw, 30px);
 color: #2E4053;
 text-align: center;
 margin: auto ;
@@ -127,7 +127,7 @@ margin-bottom: 5%;
 }
 
 .tableElement {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(18px, 3vw, 18px);
   margin-top: 20px;
   display: flex;
   flex-direction: column;
