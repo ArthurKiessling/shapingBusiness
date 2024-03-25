@@ -57,9 +57,10 @@
   text-align: center;
 }
 .tabscontainer {
-  width: 70%;
-  max-width: 80%;
+  width: 80%;
+  max-width: 90%;
   margin: auto;
+  justify-content: center;
 }
 
 .tabs {
@@ -67,7 +68,7 @@
   display: flex; /* Sorgt dafür, dass die Buttons in einer Zeile angeordnet werden */
   /* Zentriert die Buttons horizontal im Container */
   align-items: center;
-  
+  justify-content: center;
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
   font-size: clamp(23px, 3vw, 30px) !important;
@@ -77,21 +78,22 @@
 
 .tab {
   border: none;
-  width: 40%;
-  max-width: 50%;
-  margin-inline: 2%;
+  
+margin-inline: 2%;
+  max-width: 70%;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
-  padding: 10px 10px;
+  padding: 10px 4%;
   border-radius: 30px;
   font-family:"Julius Sans One", sans-serif;
+
   outline: none;
   background-color: #f0f0f0;
   font-weight: 400;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease; 
-  transform: scale(1.0);
+
 }
 
 .tab.active {
@@ -102,7 +104,7 @@
 }
 .tab:hover{
   background-color: #bfbfbf;;
-  transform: scale(1.05);
+  transform: scale(1.05)!important;
 }
 
 .tabcontent {

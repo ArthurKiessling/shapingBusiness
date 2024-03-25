@@ -42,7 +42,7 @@ const AboutMe = () => {
         <li>Reputation-, Stakeholder Management</li>
         <li>Change - und Krisenmanagement</li>
         <li>Nachhaltigkeit & Digitalisierung</li>
-        <li>Technologie & Innovationk</li>
+        <li>Technologie & Innovation</li>
       </ul>),icon: <PiCompassToolBold />
       },
      
@@ -73,7 +73,11 @@ const AboutMe = () => {
     [
       {
         title: "WITH HEART & BRAIN",
-        description: "Empathic, warm, courageous, open. Analytical, structured, results- and solution-oriented. Collaborative, strong in communication and implementation.",
+        description: (<ul className="about-list">
+        <li>empathetic, warm, courageous, open</li>
+        <li>analytical, structured, results- and solution-oriented</li>
+        <li>Collaborative, strong in communication and implementation</li>
+      </ul>),
         icon:  <img 
         src={heartbrain}
         alt="Herz- und Gehirn-Icon" 
@@ -83,21 +87,36 @@ const AboutMe = () => {
       },
       {
         title: "COMPETENT",
-        description: "Communication & Public Affairs. Reputation and stakeholder management. Change and crisis management. Sustainability & digitalization. Technology & innovation",
-        icon: <PiCompassToolBold />
+        description: (<ul className="about-list">
+        <li>Communication & Public Affairs</li>
+        <li>Reputation-, Stakeholder Management</li>
+        <li>Reputation and stakeholder management</li>
+        <li>Sustainability & digitalization</li>
+        <li>Technology & Innovation</li>
+      </ul>),
+      icon: <PiCompassToolBold />
       },
      
     ],
     [
       {
         title: "EXPERIENCE",
-        description: "Group organization & start-up, consolidation & development of locations New Work, digital transformation, crisis management, work-life balance.",
-        icon: <GiJourney />
+        description:(<ul className="about-list">
+        <li>Group organization & Start-Up</li>
+        <li>Consolidation & development of locations</li>
+        <li>New work, digital transformation, crisis management</li>
+        <li>Compatibility of career & family</li>
+      </ul>), 
+      icon: <GiJourney />
       },
       {
         title: "FUTURE-ORIENTED",
-        description: "Development of location and sustainability strategies Design and support of organizational changes Education, promotion of young talent, innovation culture, diversity.",
-        icon: <MdCompost />
+        description: (<ul className="about-list">
+        <li>Development of location and sustainability strategies</li>
+        <li>Design & support of organizational changes</li>
+        <li>Education, promotion of young talent, culture of innovation, diversity</li>
+      </ul>),
+      icon: <MdCompost />
       },
      
     ]
@@ -199,8 +218,8 @@ const { language } = useLanguage(); // 'de' oder 'en'
     <div>
 
       <article className="article">
-        <div className={styles.imagecontainer}>
-      <img className={styles.coverPicture} src={background} />
+         <div className="imagecontainer">
+      <img className="first" src={background} />
       </div>
         <div className="header2">
           <h1 className="conn">{content[language].heading}</h1>
@@ -213,7 +232,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
 
       <div  style={{ backgroundColor: themeColor }} className="banner"></div>
       <div ref={targetRef} className={styles['about-me-container']}>
-        <h1 id="startElement" className={styles.h1}> {content[language].secondheading}</h1>
+        <h1 id="startElement" className={styles.hHead}> {content[language].secondheading}</h1>
 
         {currentElements.map((row, rowIndex) => (
           <div key={rowIndex} className={styles.row}>

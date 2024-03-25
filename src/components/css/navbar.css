@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-
+  
   background-size: cover; /* Deckt den gesamten verfügbaren Raum ab */
   background-position: left;
 }

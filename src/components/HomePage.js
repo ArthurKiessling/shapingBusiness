@@ -42,7 +42,7 @@ const HomePage = () => {
   const handleScroll3 = () => {
     if (targetRef3.current) {
       const targetY = getElementY(targetRef3.current);
-      smoothScrollTo(targetY-170, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
 
@@ -116,7 +116,7 @@ const HomePage = () => {
   };
   return (
 
-    <div>
+    <div >
  
       <article className="article">
         <div className="imagecontainer">

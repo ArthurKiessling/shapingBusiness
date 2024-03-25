@@ -37,7 +37,7 @@
   color: #c1b3a5; /* Passt die Farbe der Icons an */
   /* Weitere Stile nach Bedarf */
 }
-.h1 {
+.hHead {
   color: #333;
   text-align: center;
   margin-bottom: 20px;
@@ -45,6 +45,12 @@
   font-weight: 300;
   font-size: 4.5vw;
   color: #2E4053;
+  transition: transform 0.3s ease;
+}
+.hHead:hover {
+  transform: scale(1.05) ;
+
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .h2 {  white-space: nowrap;
@@ -75,18 +81,27 @@ margin-bottom: 5%;
 
 }
 .hLang {
+  margin: auto;
+  max-width: 80%;
   color: #333;
   text-align: center;
+  justify-self: center;
   margin-bottom: 10px;
   font-family:"Julius Sans One", sans-serif;
   font-weight: 300;
-  font-size: clamp(20px, 6vw, 55px);
+  font-size: clamp(40px, 6vw, 55px);
   color: #2E4053;
+  transition: transform 0.3s ease;
+}
+.hLang:hover {
+  transform: scale(1.05) ;
+
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .hLinked { 
   display: flex;
   margin-inline: auto;
-  font-size: clamp(20px, 6vw, 55px);
+  font-size: clamp(40px, 6vw, 55px);
   color: #2E4053;
   justify-content: center;
   transition: transform 0.3s ease;
@@ -108,11 +123,12 @@ margin-bottom: 5%;
 }
 
 .tableElement {
+  font-size: clamp(16px, 3vw, 18px);
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%; /* Passt die Breite jedes Tabellenelements an */
+  width: 40%; /* Passt die Breite jedes Tabellenelements an */
   text-align: center;
 
 }
@@ -132,13 +148,13 @@ margin-bottom: 5%;
   display: block;
   justify-content: center;
   text-align: center;
-  max-width: 80%; /* Maximale Breite des Containers */
+  width: 80%; /* Maximale Breite des Containers */
   margin: auto; /* Zentriert den Container */
   margin-bottom: 0%;
 }
 
 .column {
-  
+  font-size: clamp(20px, 3vw, 20px);
   flex: 1; /* Lässt beide Spalten den verfügbaren Platz gleichmäßig aufteilen */
   padding: 20px; /* Fügt innen Abstand hinzu */
 }
@@ -148,6 +164,7 @@ ul.about-list {
   padding-left: 0; /* Entfernt Standard-Padding der Liste */
 }
 ul.about-list  li {
+  white-space: nowrap;
   position: relative; /* Ermöglicht die korrekte Positionierung des ::before Inhalts */
   text-indent: 0; /* Zieht die erste Zeile jedes Listenelements nach links */
   padding-left: 1em; /* Fügt links Padding hinzu, damit der Text nicht über den Bindestrich geht */
@@ -166,7 +183,7 @@ ul.about-list  li::before {
     padding: 20px;
     font-family: 'Lato', sans-serif;
   }
-  .h1 {
+  .hHead {
     font-size: 10.5vw;
 
   }
@@ -176,12 +193,12 @@ ul.about-list  li::before {
   }
 
   .tableElement {
-    width: 80%; /* Breitere Elemente auf kleineren Bildschirmen */
+    width: 100%; /* Breitere Elemente auf kleineren Bildschirmen */
   }
 
   .imagecontainer {
  
-    margin-bottom: -8%;
+    margin-bottom: -10%;
     width: 100%; /* oder eine spezifische Breite */
      /* Höhe des Containers, passt die Abschneidehöhe an */
     overflow: hidden; /* Verbirgt den überstehenden Teil des Bildes */
@@ -198,7 +215,7 @@ ul.about-list  li::before {
   }
   .coverPicture { 
 
-    transform: translateY(0%); 
+    transform: none; 
     position: absolute;
     top: 10%; /* Zentriert das Bild vertikal */
     transform: 0; /* Verschiebt das Bild zurück, um es zu zentrieren */
@@ -206,7 +223,8 @@ ul.about-list  li::before {
     height: auto; /* Erhält das Seitenverhältnis des Bildes */
   }
   .twocolumnscontainer {
-    width: 90%;
+    width: 100%;
+    margin-inline: none;
     display: block;
   }
   

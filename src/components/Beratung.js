@@ -149,27 +149,42 @@ const HomePage = () => {
   en:[
     {
       title: "Strategy & Change",
-      description: "Support in the development and implementation of business strategies, change management processes, cultural design and innovation promotion.",
-      icon: faBusinessTime,
+      description: (<ul className="custom-list">
+      <li>Planning and supporting change and transformation processes.</li>
+      <li>Design and development of corporate culture and innovation culture.</li>
+      <li>Development and implementation of business strategies.</li>
+    </ul>) 
+    ,icon: faBusinessTime,
       id:"tab1"
     },
     {
       title: "Communication & Reputation",
-      description: "Development of integrated communication strategies and concepts covering both internal and external channels, including crisis communication.                          a]",
-      icon: faComments,
+      description: (<ul className="custom-list">
+        <li>Development of integrated communication strategies and concepts for internal and external target groups.</li>
+        <li>Professional crisis communication for critical events</li>
+        <li>Positioning of people, organizations, locations, products & services including employer branding</li>
+      </ul>) 
+      ,icon: faComments,
       id:"tab2"
     },
     {
       title: "Stakeholder Management",
-      description: "Advice on advocacy and strategic management of stakeholder relationships to effectively support your business objectives.",
-      icon: faComments,
+      description: (<ul className="custom-list">
+      <li>Sparring and support for executives</li>
+      <li>Design and development of corporate culture and innovation culture.</li>
+      <li>Development and implementation of business strategies.</li>
+    </ul>) 
+    , icon: faComments,
       id:"tab3"
     },
     
     {
       title: "Executive Coaching",
-      description: "Individual coaching and sparring for managers to increase personal effectiveness and overcome specific leadership and management challenges. ",
-      icon: faComments,
+      description: (<ul className="custom-list">
+      <li>Public Affairs Consulting</li>
+      <li>Individual consulting on issues of change and crisis management</li>
+    </ul>) 
+    ,icon: faComments,
       id:"tab4"
     },
     // Füge bei Bedarf weitere Dienstleistungen mit Icons hinzu

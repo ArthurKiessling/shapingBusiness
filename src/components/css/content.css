@@ -17,7 +17,7 @@
      text-align: left; 
        font-family: 'Nunito', sans-serif;
        font-weight: 300;
-       font-size: clamp(23px, 2vw, 25px) !important;
+       font-size: clamp(23px, 3vw, 25px) !important;
        transition: opacity 3s ease-out;
   }
   
@@ -28,20 +28,21 @@
   /* Container für jeden Abschnitt, um Layout und Abstand zu steuern */
 
   .all{
-    max-width: 80%; /* oder einen bestimmten Prozentsatz */
+    max-width: 50%; /* oder einen bestimmten Prozentsatz */
     margin: 20 auto; /* Zentriert den Container */
     padding: 20px;
     margin-top: 2%;
   }
-  .alltop {
-  
-  }
+
   .section {
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     margin-inline: auto;
     max-width: 50%;
   }  
-  
+  .sections {
+    margin-bottom: 5%;
+
+  }  
   .third{
     grid-area: image;
     height: 85vh;
@@ -64,10 +65,10 @@
 
 /* Basierend auf Ihrer vorhandenen Klasse für das Grid-Layout */
 
-.alltop { 
+.alltopContent { 
   margin-left: 14%;
   max-width: 80%;
-  margin-top: 5%;
+ 
   grid-template-columns: 1fr; /* Eine einzelne Spalte für mobile Geräte */
   grid-template-areas:
     "text"

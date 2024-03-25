@@ -23,7 +23,7 @@ margin-top: 5%;
 }
 
 .services-list h2 {
-  color: #333;
+ 
   text-align: center;
   margin-bottom: 20px;
 }
@@ -51,9 +51,22 @@ margin-top: 5%;
 }
 
 .leistung {
+  max-width: 80%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
   font-family:"Julius Sans One", sans-serif;
   font-weight: 300;
   font-size: 4.5vw;
+  color: #2E4053;
+  transition: transform 0.3s ease;
+}
+
+.leistung:hover {
+  transform: scale(1.05) ;
+
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .alltop2 {
@@ -179,9 +192,10 @@ margin-top: 5%;
   font-size: clamp(38px, 5vw, 50px);
 color: #2E4053;
 text-align: center;
+justify-self: center;
 margin-inline: auto;
 margin-top: 5%;
-padding-inline: 20px;
+
 max-width: 70%;
 margin-bottom: 10px;
 transition: transform 0.3s ease;
@@ -220,7 +234,8 @@ ul.custom-list li::before {
   .services-list {
     font-family: Arial, sans-serif;
     margin-top: 20px;
-    margin-left: 20px;
+    margin: none;
+    margin-left: none;
     padding:0;
   
   }
@@ -231,14 +246,16 @@ ul.custom-list li::before {
     /* Zentriert die Felder in der einzelnen Spalte */
   }
 
-  .column {
-    width: 100%;
+  .column-beratung {
+    width: 90%;
+    margin-inline: 5%;
     /* Die Spalten nehmen die volle Breite ein, sodass sie zu einer Spalte werden */
   }
 
   .felder-beratung {
-    width: 160%;
-    margin-left: -20%;
+    margin: none;
+  
+
     /* Optional: Anpassung der Breite der Felder für Mobilgeräte */
   }
 

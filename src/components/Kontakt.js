@@ -40,7 +40,7 @@ const Kontakt = () => {
     <div>
     <h2 className='heading'>{content[language].heading}</h2>
  
-    <div className="contact-info">
+    <div className="contact-info-konakt">
     <div className="felder-beratung">
         <div className="title-wrapper-beratung">{content[language].email}</div>
         <div className="text-wrapper-kontakt">
