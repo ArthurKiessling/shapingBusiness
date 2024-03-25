@@ -11,7 +11,7 @@ const Kontakt = () => {
   const { language } = useLanguage();
   const content = {
     de: {
-      heading:"Kontaktieren Sie uns",
+      heading:"Kontaktieren Sie mich",
       telefon: 'Telefon',
       email: 'E-Mail',
       anschrift: 'Anschrift',
@@ -22,7 +22,7 @@ const Kontakt = () => {
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
     },
     en: {
-      heading:"Get in touch with us",
+      heading:"Contact me",
       telefon: 'Phone',
       email: 'Email',
       anschrift: 'Address',
@@ -41,26 +41,29 @@ const Kontakt = () => {
     <h2 className='heading'>{content[language].heading}</h2>
  
     <div className="contact-info-konakt">
-    <div className="felder-beratung">
-        <div className="title-wrapper-beratung">{content[language].email}</div>
-        <div className="text-wrapper-kontakt">
-          <a href={`mailto:${content[language].emailAddress}`}>{content[language].emailAddress}</a>
-        </div>
+    <div className="felder-kontakt">
+    <a href={`mailto:${content[language].emailAddress}`}>
+        <div className="title-wrapper-kontakt">{content[language].email}</div>
+        <div className="text-wrapper-kontakt">{content[language].emailAddress}</div>
+        </a>
       </div>
-      <div className="felder-beratung">
-        <div className="title-wrapper-beratung">{content[language].telefon}</div>
+      <div className="felder-kontakt">
+        <div className="title-wrapper-kontakt">{content[language].telefon}</div>
         <div className="text-wrapper-kontakt">{content[language].phone}</div>
       </div>
     
-      <div className="felder-beratung">
-        <div className="title-wrapper-beratung">{content[language].anschrift}</div>
+      <div className="felder-kontakt">
+        <div className="title-wrapper-kontakt">{content[language].anschrift}</div>
         <div className="text-wrapper-kontakt">{content[language].address}</div>
       </div>
-      <div className="felder-beratung">
   
+      <div className="felder-kontakt">
+      <a href="https://www.linkedin.com/in/angelika-kiessling-kranzelmayer-20b62a93">
         <div className="title-wrapper-kontakt">      <FaLinkedin/>{content[language].linkedin}</div>
         <div className="text-wrapper-kontakt">{content[language].linkedinName}</div>
+        </a>
       </div>
+    
     </div>
     <div  style={{ backgroundColor: '#c1b3a5' }} className="banner"></div>
   </div>

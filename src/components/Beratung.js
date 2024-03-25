@@ -1,6 +1,6 @@
 import "./css/Beratung.css";
 import React from 'react';
-
+import { NavLink } from 'react-router-dom'
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
 
 import { ReactComponent as Logo } from '../images/image2vector.svg'
@@ -68,7 +68,10 @@ const HomePage = () => {
 
   const [reveal, setReveal] = useState(false);
   const sectionRef = useRef(null);
-
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -250,7 +253,7 @@ const HomePage = () => {
 
       </div >
 
-      <a href="/kontakt" ><h1 className="h3" >{content[language].contact}</h1></a>
+      <NavLink onClick={() => {scrollToTop();}} to="/kontakt" ><h1 className="h3" >{content[language].contact}</h1></NavLink >
       <div id="point3" className="banner alltop2"></div>
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
       

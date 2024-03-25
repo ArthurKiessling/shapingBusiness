@@ -9,9 +9,10 @@
     padding: 20px;
     margin: auto;
     margin-top: 10%;
+
   }
   .heading {
-    margin-top: 5%;
+    margin-top: 10%;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
@@ -27,9 +28,13 @@
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .contact-info-konakt{
-  width: 25%;
+  max-width: 70%;
   margin: auto;
-  margin-bottom: 5%;
+  margin-bottom: 20%;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .text-style {
@@ -37,39 +42,86 @@
   padding: 5px;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: inline-block; /* Stellt sicher, dass der Hintergrund und die Polsterung richtig angewendet werden */
+   /* Stellt sicher, dass der Hintergrund und die Polsterung richtig angewendet werden */
 }
 .text-wrapper-kontakt {
-  background-color: #c1b3a5;
-  color: white;
+  transition: transform 0.3s ease;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
   font-weight: 300;
   padding: 20px;
   font-size: 22px;
+ 
+  margin: auto;
   /* Anpassen nach Bedarf */
 }
 .title-wrapper-kontakt {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+ 
   font-size: 24px;
   /* Anpassen nach Bedarf */
-  font-weight: 700;
+
   /* Für eine kräftige Überschrift */
-  color: #c1b3a5;
+  
   /* Farbanpassung */
   text-align: center;
-  padding: 10px;
-  /* Abstand */
+    padding: 10px;
+    white-space: nowrap;
+    font-size: clamp(20px, 5vw, 30px);
+    color: #2E4053;
+    text-align: center;
+    margin: auto ;
+    
+      font-weight: 300;
+
+  text-align: center;
+    background-color: #f0f0f0;
+    padding: 5px;
+    padding-inline: 20px;
+   margin-top: 10px;
+    
+  border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.title-wrapper-kontakt:hover {
+  transform: scale(1.03);
+  /* Skaliert das Element leicht */
+ 
+  /* Fügt einen Schatten hinzu */
+}
+.felder-kontakt{
+  width: 30%;
+  /* Optional: Anpassung für Abstand */
+
 }
 @media (max-width: 768px) {
-  .contact-info-konakt{
-    width: 100%;
-  
-  }
+
   .heading {
     margin-top: 30%;
     font-size: clamp(50px, 5vw, 50px);
+}
+.contact-info-konakt{
+  max-width: 100%;
+ 
+  margin: auto;
+  margin-inline: auto;
+  margin-bottom: 20%;
+  margin-top: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+.felder-kontakt{
+  width: 80%;
+  /* Optional: Anpassung für Abstand */
+
 }
 }
