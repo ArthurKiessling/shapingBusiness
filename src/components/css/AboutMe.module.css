@@ -9,7 +9,9 @@
   margin-top: 5%;
   margin-inline: 13%;
   padding: 20px;
-  font-family: 'Lato', sans-serif;
+  font-family:'Nunito', sans-serif;
+
+    font-weight: 300;
 
 }
 
@@ -74,6 +76,8 @@ font-size: clamp(20px, 5vw, 30px);
 color: #2E4053;
 text-align: center;
 margin: auto ;
+
+  font-weight: 300;
 
 padding-inline: 20px;
 
@@ -154,12 +158,16 @@ margin-bottom: 5%;
 }
 
 .column {
+  
   font-size: clamp(20px, 3vw, 20px);
   flex: 1; /* Lässt beide Spalten den verfügbaren Platz gleichmäßig aufteilen */
   padding: 20px; /* Fügt innen Abstand hinzu */
+  font-weight: 300;
 }
 
 ul.about-list {
+  font-weight: 200;
+
   list-style-type: none; /* Entfernt Standard-Listensymbole */
   padding-left: 0; /* Entfernt Standard-Padding der Liste */
 }
@@ -181,7 +189,6 @@ ul.about-list  li::before {
     margin-top: 5%;
     margin-inline: 0%;
     padding: 20px;
-    font-family: 'Lato', sans-serif;
   }
   .hHead {
     font-size: 10.5vw;

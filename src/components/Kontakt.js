@@ -58,7 +58,7 @@ const Kontakt = () => {
       </div>
       <div className="felder-beratung">
   
-        <div className="title-wrapper-beratung">      <FaLinkedin/>{content[language].linkedin}</div>
+        <div className="title-wrapper-kontakt">      <FaLinkedin/>{content[language].linkedin}</div>
         <div className="text-wrapper-kontakt">{content[language].linkedinName}</div>
       </div>
     </div>

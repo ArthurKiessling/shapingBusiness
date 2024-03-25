@@ -64,6 +64,7 @@
 }
 
 .tabs {
+  max-width: 100%;
   margin: auto;
   display: flex; /* Sorgt dafür, dass die Buttons in einer Zeile angeordnet werden */
   /* Zentriert die Buttons horizontal im Container */
@@ -73,7 +74,6 @@
   font-weight: 300;
   font-size: clamp(23px, 3vw, 30px) !important;
 
-  color: #2E4053;
 }
 
 .tab {
@@ -106,7 +106,9 @@ margin-inline: 2%;
   background-color: #bfbfbf;;
   transform: scale(1.05)!important;
 }
-
+.tabs::marker{
+  color: rgba(0, 0, 0, 0);
+}
 .tabcontent {
   width: 80%;
   margin: auto;
@@ -121,9 +123,9 @@ margin-inline: 2%;
   }
 .tabs{
   display: list-item;
-  width: 150%;
-margin-inline:-25%;}
-    .tab {
+
+}
+    .tab { 
       margin-top:3%;
       width: 90%;
       margin-inline: none;}

@@ -88,9 +88,8 @@
   max-width: 80%;
   overflow: hidden;
   border-radius: 20px;
-  font-size: 30px;
-  font-family:"Julius Sans One", sans-serif;
-  font-weight: 200;/* Verhindert, dass Inhalte außerhalb der Grenzen angezeigt werden */
+  font-weight: 300;
+  font-size: clamp(23px, 3vw, 25px) !important;/* Verhindert, dass Inhalte außerhalb der Grenzen angezeigt werden */
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s, background-color 1s;
   transform: scale(1);
 }
@@ -139,22 +138,27 @@
   /* Zentrierter Text */
   
   /* Abstand zum unteren Inhalt */
+  font-family: 'Nunito', sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: clamp(23px, 3vw, 25px) !important;
 }
 
 .end {
+
   text-align: center;
+  justify-content: center;
+  
   font-family:"Julius Sans One", sans-serif;
   /* Zentrierter Text */
   transform:  translateY(-100%);
   /* Abstand zum unteren Inhalt */
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: 2vw!important;
+  font-size: clamp(23px, 3vw, 25px) !important;
 
 }
 .endslogan{
-  transform:  translateY(-150%);
+  transform:  translateY(-10%);
   font-size: 2vw;
 }
 
@@ -173,8 +177,8 @@
   justify-content: center;
   font-family:"Julius Sans One", sans-serif;
   font-weight: 300;
-  font-size: clamp(50px, 5vw, 60px);
-  color: #2E4053;
+  font-size: clamp(50px, 5vw, 70px);
+ 
   transition: transform 0.3s ease;
 }
 .heading3:hover {

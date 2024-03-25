@@ -11,7 +11,7 @@
     margin-top: 10%;
   }
   .heading {
-    margin-top: 10%;
+    margin-top: 5%;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
@@ -29,6 +29,7 @@
 .contact-info-konakt{
   width: 25%;
   margin: auto;
+  margin-bottom: 5%;
 }
 
 .text-style {
@@ -46,6 +47,21 @@
   padding: 20px;
   font-size: 22px;
   /* Anpassen nach Bedarf */
+}
+.title-wrapper-kontakt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 24px;
+  /* Anpassen nach Bedarf */
+  font-weight: 700;
+  /* Für eine kräftige Überschrift */
+  color: #c1b3a5;
+  /* Farbanpassung */
+  text-align: center;
+  padding: 10px;
+  /* Abstand */
 }
 @media (max-width: 768px) {
   .contact-info-konakt{
