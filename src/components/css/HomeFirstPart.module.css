@@ -126,8 +126,9 @@ margin-inline: 2%;
 
 }
     .tab { 
+      max-width: 100%;
       margin-top:3%;
-      width: 90%;
+      width: 100%;
       margin-inline: none;}
 
       .tabscontainer {

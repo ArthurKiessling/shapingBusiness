@@ -86,18 +86,19 @@
 }
 
 .conn {
+  font-size: clamp(42px, 4vw, 90px) !important;
     transform: translateX(-50%); 
     margin-bottom: 20px;
     /* Keine zusätzliche Anpassung nötig, wenn dieses Element linksbündig sein soll */
 }
 .firstHead {
-  font-size: clamp(32px, 4vw, 90px) !important;
+  font-size: clamp(42px, 4vw, 90px) !important;
   /* Keine zusätzliche Anpassung nötig, wenn dieses Element linksbündig sein soll */
 }
 .secondHead{
  
   margin-bottom: 20px;
-  font-size: clamp(32px, 3.5vw, 90px) !important;
+  font-size: clamp(37px, 3.5vw, 90px) !important;
   /* Keine zusätzliche Anpassung nötig, wenn dieses Element linksbündig sein soll */
 }
 

@@ -68,8 +68,8 @@ const Philosophie = () => {
           );
         })}
       </div>*/}
-     <div className="center">
-      <div ref={ref} className={`${inView ? 'fade-in fade-in-delay-1' : 'initial-hide'}`}>
+     <div ref={ref}className="center">
+      <div  className={`${inView ? 'fade-in fade-in-delay-1' : 'initial-hide'}`}>
         <h1 className='heading3' id="endElement">{texts[language].philosophy}</h1>
         <p className='main'>{texts[language].mainText}</p>
       </div>
