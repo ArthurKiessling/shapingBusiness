@@ -66,7 +66,7 @@
 /* Basierend auf Ihrer vorhandenen Klasse für das Grid-Layout */
 
 .alltopContent { 
-  margin-left: 14%;
+  margin-left: 10%;
   max-width: 80%;
  
   grid-template-columns: 1fr; /* Eine einzelne Spalte für mobile Geräte */

@@ -57,10 +57,14 @@ const Kontakt = () => {
         <div className="text-wrapper-kontakt">{content[language].emailAddress}</div>
         </a>
       </div>
+ 
       <div className="felder-kontakt">
+      <a href={`tel:${content[language].phone.replace(/[^0-9]/g, '')}`}>
         <div className="title-wrapper-kontakt">{content[language].telefon}</div>
         <div className="text-wrapper-kontakt">{content[language].phone}</div>
+        </a>
       </div>
+   
       <div className="felder-kontakt">
       <a href="https://www.linkedin.com/in/angelika-kiessling-kranzelmayer-20b62a93">
         <div className="title-wrapper-kontakt">      <FaLinkedin/>{content[language].linkedin}</div>

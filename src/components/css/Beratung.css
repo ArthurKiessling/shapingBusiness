@@ -59,6 +59,7 @@ margin-top: 5%;
   font-family:"Julius Sans One", sans-serif;
   font-weight: 300;
   font-size: 4.5vw;
+  
   color: #2E4053;
   transition: transform 0.3s ease;
 }
@@ -189,14 +190,14 @@ margin-top: 5%;
 .h3 { 
   font-family:"Julius Sans One", sans-serif;
   font-weight: 300;
-  font-size: clamp(38px, 5vw, 50px);
+  font-size: clamp(40px, 5vw, 70px);
 color: #2E4053;
 text-align: center;
 justify-self: center;
 margin-inline: auto;
 margin-top: 5%;
 
-max-width: 70%;
+max-width: 90%;
 margin-bottom: 10px;
 transition: transform 0.3s ease;
 }

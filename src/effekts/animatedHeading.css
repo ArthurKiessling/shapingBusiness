@@ -17,8 +17,14 @@
     margin: 20px 0;
     margin-left: auto;
     opacity: 0; /* Starte unsichtbar, bis inView wahr ist */
-    transition: opacity 1s ease-out; /* Weiche Übergänge für das Einblenden */
+    transition: transform 0.3s ease;
   }
+
+.animated-heading:hover {
+  transform: scale(1.05) ;
+
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
   .heading-wrapper {
     min-height: 60px;
