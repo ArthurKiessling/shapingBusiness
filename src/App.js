@@ -9,10 +9,34 @@ import AGB from './components/AGB.js';
 import Beratung from './components/Beratung.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
 import { LanguageProvider } from './effekts/LanguageProvider.js';
-
+import  { useState } from 'react';
+import './components/css/HomePage.css'
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [password, setPassword] = useState('');
 
-  return (
+  const correctPassword = 'mama'; // In einer echten Anwendung solltest du hier eine sicherere Überprüfung implementieren
+
+  const handleLogin = () => {
+    if (password === correctPassword) {
+      setIsLoggedIn(true);
+    } else {
+      alert('Falsches Passwort');
+    }
+  };
+  return (<div >
+     {!isLoggedIn ? (
+        <div className='login'>
+          <input
+            type="password"
+            placeholder="Passwort eingeben"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="loginButton" onClick={handleLogin}>Einloggen</button>
+        </div>
+      ) : (
+  
     <LanguageProvider>
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
@@ -31,7 +55,8 @@ const App = () => {
         </div>
       </div>
     </ThemeProvider>
-    </LanguageProvider>
+    </LanguageProvider>)}
+    </div>
   );
 };
 

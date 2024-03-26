@@ -39,7 +39,7 @@ margin-top: 5%;
   /* Elemente links ausrichten */
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
-  font-size: clamp(38px, 5vw, 90px);
+  font-size: clamp(55px, 5vw, 90px)!important;
   color: white;
   position: absolute;
   top: 75%;
@@ -51,7 +51,7 @@ margin-top: 5%;
 }
 
 .leistung {
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
   justify-content: center;
   text-align: center;
@@ -270,7 +270,8 @@ ul.custom-list li::before {
   }
 
   .header2 {
-    
+    width: 80%;
+    white-space: initial;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -280,7 +281,6 @@ ul.custom-list li::before {
     height: fit-content;
     margin: auto;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    ;
 
   }
 }

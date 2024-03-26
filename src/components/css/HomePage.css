@@ -7,7 +7,39 @@
     src: url('../../fonts/Mogila.otf') format('opentype');
   }
 
-
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Nutzt die gesamte Höhe des Viewports */
+    background-color: #f5f5f5; /* Hintergrundfarbe des Login-Bereichs */
+  }
+  
+  /* Stil für das Passworteingabefeld */
+  .login input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px; /* Abstand zum Login-Button */
+    border: 1px solid #ccc; /* Rand des Eingabefelds */
+    border-radius: 5px; /* Abgerundete Ecken für das Eingabefeld */
+    width: 250px; /* Breite des Eingabefelds */
+  }
+  
+  /* Stil für den Login-Button */
+  .login .loginButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff; /* Hintergrundfarbe des Buttons */
+    color: white; /* Textfarbe des Buttons */
+    border-radius: 5px; /* Abgerundete Ecken für den Button */
+    cursor: pointer; /* Ändert den Cursor beim Überfahren des Buttons */
+    transition: background-color 0.3s ease; /* Glatter Übergang für den Hover-Effekt */
+  }
+  
+  /* Hover-Effekt für den Login-Button */
+  .login .loginButton:hover {
+    background-color: #0056b3; /* Dunklere Hintergrundfarbe beim Überfahren */
+  }
 .article {
     height: 80%;
     

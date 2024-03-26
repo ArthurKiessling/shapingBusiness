@@ -44,11 +44,11 @@ const [activeTab, setActiveTab] = useState(initialTab);
   };
     return <div className={styles.fließContent}>{contents[lang][tab]}</div>;
   };
-
+  const [animationCompleted, setAnimationCompleted] = useState(false);
 
 
   return (
-    <motion.div className={styles.centered} variants={containerVariants} initial="initial" animate={startAnimation ? "animate" : "initial"}>
+    <motion.div className={styles.centered} variants={containerVariants} initial="initial" animate={startAnimation ? "animate" : "initial"}  onAnimationComplete={() => setAnimationCompleted(true)}>
       <motion.div className={styles.tabs}>
         {Object.keys(tabNames).map((tabKey, index) => (
           <motion.button 
@@ -62,7 +62,11 @@ const [activeTab, setActiveTab] = useState(initialTab);
                 smoothScrollTo(targetY, 1000);
               }
             }}
+           
             className={`${styles.tab} ${activeTab === tabKey ? '' : ''}`}
+            style={{
+              transition: animationCompleted ? 'transform 1s ease' : 'none',
+            }}
           >
             {tabNames[tabKey][language]}
           </motion.button>
