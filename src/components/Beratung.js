@@ -19,6 +19,26 @@ import Philosophie from "./Philosophie";
 import Content from "./Content.js";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import { useLanguage } from '../effekts/LanguageProvider.js';
+
+function useIsMobile() {
+  // Setze einen initialen Zustand basierend auf der aktuellen Bildschirmbreite
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    // Definiere eine Funktion, um den Zustand basierend auf der Bildschirmbreite zu aktualisieren
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Füge einen Event-Listener für das Resize-Event hinzu
+    window.addEventListener('resize', handleResize);
+
+    // Entferne den Event-Listener, wenn die Komponente unmountet
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return isMobile;
+}
 const HomePage = () => {
   const targetRef = useRef(null);
   const targetRef2 = useRef(null);
@@ -96,12 +116,12 @@ const HomePage = () => {
     de: {
         heading:"ZUKUNFT GESTALTEN",
         secondheading:"Meine Leistungen",
-        contact:"Zu meinen Kontaktdaten"
+        contact:"Let´s connect!"
        },
     en:  {
       heading:"SHAPING FUTURE",
       secondheading:"My services",
-      contact:"To my contact details"
+      contact:"Let´s connect!"
     },
   };
   const services = {de:[
@@ -109,8 +129,8 @@ const HomePage = () => {
       title: "Strategie & Change",
       description:(<ul className="custom-list">
         <li>Planung und Begleitung von Change- und Transformationsprozessen</li>
-        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur.</li>
-        <li>Entwicklung und Implementierung von Geschäftsstrategien.</li>
+        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur</li>
+        <li>Entwicklung und Implementierung von Geschäftsstrategien</li>
       </ul>) 
       ,
       icon: faBusinessTime,
@@ -119,7 +139,7 @@ const HomePage = () => {
     {
       title: "Kommunikation & Reputation",
       description: (<ul className="custom-list">
-        <li>Erarbeitung integrierter Kommunikationsstrategien und -konzepte für interne und externe Zielgruppen.</li>
+        <li>Erarbeitung integrierter Kommunikationsstrategien und -konzepte für interne und externe Zielgruppen</li>
         <li>Professionelle Krisenkommunikation bei kritischen Ereignissen</li>
         <li>Positionierung von Personen, Organisationen, Standorten, Produkten & Dienstleitungen  inklusive Employer Branding</li>
       </ul>) 
@@ -130,8 +150,8 @@ const HomePage = () => {
       title: "Executive Coaching",
       description: (<ul className="custom-list">
         <li>Sparring und Begleitung für Führungskräfte</li>
-        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur.</li>
-        <li>Entwicklung und Implementierung von Geschäftsstrategien.</li>
+        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur</li>
+        <li>Individuelle Beratung bei Change- und Krisenthemen </li>
       </ul>) 
       , icon: faComments,
       id:"tab3"
@@ -140,7 +160,7 @@ const HomePage = () => {
       title: "Stakeholder Management",
       description: (<ul className="custom-list">
         <li>Public Affairs Consulting</li>
-        <li>Individuelle Beratung bei Change- und Krisenthemen</li>
+        <li>Aktives Stakeholdermanagement</li>
       </ul>) 
       ,icon: faComments,
       id:"tab4"
@@ -153,9 +173,9 @@ const HomePage = () => {
     {
       title: "Strategy & Change",
       description: (<ul className="custom-list">
-      <li>Planning and supporting change and transformation processes.</li>
-      <li>Design and development of corporate culture and innovation culture.</li>
-      <li>Development and implementation of business strategies.</li>
+      <li>Planning and supporting change and transformation processes</li>
+      <li>Design and development of corporate culture and innovation culture</li>
+      <li>Development and implementation of business strategies</li>
     </ul>) 
     ,icon: faBusinessTime,
       id:"tab1"
@@ -163,7 +183,7 @@ const HomePage = () => {
     {
       title: "Communication & Reputation",
       description: (<ul className="custom-list">
-        <li>Development of integrated communication strategies and concepts for internal and external target groups.</li>
+        <li>Development of integrated communication strategies and concepts for internal and external target groups</li>
         <li>Professional crisis communication for critical events</li>
         <li>Positioning of people, organizations, locations, products & services including employer branding</li>
       </ul>) 
@@ -174,8 +194,8 @@ const HomePage = () => {
       title: "Stakeholder Management",
       description: (<ul className="custom-list">
       <li>Sparring and support for executives</li>
-      <li>Design and development of corporate culture and innovation culture.</li>
-      <li>Development and implementation of business strategies.</li>
+      <li>Design and development of corporate culture and innovation culture</li>
+      <li>Individual advice on change and crisis issues</li>
     </ul>) 
     , icon: faComments,
       id:"tab3"
@@ -185,7 +205,7 @@ const HomePage = () => {
       title: "Executive Coaching",
       description: (<ul className="custom-list">
       <li>Public Affairs Consulting</li>
-      <li>Individual consulting on issues of change and crisis management</li>
+      <li>Active stakeholder management</li>
     </ul>) 
     ,icon: faComments,
       id:"tab4"
@@ -195,8 +215,17 @@ const HomePage = () => {
 
   const { language } = useLanguage(); // 'de' oder 'en'
   const currentElements = services[language]; 
-  const leftColumnServices = currentElements.filter((_, index) => index % 2 === 0);
-  const rightColumnServices = currentElements.filter((_, index) => index % 2 !== 0);
+
+  const isMobil = useIsMobile();
+  if(isMobil){
+    var leftColumnServices = currentElements.filter((_, index) => index <2);
+    var rightColumnServices = currentElements.filter((_, index) => index >1);
+    var rightColumnServices = rightColumnServices.slice().reverse();
+  }else{
+    var leftColumnServices = currentElements.filter((_, index) => index % 2 === 0);
+    var rightColumnServices = currentElements.filter((_, index) => index % 2 !== 0);
+  }
+
   return (
 
     <div>

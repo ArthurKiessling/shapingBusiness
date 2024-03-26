@@ -154,12 +154,13 @@
   /* Abstand zum unteren Inhalt */
   font-weight: 500;
   font-size: 2vw!important;
-  font-size: clamp(23px, 3vw, 25px) !important;
 
 }
 .endslogan{
   transform:  translateY(-10%);
-  font-size: 2vw;
+  font-size: clamp(35px, 4vw, 60px);
+  margin: auto;
+  width: 80%;
 }
 
 .center-title {

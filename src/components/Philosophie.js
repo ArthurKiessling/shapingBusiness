@@ -36,13 +36,15 @@ const Philosophie = () => {
   const { language, toggleLanguage } = useLanguage();
   const texts = {
     de: {
-      mainText: "In einer dynamischen Zeit mit Veränderungen in Geopolitik, Klimawandel, digitaler Transformation unterstütze ich Organisationen und Entscheider dabei, Komplexität zu reduzieren, Strategien für die Geschäftsentwicklung zu erarbeiten, relevante Stakeholder einzubinden und diese durch professionelle Kommunikationsmaßnahmen auf den gemeinsamen Weg mitzunehmen. Die Kombination aus Know-How, interdisziplinärer Erfahrung und einem sehr guten persönlichen Netzwerk in Industrie, Wirtschaft und öffentlicher Hand in Österreich und über die Grenzen hinaus bringe ich in die Beratung und in die Begleitung von Veränderungen ein.",
+      mainText: "In einer dynamischen Zeit mit Veränderungen in Geopolitik, Klimawandel, digitaler Transformation unterstütze ich Organisationen und Entscheider dabei, Komplexität zu reduzieren, Strategien für die Geschäftsentwicklung zu erarbeiten, relevante Stakeholder einzubinden und diese durch professionelle Kommunikationsmaßnahmen auf den gemeinsamen Weg mitzunehmen.",
+      mainText2:"Die Kombination aus Know-How, interdisziplinärer Erfahrung und einem sehr guten persönlichen Netzwerk in Industrie, Wirtschaft und öffentlicher Hand in Österreich und über die Grenzen hinaus bringe ich in die Beratung und in die Begleitung von Veränderungen ein.",
       endText: "Connecting People, Shaping Business.",
       philosophy: "Pilosophie",
       standsFor: "Dafür Steht",
     },
     en: {
-      mainText: "Clarity in setting goals, consistency in implementation, successful communication, and involvement of relevant stakeholders lead to efficiency and effectiveness in achieving personal and corporate goals. I offer my clients my extensive experience from successfully implemented projects in industry, corporate structures, and start-up organizations, as well as my expertise in strategic planning, all disciplines of modern communication, and professional stakeholder management.",
+      mainText: "In a dynamic time with changes in geopolitics, climate change and digital transformation, I support organizations and decision-makers in reducing complexity, developing strategies for business development, involving relevant stakeholders and taking them along on the common path through professional communication measures.",
+      mainText2:"I bring the combination of know-how, interdisciplinary experience and a very good personal network in industry, business and the public sector in Austria and beyond into consulting and change management.",
       endText: "Connecting People, Shaping Business.",
       philosophy: "Philosophy",
       standsFor: "Stands For",
@@ -71,7 +73,10 @@ const Philosophie = () => {
      <div ref={ref}className="center">
       <div  className={`${inView ? 'fade-in fade-in-delay-1' : 'initial-hide'}`}>
         <h1 className='heading3' id="endElement">{texts[language].philosophy}</h1>
-        <p className='main'>{texts[language].mainText}</p>
+        <p className='main'>{texts[language].mainText}
+        <br/> <br/>
+        {texts[language].mainText2}
+        </p>
       </div>
       <div ref={ref} className={` main end ${inView ? 'fade-in fade-in-delay-3' : 'initial-hide'}`}>
         <p >{texts[language].standsFor}</p>
