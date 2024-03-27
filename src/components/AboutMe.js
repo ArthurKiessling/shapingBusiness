@@ -226,7 +226,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
         </div>
 
 
-        <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
+      {/* <Logo /*style={{ fill: themeColor }} className="logoSvg"></Logo> */} 
         <div className="scroll-down-arrow" onClick={handleScroll}><DownArrow width="40" height="40" /></div>
       </article>
 

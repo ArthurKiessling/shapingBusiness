@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
         <div className='menuHeader'>
         <p className='nameHead'>Angelika Kiessling-Kranzelmayer</p>
-        <p className='sloganHead'>Connecting People - Shaping Business</p>
+        <p className='sloganHead'>Connecting People, Shaping Business</p>
         </div>
         <div  className="menu-icon" onClick={handleShowNavbar}>
         <Hamburger />

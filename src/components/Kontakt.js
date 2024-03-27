@@ -59,7 +59,7 @@ const Kontakt = () => {
       </div>
  
       <div className="felder-kontakt">
-      <a href={`tel:${content[language].phone.replace(/[^0-9]/g, '')}`}>
+      <a href={`tel:+436644268508`}>
         <div className="title-wrapper-kontakt">{content[language].telefon}</div>
         <div className="text-wrapper-kontakt">{content[language].phone}</div>
         </a>

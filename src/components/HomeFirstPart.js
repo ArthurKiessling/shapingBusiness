@@ -62,7 +62,6 @@ const [activeTab, setActiveTab] = useState(initialTab);
                 smoothScrollTo(targetY, 1000);
               }
             }}
-           
             className={`${styles.tab} ${activeTab === tabKey ? '' : ''}`}
             style={{
               transition: animationCompleted ? 'transform 1s ease' : 'none',

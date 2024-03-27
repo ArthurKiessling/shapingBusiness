@@ -175,6 +175,8 @@ margin-top: 5%;
 .column-beratung {
   display: flex;
   flex-direction: column;
+  align-items: stretch; /* Neu hinzugefügt, um die Felder zu strecken */
+  justify-content: space-between;
   gap: 20px;
   /* Vertikaler Abstand zwischen den Feldern */
   width: 48%;

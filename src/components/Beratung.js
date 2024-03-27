@@ -150,7 +150,6 @@ const HomePage = () => {
       title: "Executive Coaching",
       description: (<ul className="custom-list">
         <li>Sparring und Begleitung für Führungskräfte</li>
-        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur</li>
         <li>Individuelle Beratung bei Change- und Krisenthemen </li>
       </ul>) 
       , icon: faComments,
@@ -194,7 +193,6 @@ const HomePage = () => {
       title: "Stakeholder Management",
       description: (<ul className="custom-list">
       <li>Sparring and support for executives</li>
-      <li>Design and development of corporate culture and innovation culture</li>
       <li>Individual advice on change and crisis issues</li>
     </ul>) 
     , icon: faComments,
@@ -235,7 +233,7 @@ const HomePage = () => {
           <h1 className="conn">{content[language].heading}</h1>
         </div>
 
-        <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
+       {/* <Logo /*style={{ fill: themeColor }} className="logoSvg"></Logo> */} 
         <div className="scroll-down-arrow" onClick={handleScroll}><DownArrow width="40" height="40" /></div>
       </article>
 
