@@ -4,7 +4,7 @@ import ganzSitzBild from '../images/ganz_sitz.jpg';
 import background from "../images/hoch_ganz.jpg";
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
 
-import { ReactComponent as Logo } from '../images/image2vector.svg'
+import { ReactComponent as Logo } from '../images/AK.svg'
 import { useTheme } from './ThemeContext.js';
 import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 

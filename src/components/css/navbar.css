@@ -18,6 +18,19 @@ body {
   height: 120px; 
   
 }
+.nameHead{
+  font-size: 22px;
+  margin:auto;
+}
+.sloganHead{
+  font-size: 15px;
+  margin:auto;
+}
+.menuHeader{
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -143,6 +156,18 @@ body {
     margin-top: 22px;
   }
 }
-@media (max-width: 400px) {
- 
+@media (max-width: 768px) {
+  .nameHead{
+    font-size: 16px;
+    margin:auto;
+  }
+  .sloganHead{
+    font-size: 13px;
+    margin:auto;
+  }
+  .menuHeader{
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
 }

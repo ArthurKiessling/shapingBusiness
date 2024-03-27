@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as Hamburger } from '../images/menu_icon.svg'
-import { ReactComponent as LogoSvg } from '../images/image2vector.svg'
+import { ReactComponent as LogoSvg } from '../images/AK.svg'
 import { useTheme } from './ThemeContext.js'; 
 import './css/navbar.css'
 import './css/styles.css'; 
@@ -75,7 +75,10 @@ const Navbar = () => {
         <div>
         <LogoSvg className='logo'/>
         </div>
-          <p className='textSize'>Connecting People - Shaping Business</p>
+        <div className='menuHeader'>
+        <p className='nameHead'>Angelika Kiessling-Kranzelmayer</p>
+        <p className='sloganHead'>Connecting People - Shaping Business</p>
+        </div>
         <div  className="menu-icon" onClick={handleShowNavbar}>
         <Hamburger />
         </div>
