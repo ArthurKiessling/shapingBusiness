@@ -16,7 +16,7 @@ body {
   fill:white;
   width: 100px;  /* Breite des SVG */
   height: 120px; 
-  
+  align-items: center;
 }
 .nameHead{
   font-size: 22px;
@@ -27,6 +27,7 @@ body {
   margin:auto;
 }
 .menuHeader{
+  align-items: center;
   display: block;
   justify-content: center;
   text-align: center;
@@ -78,6 +79,7 @@ body {
 }
 
 .nav-elements ul {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -131,22 +133,24 @@ body {
   }
 
   .nav-elements {
+    
     position: absolute;
     right: 0;
     top: 80px;
     opacity: 1;
     width: 0px;
-    height: calc(100vh - 60px);
+    height: calc(100vh);
     transition: all 0.3s ease-in;
     overflow: hidden;
   }
 
   .nav-elements.active {
-    width: 270px;
+    width: 180px;
   }
   .nav-elements ul a {
     font-size: 18px;}
   .nav-elements ul {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
   }
@@ -158,16 +162,22 @@ body {
 }
 @media (max-width: 768px) {
   .nameHead{
-    font-size: 13px;
+    font-size: 14px;
     margin:auto;
   }
   .sloganHead{
-    font-size: 10px;
+    font-size: 11px;
     margin:auto;
   }
   .menuHeader{
     display: block;
     justify-content: center;
     text-align: center;
+  }
+  .logo{
+    
+    width: 80px;  /* Breite des SVG */
+    height: 70px; 
+    
   }
 }

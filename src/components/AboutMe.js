@@ -17,6 +17,7 @@ import { GiJourney } from "react-icons/gi";
 import { PiCompassToolBold } from "react-icons/pi";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import heartbrain from '../images/heartbrain.svg';
+import glue from '../images/gluebirne.svg';
 import { useLanguage } from '../effekts/LanguageProvider.js';
 const AboutMe = () => {
   const tableElements =  { de: [
@@ -43,7 +44,12 @@ const AboutMe = () => {
         <li>Change - und Krisenmanagement</li>
         <li>Nachhaltigkeit & Digitalisierung</li>
         <li>Technologie & Innovation</li>
-      </ul>),icon: <PiCompassToolBold />
+      </ul>),icon: <img 
+      src={glue}
+      alt="Herz- und Gehirn-Icon" 
+      color='white'
+      style={{ width: '48px', height: '48px' }} // Größe nach Bedarf anpassen
+    />
       },
      
     ],
@@ -94,7 +100,12 @@ const AboutMe = () => {
         <li>Sustainability & digitalization</li>
         <li>Technology & Innovation</li>
       </ul>),
-      icon: <PiCompassToolBold />
+      icon: <img 
+      src={glue}
+      alt="Herz- und Gehirn-Icon" 
+      color='white'
+      style={{ width: '48px', height: '48px' }} // Größe nach Bedarf anpassen
+    />
       },
      
     ],
@@ -230,8 +241,8 @@ const { language } = useLanguage(); // 'de' oder 'en'
         <div className="scroll-down-arrow" onClick={handleScroll}><DownArrow width="40" height="40" /></div>
       </article>
 
-      <div  style={{ backgroundColor: themeColor }} className="banner"></div>
-      <div ref={targetRef} className={styles['about-me-container']}>
+      <div ref={targetRef} style={{ backgroundColor: themeColor }} className="banner"></div>
+      <div  className={styles['about-me-container']}>
         <h1 id="startElement" className={styles.hHead}> {content[language].secondheading}</h1>
 
         {currentElements.map((row, rowIndex) => (

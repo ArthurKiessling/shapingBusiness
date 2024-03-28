@@ -1,9 +1,32 @@
 'use client';
 
 import { Footer } from 'flowbite-react';
+import { NavLink } from 'react-router-dom'
 import './css/footer.css'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from '../effekts/LanguageProvider.js';
 export default function Component() {
+  const content = {
+    de: {
+      home: 'Home',
+      beratung: 'Beratung',
+      mich: 'Über mich',
+      kontakt: 'Kontakt',
+      impressum:'Impressum',
+      daten:'Datenschutz',
+      agb:'AGB'
+    },
+    en: {
+      home: 'Home',
+      beratung: 'Consulting',
+      mich: 'About Me',
+      kontakt: 'Contact',
+      impressum:'Imprint',
+      daten:'Datenschutz',
+      agb:'Legal & Privacy'
+    }
+  };
+  const { language, toggleLanguage } = useLanguage();
   return (
     <Footer className="footer">
      <div className="w-full footer-background" /> 
@@ -12,19 +35,19 @@ export default function Component() {
           <div>
             <Footer.Title title="Unternehmen" />
             <Footer.LinkGroup col>
-              <Footer.Link href="/">Home</Footer.Link>
-              <Footer.Link href="/uebermich">About</Footer.Link>
-              <Footer.Link href="/beratung">Beratung</Footer.Link>
-              <Footer.Link href="/kontakt">Kontakt</Footer.Link>
+              <Footer.Link href="/">{content[language].home}</Footer.Link>
+              <Footer.Link href="/beratung">{content[language].beratung}</Footer.Link>
+              <Footer.Link href="/uebermich">{content[language].mich}</Footer.Link>
+              <Footer.Link href="/kontakt">{content[language].kontakt}</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>
             <Footer.Title title="legal" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#">Impressum</Footer.Link>
+              <Footer.Link href="#">{content[language].impressum}</Footer.Link>
               <Footer.Link href="#">Cookies</Footer.Link>
-              <Footer.Link href="#">Datenschutz</Footer.Link>
-              <Footer.Link href="/AGB">AGB</Footer.Link>
+              <Footer.Link href="#">{content[language].daten}</Footer.Link>
+              <Footer.Link href="/AGB">{content[language].agb}</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>

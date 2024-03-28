@@ -237,12 +237,12 @@ const HomePage = () => {
         <div className="scroll-down-arrow" onClick={handleScroll}><DownArrow width="40" height="40" /></div>
       </article>
 
-      <div style={{ backgroundColor: themeColor }} className="banner" id="startElementMobil"></div>
+      <div ref={targetRef} style={{ backgroundColor: themeColor }} className="banner" id="startElementMobil"></div>
 
 
       <div >
         <div className="services-list" >
-          <h2 id="startElement" ref={targetRef} className="leistung"> {content[language].secondheading}</h2>
+          <h2 id="startElement" className="leistung"> {content[language].secondheading}</h2>
           {/*<h1 className={styles.slogan}>{slogan}</h1>
       <p className={styles.fließContent}>{fließContent}</p>*/}
           <div id="point1" style={{ backgroundColor: "" }} className="banner"></div>

@@ -12,14 +12,15 @@
 
   }
   .heading {
+    margin: auto;
     margin-top: 10%;
-    color: #333;
     text-align: center;
     margin-bottom: 20px;
     font-family:"Julius Sans One", sans-serif;
     font-weight: 300;
     font-size: 4.5vw;
-    color: #2E4053;
+    max-width: 90%;
+    align-items: center;
     transition: transform 0.3s ease;
 }
 .heading:hover {
@@ -50,7 +51,7 @@
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
   padding: 20px;
-  font-size: 22px;
+  font-size: 23px;
  
   margin: auto;
   /* Anpassen nach Bedarf */
@@ -73,7 +74,7 @@
     padding: 10px;
     white-space: nowrap;
     font-size: clamp(30px, 5vw, 30px);
-    color: #2E4053;
+    
     text-align: center;
     margin: auto ;
     

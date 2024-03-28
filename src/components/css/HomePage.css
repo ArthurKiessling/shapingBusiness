@@ -49,7 +49,7 @@
 }
 .imagecontainer {
   width: 100%; /* oder eine spezifische Breite */
-  height: 100vh; /* Höhe des Containers, passt die Abschneidehöhe an */
+  height: 98vh; /* Höhe des Containers, passt die Abschneidehöhe an */
   overflow: hidden; /* Verbirgt den überstehenden Teil des Bildes */
   position: relative; /* Ermöglicht die absolute Positionierung des Kind-Elements */
   display: flex;
@@ -105,7 +105,7 @@
     /* Elemente links ausrichten */
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
-    font-size: clamp(32px, 5vw, 90px) !important;
+    font-size: clamp(32px, 5vw, 90px);
     color: white;
     position: absolute;
     top: 31%;
@@ -118,7 +118,7 @@
 }
 
 .conn {
-  font-size: clamp(42px, 4vw, 90px) !important;
+  font-size: clamp(55px, 5vw, 90px)!important;
     transform: translateX(-50%); 
     margin-bottom: 20px;
     /* Keine zusätzliche Anpassung nötig, wenn dieses Element linksbündig sein soll */
@@ -278,6 +278,10 @@
 }
 
 @media (max-width: 768px) {
+  .imagecontainer {
+    width: 100%; /* oder eine spezifische Breite */
+    height: 87vh;
+  }
   .arrow-second{
     top: -30%;
    }

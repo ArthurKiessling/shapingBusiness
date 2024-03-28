@@ -25,7 +25,7 @@ const App = () => {
     }
   };
   return (<div >
-     {!isLoggedIn ? (
+     {false ? (
         <div className='login'>
           <input
             type="password"
