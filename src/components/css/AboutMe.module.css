@@ -84,6 +84,36 @@ padding-inline: 20px;
 margin-bottom: 5%;
 
 }
+.hAusbildung { 
+
+  font-family:'Nunito', sans-serif;
+font-size: clamp(30px, 5vw, 30px);
+
+text-align: center;
+margin: auto ;
+
+  font-weight: 400;
+
+padding-inline: 20px;
+
+margin-bottom: 1%;
+
+}
+.textAusbildung { 
+
+  font-family:'Nunito', sans-serif;
+font-size: clamp(20px, 5vw, 25px);
+
+text-align: center;
+margin: auto ;
+
+  font-weight: 300;
+
+padding-inline: 20px;
+
+margin-bottom: 5%;
+
+}
 .hLang {
   margin: auto;
   max-width: 80%;

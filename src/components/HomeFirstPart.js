@@ -38,9 +38,9 @@ const [activeTab, setActiveTab] = useState(initialTab);
     },
     en:
     {
-      Klarheit: "Where do we want to go, what is the actual goal? This is one of the most important questions when it comes to success. I support people and organizations in finding clarity in their objectives so that they can consistently pursue the path to their goal.",
-      Konsequenz: "There are countless forks in the road, stumbling blocks and distractions on the way to the goal. Which path is the right one, how do I make decisions and how do I find the way to the goal in a dynamically changing, complex world? With an analytical and at the same time agile approach, I help you to find the right path and to follow it powerfully and purposefully.",
-      Kommunikation: "Who do I need to achieve my goals, who has an influence on my success? By defining relevant stakeholders, building sustainable relationships and active stakeholder management, I help to build bridges to relevant stakeholders in order to establish a culture of cooperation and pulling together. This requires messages that resonate.",},
+      Klarheit: "Where are we actually headed? One of the most important questions when it comes to success. I support people and organizations to find clarity in their objectives so that they can consistently pursue the path to their goals.",
+      Konsequenz: "With an analytical and agile approach, I support in finding the right path and pursuing it with power and purpose.",
+      Kommunikation: "By defining relevant stakeholders and actively managing corresponding relationships, I help build bridges to important stakeholders, establishing a culture of collaboration and pulling together. This requires messages that resonate.",},
   };
     return <div className={styles.fließContent}>{contents[lang][tab]}</div>;
   };

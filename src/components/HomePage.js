@@ -108,8 +108,7 @@ const HomePage = () => {
     },
     en: {
       animatedLines: {
-        one:"Success lies in the power of people,",
-        two:"who pull together in the same direction.",
+        one:"Success lies in the power of people pulling together.",
         three:"Three factors are essential here:",
       },
     }

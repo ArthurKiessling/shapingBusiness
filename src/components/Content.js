@@ -25,29 +25,29 @@ const sections = {
   {
     id:"Klarheit",
     heading: "KLARHEIT",
-    content: "Wo soll es eigentlich hingehen? Eine der wichtigsten Fragen, wenn es um Erfolg geht. Ich unterstütze Menschen und Organisationen, Klarheit in ihrer Zielsetzung zu finden, um den Weg zum Ziel konsequent beschreiten zu können."
+    content: "Wo soll es eigentlich hingehen? Eine der wichtigsten Fragen, wenn es um Erfolg geht. Ich unterstütze Menschen und Organisationen, Klarheit in ihrer Zielsetzung zu finden, um den Weg zum Ziel konsequent beschreiten zu können.",
   },
   {id:"Konsequenz",
     heading: "KONSEQUENZ",
-    content: "Mit analytischem und gleichzeitig agilem Vorgehen helfe ich, den richtigen Weg zu finden und diesen kraftvoll und zielstrebig zu beschreiten.",
- },
+    content:"Mit analytischem und gleichzeitig agilem Vorgehen helfe ich, den richtigen Weg zu finden und diesen kraftvoll und zielstrebig zu beschreiten.",
+  },
   {id:"Kommunikation",
     heading: "KOMMUNIKATION",
     content: "Mit der Definition relevanter Stakeholder und einem aktivem Stakeholder Management helfe ich, Brücken zu relevanten Stakeholdern zu bauen, um eine Kultur des Miteinanders und „An-einem-Strang-Ziehens“ zu etablieren. Dazu braucht es Botschaften, die ankommen.",
-},],
+  },],
 en:[
   {
     id:"Klarheit",
     heading: "CLARITY",
-    content: "Where do you actually want to go? One of the most important questions when it comes to success. I support people and organizations in finding clarity in their objectives so that they can consistently pursue the path to their goal."
+    content: "Where are we actually headed? One of the most important questions when it comes to success. I support people and organizations to find clarity in their objectives so that they can consistently pursue the path to their goals.",
   },
   {id:"Konsequenz",
     heading: "CONSEQUENCE",
-    content: "With an analytical and at the same time agile approach, I help you to find the right path and to follow it powerfully and purposefully.",
- },
+    content: "With an analytical and agile approach, I support in finding the right path and pursuing it with power and purpose.",
+  },
   {id:"Kommunikation",
     heading: "COMMUNICATION",
-    content: "With the definition of relevant stakeholders and active stakeholder management, I help to build bridges to relevant stakeholders in order to establish a culture of cooperation and pulling together. This requires messages that resonate. ",
+    content: "By defining relevant stakeholders and actively managing corresponding relationships, I help build bridges to important stakeholders, establishing a culture of collaboration and pulling together. This requires messages that resonate.",
 },],
 
   // Weitere Abschnitte hinzufügen

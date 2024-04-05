@@ -141,7 +141,7 @@ const HomePage = () => {
       description: (<ul className="custom-list">
         <li>Erarbeitung integrierter Kommunikationsstrategien und -konzepte für interne und externe Zielgruppen</li>
         <li>Professionelle Krisenkommunikation bei kritischen Ereignissen</li>
-        <li>Positionierung von Personen, Organisationen, Standorten, Produkten & Dienstleitungen  inklusive Employer Branding</li>
+        <li>Positionierung von Personen, Organisationen, Standorten, Produkten & Dienstleitungen inklusive Employer Branding</li>
       </ul>) 
       ,icon: faComments,
       id:"tab2"
@@ -150,7 +150,7 @@ const HomePage = () => {
       title: "Executive Coaching",
       description: (<ul className="custom-list">
         <li>Sparring und Begleitung für Führungskräfte</li>
-        <li>Individuelle Beratung bei Change- und Krisenthemen </li>
+        <li>Individuelle Beratung bei Change- und Krisenthemen</li>
       </ul>) 
       , icon: faComments,
       id:"tab3"
@@ -172,9 +172,9 @@ const HomePage = () => {
     {
       title: "Strategy & Change",
       description: (<ul className="custom-list">
-      <li>Planning and supporting change and transformation processes</li>
-      <li>Design and development of corporate culture and innovation culture</li>
-      <li>Development and implementation of business strategies</li>
+      <li>Planning and guiding change and transformation processes</li>
+      <li>Designing and developing corporate culture and innovation culture</li>
+      <li>Developing and implementing business strategies</li>
     </ul>) 
     ,icon: faBusinessTime,
       id:"tab1"
@@ -182,9 +182,9 @@ const HomePage = () => {
     {
       title: "Communication & Reputation",
       description: (<ul className="custom-list">
-        <li>Development of integrated communication strategies and concepts for internal and external target groups</li>
-        <li>Professional crisis communication for critical events</li>
-        <li>Positioning of people, organizations, locations, products & services including employer branding</li>
+        <li>Developing integrated communication strategies and concepts for internal and external target groups</li>
+        <li>Professional crisis communication during critical events</li>
+        <li>Positioning of individuals, organizations, locations, products & services, including employer branding</li>
       </ul>) 
       ,icon: faComments,
       id:"tab2"
@@ -193,7 +193,7 @@ const HomePage = () => {
       title: "Stakeholder Management",
       description: (<ul className="custom-list">
       <li>Sparring and support for executives</li>
-      <li>Individual advice on change and crisis issues</li>
+      <li>Individual consulting on change and crisis topics</li>
     </ul>) 
     , icon: faComments,
       id:"tab3"
@@ -202,7 +202,7 @@ const HomePage = () => {
     {
       title: "Executive Coaching",
       description: (<ul className="custom-list">
-      <li>Public Affairs Consulting</li>
+      <li>Public affairs consulting</li>
       <li>Active stakeholder management</li>
     </ul>) 
     ,icon: faComments,

@@ -81,8 +81,8 @@ const AboutMe = () => {
         title: "WITH HEART & BRAIN",
         description: (<ul className="about-list">
         <li>empathetic, warm, courageous, open</li>
-        <li>analytical, structured, results- and solution-oriented</li>
-        <li>Collaborative, strong in communication and implementation</li>
+        <li>analytical, structured, results-oriented, solution-focused</li>
+        <li>collaborative, strong in communication and implementation</li>
       </ul>),
         icon:  <img 
         src={heartbrain}
@@ -92,11 +92,11 @@ const AboutMe = () => {
       />
       },
       {
-        title: "COMPETENT",
+        title: "PROFESSIONALLY COMPETENT",
         description: (<ul className="about-list">
-        <li>Communication & Public Affairs</li>
-        <li>Reputation-, Stakeholder Management</li>
-        <li>Reputation and stakeholder management</li>
+        <li>Communication & public affairs</li>
+        <li>Reputation management, stakeholder management</li>
+        <li>Change and crisis management</li>
         <li>Sustainability & digitalization</li>
         <li>Technology & Innovation</li>
       </ul>),
@@ -111,12 +111,12 @@ const AboutMe = () => {
     ],
     [
       {
-        title: "EXPERIENCE",
+        title: "EXPERIENCED",
         description:(<ul className="about-list">
-        <li>Group organization & Start-Up</li>
+        <li>Corporate organization & start up</li>
         <li>Consolidation & development of locations</li>
         <li>New work, digital transformation, crisis management</li>
-        <li>Compatibility of career & family</li>
+        <li>Work-life balance</li>
       </ul>), 
       icon: <GiJourney />
       },
@@ -125,7 +125,7 @@ const AboutMe = () => {
         description: (<ul className="about-list">
         <li>Development of location and sustainability strategies</li>
         <li>Design & support of organizational changes</li>
-        <li>Education, promotion of young talent, culture of innovation, diversity</li>
+        <li>Training, talent development, innovation culture, diversity</li>
       </ul>),
       icon: <MdCompost />
       },
@@ -134,22 +134,62 @@ const AboutMe = () => {
   ]
 };
 
+
+
 const content = {
   de: {
       heading:"ÜBER MICH",
       secondheading:"Dafür stehe Ich",
-      firstcolm:" In mehr als 25 Jahren Erfahrung aus erfolgreicher Corporate Career, mehr als 15 davon in leitenden Management-Funktionen im internationalen Technologie- und Dienstleistungsunternehmen, prägen die Gestaltung von Zukunftsfeldern im Forschungs-, Technologie- und Bildungsumfeld sowie in der Standortentwicklung mein berufliches Engagement.",
+      firstcolm:"In mehr als 25 Jahren Erfahrung aus erfolgreicher Corporate Career, mehr als 15 davon in leitenden Management-Funktionen im internationalen Technologie- und Dienstleistungsunternehmen, prägen die Gestaltung von Zukunftsfeldern im Forschungs-, Technologie- und Bildungsumfeld sowie in der Standortentwicklung mein berufliches Engagement.",
       secondcolm:"Mit ganzheitlichem, strategischem, unternehmerischem Denken und Handeln sowie innovativem Mindset und ausgeprägten Problemlösungskompetenzen habe ich eine Vielzahl von Projekten den Bereichen in Technologie & Digitalisierung, Innovation & Nachhaltigkeit sowie Marketing & Sales erfolgreich umgesetzt.",
       sprachenHeading:"Sprachen",
-      sprachen:"Deutsch, Englisch"
-    },
+      sprachen:"Deutsch, Englisch",
+      ausbildung: "AUSBILDUNG",
+    ausbildungen: [
+      {
+        institution: "Wirtschaftsuniversität Wien (WU-Wien)",
+        jahre: "1989-1996",
+        abschluss: "Studium Betriebswirtschaft, Abschluss mit Mag. rer.soc.oec."
+      },
+      {
+        institution: "WU Executive Academy",
+        jahre: "2019-2020",
+        extrainfo:"Judge Business School Executive Education",
+        abschluss: 'Zertifikat “Governance Excellence- Programm für AufsichtsrätInnen”'
+      },
+      {
+        institution: "University of Cambridge",
+        jahre: "2022-2023",
+        abschluss: 'Certificate “Circular Economy & Sustainable Strategies”'
+      }
+    ]
+   },
   en:  {
     heading:"ABOUT ME",
     secondheading:"That's what I stand for",
-    firstcolm:"In more than 25 years of experience from a successful corporate career, more than 15 of them in leading management positions in international technology and service companies, the shaping of future fields in the research, technology and education environment as well as in location development characterize my professional commitment.",
-     secondcolm:"With holistic, strategic, entrepreneurial thinking and action as well as an innovative mindset and strong problem-solving skills, I have successfully implemented a large number of projects in the areas of technology & digitization, innovation & sustainability and marketing & sales."
-    ,sprachenHeading:"Languages",
-     sprachen:"German, English"
+    firstcolm:"More than 25 years of successful corporate experience define my professional commitment. Over 15 of these years have been spent in senior management positions in international technology and service companies, shaping future fields in research, technology and training environments, and location development.",
+     secondcolm:"With holistic, strategic, entrepreneurial thinking and action as well as an innovative mindset and pronounced problem-solving skills, I have successfully implemented a variety of projects in the fields of technology & digitalization, innovation & sustainability, and marketing & sales.",
+     sprachenHeading:"Languages",
+     sprachen:"German, English",
+     ausbildung: "EDUCATION",
+     ausbildungen: [
+       {
+         institution: "University of Ecnonomics & Business, Vienna (WU-Wien)",
+         jahre: "1989-1996",
+         abschluss: "Studies in Business Administration, graduation with MBA equivalent (Mag. rer.soc.oec.)"
+       },
+       {
+         institution: "WU Executive Academy",
+         jahre: "2019-2020",
+        extrainfo:"Judge Business School Executive Education",
+         abschluss: 'Certificate “Governance Excellence-Program for Supervisory Board Members”'
+       },
+       {
+         institution: "University of Cambridge",
+         jahre: "2022-2023",
+         abschluss: 'Certificate “Circular Economy & Sustainable Strategies”'
+       }
+     ]
     },
 };
 const { language } = useLanguage(); // 'de' oder 'en'
@@ -271,6 +311,16 @@ const { language } = useLanguage(); // 'de' oder 'en'
    <div>
    <h1  className={styles.hLang} >{content[language].sprachenHeading}</h1>
   <h1  className={styles.h3} >{content[language].sprachen}</h1>
+  <h1  className={styles.hLang} >{content[language].ausbildung}</h1>
+  {
+  content[language].ausbildungen.map(ausbildung => (
+    <div key={ausbildung.institution}>
+      <h1 className={styles.hAusbildung}>{ausbildung.institution} {ausbildung.jahre}</h1>
+      { ausbildung.extrainfo && <h1 className={styles.hAusbildung}>{ausbildung.extrainfo}</h1> }
+      <h1 className={styles.textAusbildung}>{ausbildung.abschluss}</h1>
+    </div>
+  ))
+}
    <a href="https://www.linkedin.com/in/angelika-kiessling-kranzelmayer-20b62a93" className={styles.hLinked} ><FaLinkedin /> </a>
       
    

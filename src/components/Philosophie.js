@@ -44,12 +44,12 @@ const Philosophie = () => {
       standsFor: "Dafür Steht",
     },
     en: {
-      mainText: "In a dynamic time with changes in geopolitics, climate change and digital transformation, I support organizations and decision-makers in reducing complexity, developing strategies for business development, involving relevant stakeholders and taking them along on the common path through professional communication measures.",
-      mainText2:"I bring the combination of know-how, interdisciplinary experience and a very good personal network in industry, business and the public sector in Austria and beyond into consulting and change management.",
+      mainText: "In a dynamic era marked by changes in geopolitics, climate change, and digital transformation, I assist organizations and decision-makers in reducing complexity, developing business strategies, engaging relevant stakeholders, and navigating professional communication measures onto a shared path.",
+      mainText2:"Leveraging a combination of expertise, interdisciplinary experience, and a strong personal network in industry, business, and the public sector - both domestically and internationally - I contribute to advising and facilitating change.",
       SloganFirst: "Connecting People,",
       SloganSecond: "Shaping Business.",
       philosophy: "Philosophy",
-      standsFor: "Stands For",
+      standsFor: "This is what I stand for:",
     }
   };
 
