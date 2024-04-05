@@ -12,49 +12,10 @@ import { LanguageProvider } from './effekts/LanguageProvider.js';
 
 import './components/css/HomePage.css'
 
-
-const PreloadImages = ({ imageUrls, children }) => {
-  const [loaded, setLoaded] = useState(false);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const promises = imageUrls.map(src => {
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = src;
-        img.onload = resolve;
-        img.onerror = reject;
-      });
-    });
-
-    Promise.all(promises)
-      .then(() => setLoaded(true))
-      .catch(() => setError(true));
-  }, [imageUrls]);
-
-  if (error) {
-    return <div>Es gab einen Fehler beim Laden der Bilder.</div>;
-  }
-
-  if (!loaded) {
-    return <div>Lädt...</div>;
-  }
-
-  return (
-    <>
-      {children}
-    </>
-  );
-};
-
+import PreloadImages from './effekts/PreloadImages'; 
 
 const App = () => {
-  const imageUrls = [
-   require('./images/ganz_sitz.jpg') ,
-   require('./images/hoch_ganz.jpg'),
-   require('./images/beratung.jpg'),
-    // weitere URLs
-  ];
+
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [password, setPassword] = useState('');
@@ -81,7 +42,7 @@ const App = () => {
         </div>
       ) : (
   
-        <PreloadImages  imageUrls={imageUrls}>
+        <PreloadImages>
     <LanguageProvider>
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">

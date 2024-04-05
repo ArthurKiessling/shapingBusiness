@@ -20,6 +20,9 @@ import Content from "./Content.js";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import HomeFirstPart from "./HomeFirstPart";
 import { useLanguage } from '../effekts/LanguageProvider.js';
+
+import PreloadImages from '../effekts/PreloadImages'; 
+
 const HomePage = () => {
 
   const targetRef = useRef(null);
@@ -114,7 +117,7 @@ const HomePage = () => {
     }
   };
   return (
-
+<PreloadImages>
     <div >
  
       <article className="article">
@@ -230,6 +233,7 @@ const HomePage = () => {
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
      
     </div>
+    </PreloadImages>
   );
 };
 
@@ -284,6 +288,7 @@ const PhilosophySection = () => {
         })}
       </div>
     </div>
+   
   );
 };
 

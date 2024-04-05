@@ -19,6 +19,7 @@ import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import heartbrain from '../images/heartbrain.svg';
 import glue from '../images/gluebirne.svg';
 import { useLanguage } from '../effekts/LanguageProvider.js';
+import PreloadImages from '../effekts/PreloadImages'; 
 const AboutMe = () => {
   const tableElements =  { de: [
     
@@ -264,8 +265,8 @@ const { language } = useLanguage(); // 'de' oder 'en'
       }
     };
   }, []);
-
   return (
+    <PreloadImages>
     <div>
 
       <article className="article">
@@ -326,8 +327,9 @@ const { language } = useLanguage(); // 'de' oder 'en'
    
    </div>
    <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
+   
     </div>
-
+    </PreloadImages>
 
   );
 };

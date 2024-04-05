@@ -19,6 +19,7 @@ import Philosophie from "./Philosophie";
 import Content from "./Content.js";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import { useLanguage } from '../effekts/LanguageProvider.js';
+import PreloadImages from '../effekts/PreloadImages'; 
 
 function useIsMobile() {
   // Setze einen initialen Zustand basierend auf der aktuellen Bildschirmbreite
@@ -225,7 +226,7 @@ const HomePage = () => {
   }
 
   return (
-
+    <PreloadImages>
     <div>
       <article className="article2">
         <img className="cover" src={background} />
@@ -285,6 +286,7 @@ const HomePage = () => {
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
       
     </div>
+    </PreloadImages>
   );
 };
 
