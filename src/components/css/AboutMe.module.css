@@ -64,7 +64,7 @@
   padding: 5px;
   padding-inline: 20px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -85,19 +85,23 @@ margin-bottom: 5%;
 
 }
 .hAusbildung { 
-
   font-family:'Nunito', sans-serif;
 font-size: clamp(30px, 5vw, 30px);
 
 text-align: center;
 margin: auto ;
 
-  font-weight: 400;
+  font-weight: 300;
 
 padding-inline: 20px;
 
-margin-bottom: 1%;
 
+
+}
+.hJahre{
+  font-family:'Nunito', sans-serif;
+  white-space: nowrap;
+  font-weight: 200;
 }
 .textAusbildung { 
 
@@ -111,7 +115,7 @@ margin: auto ;
 
 padding-inline: 20px;
 
-margin-bottom: 5%;
+margin-bottom: 4%;
 
 }
 .hLang {
@@ -163,7 +167,7 @@ margin-bottom: 5%;
   flex-direction: column;
   align-items: center;
   width: 90%; /* Passt die Breite jedes Tabellenelements an */
-  text-align: center;
+  align-items: center;
 
 }
 .tableElement:hover {
@@ -189,25 +193,25 @@ margin-bottom: 5%;
 
 .column {
   
-  font-size: clamp(20px, 3vw, 20px);
+  font-size: clamp(23px, 3vw, 23px);
   flex: 1; /* Lässt beide Spalten den verfügbaren Platz gleichmäßig aufteilen */
   padding: 20px; /* Fügt innen Abstand hinzu */
   font-weight: 300;
 }
 
-ul.about-list {
-  font-weight: 200;
+ul.aboutlist {
+  font-weight: 300;
 
   list-style-type: none; /* Entfernt Standard-Listensymbole */
-  padding-left: 0; /* Entfernt Standard-Padding der Liste */
+/* Entfernt Standard-Padding der Liste */
 }
-ul.about-list  li {
-  white-space: nowrap;
+ul.aboutlist  li {
+
   position: relative; /* Ermöglicht die korrekte Positionierung des ::before Inhalts */
   text-indent: 0; /* Zieht die erste Zeile jedes Listenelements nach links */
   padding-left: 1em; /* Fügt links Padding hinzu, damit der Text nicht über den Bindestrich geht */
 }
-ul.about-list  li::before {
+ul.aboutlist  li::before {
   content: "-"; /* Fügt den Bindestrich hinzu */
   position: absolute; /* Ermöglicht die absolute Positionierung des Bindestrichs */
   left: 0; /* Positioniert den Bindestrich am Anfang des Elements */

@@ -42,7 +42,7 @@ const App = () => {
         </div>
       ) : (
   
-        <PreloadImages>
+
     <LanguageProvider>
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
@@ -61,8 +61,7 @@ const App = () => {
         </div>
       </div>
     </ThemeProvider>
-    </LanguageProvider>
-    </PreloadImages>)}
+    </LanguageProvider>)}
     
     </div>
   );

@@ -60,7 +60,7 @@ export default function Component() {
           </div>
         </div>
         <div className="w-full px-4 py-6 sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Shaping Business™" year={2024} />
+          <Footer.Copyright href="#" by="Angelika Kiessling-Kranzelmayer™" year={2024} />
          
         </div>
          

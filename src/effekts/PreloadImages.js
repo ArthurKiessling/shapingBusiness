@@ -25,13 +25,7 @@ const PreloadImages = ({ children }) => {
         .catch(() => setError(true));
     }, [imageUrls]);
   
-    if (error) {
-      return <div>Es gab einen Fehler beim Laden der Bilder.</div>;
-    }
-  
-    if (!loaded) {
-      return <div></div>;
-    }
+
   
     return (
       <>

@@ -25,6 +25,7 @@ body {
 .sloganHead{
   font-size: 15px;
   margin:auto;
+  letter-spacing:2.1px;
 }
 .menuHeader{
   align-items: center;
@@ -60,13 +61,18 @@ body {
 
 .navbar.hide {
   transform: translateY(-100%);
-  pointer-events: none;/* Stelle sicher, dass dies ausreicht, um die Navbar vollständig zu verstecken */
-  transition: 1s ease;
+  pointer-events: auto;
+  transition: opacity 1s ease, transform 0.5s ease,   visibility 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .navbar.show {
-  transition: transform 0.5s ease;
-  transform: translateY(0);
+  transform: translateY(0%);
+  pointer-events: auto; /* Ändere dies zu auto, wenn du Interaktionen zulassen möchtest, wenn die Navbar sichtbar ist */
+  transition: opacity 1s ease, transform 0.5s ease;
+  opacity: 1;
+  visibility: visible; 
 }
 
 .menu-icon {
@@ -168,6 +174,7 @@ body {
   .sloganHead{
     font-size: 11px;
     margin:auto;
+    letter-spacing:1.8px;
   }
   .menuHeader{
     display: block;

@@ -26,7 +26,7 @@ const AboutMe = () => {
     [
       {
         title: "MIT HERZ & HIRN",
-        description: (<ul className="about-list">
+        description: (<ul className={styles.aboutlist}>
         <li>empathisch, herzlich, mutig, offen</li>
         <li>analytisch, strukturiert, ergebnis-, lösungsorientiert</li>
         <li>kollaborativ, kommunikations-, umsetzungsstark</li>
@@ -39,7 +39,7 @@ const AboutMe = () => {
       },
       {
         title: "FACHLICH KOMPETENT",
-        description: (<ul className="about-list">
+        description: (<ul className={styles.aboutlist}>
         <li>Kommunikation & Public Affairs</li>
         <li>Reputation-, Stakeholder Management</li>
         <li>Change - und Krisenmanagement</li>
@@ -57,7 +57,7 @@ const AboutMe = () => {
     [
       {
         title: "ERFAHREN",
-        description: (<ul className="about-list">
+        description: (<ul className={styles.aboutlist}>
         <li>Konzernorganisation & Start-Up</li>
         <li>Konsolidierung & Entwicklung von Standorten</li>
         <li>New Work, Digitale Transformation, Krisenmanagement</li>
@@ -66,7 +66,7 @@ const AboutMe = () => {
       },
       {
         title: "ZUKUNFTSORIENTIERT",
-        description: (<ul className="about-list">
+        description: (<ul className={styles.aboutlist}>
         <li>Entwicklung von Standort-, Nachhaltigkeitsstrategien</li>
         <li>Gestaltung & Begleitung von Organisationsänderungen</li>
         <li>Bildung, Nachwuchsförderung, Innovationskultur, Diversität</li>
@@ -80,7 +80,7 @@ const AboutMe = () => {
     [
       {
         title: "WITH HEART & BRAIN",
-        description: (<ul className="about-list">
+        description: (<ul className={styles.aboutlist}>
         <li>empathetic, warm, courageous, open</li>
         <li>analytical, structured, results-oriented, solution-focused</li>
         <li>collaborative, strong in communication and implementation</li>
@@ -94,7 +94,7 @@ const AboutMe = () => {
       },
       {
         title: "PROFESSIONALLY COMPETENT",
-        description: (<ul className="about-list">
+        description: (<ul className={styles.aboutlist}>
         <li>Communication & public affairs</li>
         <li>Reputation management, stakeholder management</li>
         <li>Change and crisis management</li>
@@ -113,7 +113,7 @@ const AboutMe = () => {
     [
       {
         title: "EXPERIENCED",
-        description:(<ul className="about-list">
+        description:(<ul className={styles.aboutlist}>
         <li>Corporate organization & start up</li>
         <li>Consolidation & development of locations</li>
         <li>New work, digital transformation, crisis management</li>
@@ -123,7 +123,7 @@ const AboutMe = () => {
       },
       {
         title: "FUTURE-ORIENTED",
-        description: (<ul className="about-list">
+        description: (<ul className={styles.aboutlist}>
         <li>Development of location and sustainability strategies</li>
         <li>Design & support of organizational changes</li>
         <li>Training, talent development, innovation culture, diversity</li>
@@ -145,22 +145,19 @@ const content = {
       secondcolm:"Mit ganzheitlichem, strategischem, unternehmerischem Denken und Handeln sowie innovativem Mindset und ausgeprägten Problemlösungskompetenzen habe ich eine Vielzahl von Projekten den Bereichen in Technologie & Digitalisierung, Innovation & Nachhaltigkeit sowie Marketing & Sales erfolgreich umgesetzt.",
       sprachenHeading:"Sprachen",
       sprachen:"Deutsch, Englisch",
-      ausbildung: "AUSBILDUNG",
+      ausbildung: "Ausbildung",
     ausbildungen: [
       {
         institution: "Wirtschaftsuniversität Wien (WU-Wien)",
-        jahre: "1989-1996",
         abschluss: "Studium Betriebswirtschaft, Abschluss mit Mag. rer.soc.oec."
       },
       {
         institution: "WU Executive Academy",
-        jahre: "2019-2020",
-        extrainfo:"Judge Business School Executive Education",
         abschluss: 'Zertifikat “Governance Excellence- Programm für AufsichtsrätInnen”'
       },
       {
         institution: "University of Cambridge",
-        jahre: "2022-2023",
+        extrainfo:"Judge Business School Executive Education",
         abschluss: 'Certificate “Circular Economy & Sustainable Strategies”'
       }
     ]
@@ -172,7 +169,7 @@ const content = {
      secondcolm:"With holistic, strategic, entrepreneurial thinking and action as well as an innovative mindset and pronounced problem-solving skills, I have successfully implemented a variety of projects in the fields of technology & digitalization, innovation & sustainability, and marketing & sales.",
      sprachenHeading:"Languages",
      sprachen:"German, English",
-     ausbildung: "EDUCATION",
+     ausbildung: "Education",
      ausbildungen: [
        {
          institution: "University of Ecnonomics & Business, Vienna (WU-Wien)",
@@ -182,12 +179,12 @@ const content = {
        {
          institution: "WU Executive Academy",
          jahre: "2019-2020",
-        extrainfo:"Judge Business School Executive Education",
          abschluss: 'Certificate “Governance Excellence-Program for Supervisory Board Members”'
        },
        {
          institution: "University of Cambridge",
          jahre: "2022-2023",
+         extrainfo:"Judge Business School Executive Education",
          abschluss: 'Certificate “Circular Economy & Sustainable Strategies”'
        }
      ]
@@ -316,7 +313,10 @@ const { language } = useLanguage(); // 'de' oder 'en'
   {
   content[language].ausbildungen.map(ausbildung => (
     <div key={ausbildung.institution}>
-      <h1 className={styles.hAusbildung}>{ausbildung.institution} {ausbildung.jahre}</h1>
+      <div className={styles.hAusbildung}>
+       <h1> {ausbildung.institution}</h1>
+        <h1 className='hJahre'>{ausbildung.jahre}</h1>
+        </div>
       { ausbildung.extrainfo && <h1 className={styles.hAusbildung}>{ausbildung.extrainfo}</h1> }
       <h1 className={styles.textAusbildung}>{ausbildung.abschluss}</h1>
     </div>

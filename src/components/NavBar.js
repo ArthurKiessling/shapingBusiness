@@ -70,14 +70,16 @@ const Navbar = () => {
   };
   {/*Interresant Farbe:#989292*/}
   return (
-    <nav style={{ backgroundColor: themeColor}} className={`navbar ${!show && 'hide'}`}>
+    
+    <nav style={{ backgroundColor: themeColor}} className={`navbar ${!show && 'hide'} ${show && 'show'}`}>
       <div className="container">
         <div>
         <LogoSvg className='logo'/>
         </div>
         <div className='menuHeader'>
         <p className='nameHead'>Angelika Kiessling-Kranzelmayer</p>
-        <p className='sloganHead'>Connecting People, Shaping Business</p>
+        <p className='sloganHead'>Connecting People, Shaping Business.</p>
+        
         </div>
         <div  className="menu-icon" onClick={handleShowNavbar}>
         <Hamburger />
