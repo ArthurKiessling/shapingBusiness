@@ -17,7 +17,7 @@ import { GiJourney } from "react-icons/gi";
 import { PiCompassToolBold } from "react-icons/pi";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import heartbrain from '../images/heartbrain.svg';
-import glue from '../images/gluebirne.svg';
+import glue from '../images/birne.svg';
 import { useLanguage } from '../effekts/LanguageProvider.js';
 import PreloadImages from '../effekts/PreloadImages'; 
 const AboutMe = () => {
