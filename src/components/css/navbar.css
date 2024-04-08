@@ -188,3 +188,10 @@ body {
     
   }
 }
+@media (max-width: 450px) {
+  .sloganHead{
+    font-size: 11px;
+    margin:auto;
+    letter-spacing:0.6px;
+  }
+}

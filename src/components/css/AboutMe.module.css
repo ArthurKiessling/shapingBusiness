@@ -57,7 +57,7 @@
 
 .h2 {  white-space: nowrap;
     font-family:'Nunito', sans-serif;
-  font-size: clamp(30px, 5vw, 30px);
+  font-size: 30px;
 
   text-align: center;
   background-color: #f0f0f0;
@@ -86,7 +86,7 @@ margin-bottom: 5%;
 }
 .hAusbildung { 
   font-family:'Nunito', sans-serif;
-font-size: clamp(30px, 5vw, 30px);
+font-size:30px;
 
 text-align: center;
 margin: auto ;
@@ -94,8 +94,6 @@ margin: auto ;
   font-weight: 300;
 
 padding-inline: 20px;
-
-
 
 }
 .hJahre{
@@ -219,6 +217,14 @@ ul.aboutlist  li::before {
 
 @media (max-width: 768px) {
 
+  .h2 { 
+  font-size: 23px;
+  }
+  .hAusbildung { 
+  font-size:25px;
+
+  
+  }
   .about-me-container {
     margin-top: 5%;
     margin-inline: 0%;

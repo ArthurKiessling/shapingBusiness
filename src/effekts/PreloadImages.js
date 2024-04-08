@@ -27,6 +27,10 @@ const PreloadImages = ({ children }) => {
   
 
   
+    if (!loaded) {
+      return <div></div>;
+    }
+  
     return (
       <>
         {children}

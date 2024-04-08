@@ -173,17 +173,14 @@ const content = {
      ausbildungen: [
        {
          institution: "University of Ecnonomics & Business, Vienna (WU-Wien)",
-         jahre: "1989-1996",
          abschluss: "Studies in Business Administration, graduation with MBA equivalent (Mag. rer.soc.oec.)"
        },
        {
          institution: "WU Executive Academy",
-         jahre: "2019-2020",
          abschluss: 'Certificate “Governance Excellence-Program for Supervisory Board Members”'
        },
        {
          institution: "University of Cambridge",
-         jahre: "2022-2023",
          extrainfo:"Judge Business School Executive Education",
          abschluss: 'Certificate “Circular Economy & Sustainable Strategies”'
        }
