@@ -1,7 +1,6 @@
 import "./css/HomePage.css";
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import background from "../images/ganz_sitz.jpg";
 
 
@@ -22,6 +21,7 @@ import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import HomeFirstPart from "./HomeFirstPart";
 import { useLanguage } from '../effekts/LanguageProvider.js';
 
+import PreloadImages from '../effekts/PreloadImages'; 
 
 const HomePage = () => {
 
@@ -116,24 +116,29 @@ const HomePage = () => {
       },
     }
   };
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imageUrl = "../images/ganz_sitz.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
 
-  const image = {
-    src: {background},
-    className:'first'
-  };
+  useEffect(() => {
+    const image = new Image();
+    image.onload = () => setImageLoaded(true);
+    image.src = imageUrl;
+  }, [imageUrl]);
+
+  if (!imageLoaded) {
+    return  <div className="spinner-container">
+    <div className="loading-spinner"></div>
+  </div>
+  }
   return (
 
     <div >
  
       <article className="article">
         <div className="imagecontainer">
-        <LazyLoadImage
-      src={background} // Use your own image file here
-      className="first"
-      width="100%"
-      height="auto"
-      effect="blur" // Optional: use 'blur' effect while loading
-    />
+
+          
+      <img className="first" src={imageUrl} />
       </div>
         <div className="header">
           <h1 className="firstHead">Angelika</h1>
