@@ -6,6 +6,8 @@ import HomePage from './components/HomePage.js'
 import AboutMe from './components/AboutMe.js'
 import Kontakt from './components/Kontakt.js';
 import AGB from './components/AGB.js';
+import Impressum from './components/Impressum.js';
+import Datenschutz from './components/Datenschutz.js';
 import Beratung from './components/Beratung.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
 import { LanguageProvider } from './effekts/LanguageProvider.js';
@@ -42,7 +44,7 @@ const App = () => {
         </div>
       ) : (
   
-
+<PreloadImages>
     <LanguageProvider>
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
@@ -54,6 +56,8 @@ const App = () => {
             <Route  path="/uebermich" element={<AboutMe/>}/>
             <Route  path="/kontakt" element={<Kontakt/>}/>
             <Route  path="/AGB" element={<AGB/>}/>
+            <Route  path="/Impressum" element={<Impressum/>}/>
+            <Route  path="/Datenschutz" element={<Datenschutz/>}/>
           </Routes>
         </BrowserRouter>
         <div className="mt-auto">
@@ -61,7 +65,8 @@ const App = () => {
         </div>
       </div>
     </ThemeProvider>
-    </LanguageProvider>)}
+    </LanguageProvider>
+    </PreloadImages>)}
     
     </div>
   );

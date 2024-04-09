@@ -39,7 +39,7 @@ const AGB = () => {
 
   return (
     <div>
-		 <h2 className='formatted-heading'>{content[language].heading}</h2>
+		 
     <div className='box'>
 	{language === 'de' && (
 	<div>

@@ -54,7 +54,7 @@ const Philosophie = () => {
   };
 
   return (
-    <div class="grid-container">
+    <div className="grid-container">
       {/*<div  ref={ref} className={`left ${inView ? 'fade-in fade-in-delay-2'  : 'initial-hide'}`}>
         {textsLeft.map((item, index) => {
           const { xOffset, yOffset } = calculateOffset(index, true);

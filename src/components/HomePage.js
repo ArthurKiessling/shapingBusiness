@@ -117,7 +117,7 @@ const HomePage = () => {
     }
   };
   return (
-<PreloadImages>
+
     <div >
  
       <article className="article">
@@ -224,7 +224,7 @@ const HomePage = () => {
 
 
 
-      <div class="philo" ref={targetRef3} >
+      <div className="philo" ref={targetRef3} >
 
         <Philosophie />
 
@@ -233,7 +233,7 @@ const HomePage = () => {
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
      
     </div>
-    </PreloadImages>
+
   );
 };
 

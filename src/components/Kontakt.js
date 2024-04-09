@@ -52,7 +52,7 @@ const Kontakt = () => {
  
     <div className="contact-info-konakt">
     <div className="felder-kontakt">
-    <a href={`mailto:${content[language].emailAddress}`}>
+    <a href={`mailto:office@angelikakiessling.com`}>
         
         <div className="text-wrapper-kontakt">{content[language].emailAddress}</div>
         </a>

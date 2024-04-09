@@ -16,7 +16,7 @@ import { MdCompost } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
 import { PiCompassToolBold } from "react-icons/pi";
 import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
-import heartbrain from '../images/heartbrain.svg';
+import heartbrain from '../images/heartbrain_now.svg';
 import glue from '../images/birne.svg';
 import { useLanguage } from '../effekts/LanguageProvider.js';
 import PreloadImages from '../effekts/PreloadImages'; 
@@ -28,7 +28,8 @@ const AboutMe = () => {
         title: "MIT HERZ & HIRN",
         description: (<ul className={styles.aboutlist}>
         <li>empathisch, herzlich, mutig, offen</li>
-        <li>analytisch, strukturiert, ergebnis-, lösungsorientiert</li>
+        <li>analytisch, strukturiert</li>
+        <li>ergebnis-, lösungsorientiert</li>
         <li>kollaborativ, kommunikations-, umsetzungsstark</li>
       </ul>), icon:  <img 
         src={heartbrain}
@@ -69,7 +70,8 @@ const AboutMe = () => {
         description: (<ul className={styles.aboutlist}>
         <li>Entwicklung von Standort-, Nachhaltigkeitsstrategien</li>
         <li>Gestaltung & Begleitung von Organisationsänderungen</li>
-        <li>Bildung, Nachwuchsförderung, Innovationskultur, Diversität</li>
+        <li>Bildung, Nachwuchsförderung</li>
+        <li>Innovationskultur, Diversität</li>
       </ul>),icon: <MdCompost />
       },
      
@@ -79,10 +81,11 @@ const AboutMe = () => {
     
     [
       {
-        title: "WITH HEART & BRAIN",
+        title: "WITH HEART",
         description: (<ul className={styles.aboutlist}>
         <li>empathetic, warm, courageous, open</li>
-        <li>analytical, structured, results-oriented, solution-focused</li>
+        <li>analytical, structured</li>
+       <li>results-oriented, solution-focused</li>
         <li>collaborative, strong in communication and implementation</li>
       </ul>),
         icon:  <img 
@@ -117,7 +120,7 @@ const AboutMe = () => {
         <li>Corporate organization & start up</li>
         <li>Consolidation & development of locations</li>
         <li>New work, digital transformation, crisis management</li>
-        <li>Work-life balance</li>
+        <li>reconciliation of family & workinglife</li>
       </ul>), 
       icon: <GiJourney />
       },
@@ -126,7 +129,8 @@ const AboutMe = () => {
         description: (<ul className={styles.aboutlist}>
         <li>Development of location and sustainability strategies</li>
         <li>Design & support of organizational changes</li>
-        <li>Training, talent development, innovation culture, diversity</li>
+        <li>Education, talent development</li>
+        <li>innovation culture, diversity</li>
       </ul>),
       icon: <MdCompost />
       },
@@ -165,7 +169,7 @@ const content = {
   en:  {
     heading:"ABOUT ME",
     secondheading:"That's what I stand for",
-    firstcolm:"More than 25 years of successful corporate experience define my professional commitment. Over 15 of these years have been spent in senior management positions in international technology and service companies, shaping future fields in research, technology and training environments, and location development.",
+    firstcolm:"More than 25 years of successful corporate experience define my professional commitment. Over 15 of these years have been spent in senior management positions in international technology and service companies, shaping future fields in research, technology and educational environments, and location development.",
      secondcolm:"With holistic, strategic, entrepreneurial thinking and action as well as an innovative mindset and pronounced problem-solving skills, I have successfully implemented a variety of projects in the fields of technology & digitalization, innovation & sustainability, and marketing & sales.",
      sprachenHeading:"Languages",
      sprachen:"German, English",
@@ -260,7 +264,6 @@ const { language } = useLanguage(); // 'de' oder 'en'
     };
   }, []);
   return (
-    <PreloadImages>
     <div>
 
       <article className="article">
@@ -326,7 +329,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
    <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
    
     </div>
-    </PreloadImages>
+
 
   );
 };

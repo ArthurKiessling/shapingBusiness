@@ -226,7 +226,7 @@ const HomePage = () => {
   }
 
   return (
-    <PreloadImages>
+ 
     <div>
       <article className="article2">
         <img className="cover" src={background} />
@@ -286,7 +286,7 @@ const HomePage = () => {
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
       
     </div>
-    </PreloadImages>
+ 
   );
 };
 

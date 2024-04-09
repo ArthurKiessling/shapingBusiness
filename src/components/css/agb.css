@@ -6,7 +6,7 @@
     margin-bottom: 20px;
     font-family: "Julius Sans One", sans-serif;
     font-weight: 300;
-    font-size: 4.5vw;
+    font-size: 4vw;
     color: #2E4053;
     transition: transform 0.3s ease;
     width: 70%;
@@ -15,17 +15,18 @@
     width: 50%;
     margin: auto;
     margin-bottom: 10%;
+    margin-top:10%;
 }
 
 @media (max-width: 768px) {
     .box{
+        margin-top: 25%;
         width: 80%;
     }
     .formatted-heading {
         align-self:center;
         margin-top: 20%;
-        font-size: 7.5vw;
-        color: #2E4053;
+        font-size: 30px;
         transition: transform 0.3s ease;
         width: 100%;
     }

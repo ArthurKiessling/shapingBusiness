@@ -22,7 +22,7 @@ export default function Component() {
       mich: 'About Me',
       kontakt: 'Contact',
       impressum:'Imprint',
-      daten:'Datenschutz',
+      daten:'Privacy Protection',
       agb:'Legal & Privacy'
     }
   };
@@ -44,9 +44,9 @@ export default function Component() {
           <div>
             <Footer.Title title="legal" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#">{content[language].impressum}</Footer.Link>
-              <Footer.Link href="#">Cookies</Footer.Link>
-              <Footer.Link href="#">{content[language].daten}</Footer.Link>
+              <Footer.Link href="/Impressum">{content[language].impressum}</Footer.Link>
+              <Footer.Link href="/Datenschutz">Cookies</Footer.Link>
+              <Footer.Link href="/Datenschutz">{content[language].daten}</Footer.Link>
               <Footer.Link href="/AGB">{content[language].agb}</Footer.Link>
             </Footer.LinkGroup>
           </div>
@@ -60,7 +60,7 @@ export default function Component() {
           </div>
         </div>
         <div className="w-full px-4 py-6 sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Angelika Kiessling-Kranzelmayer™" year={2024} />
+          <Footer.Copyright href="#" by="Angelika Kiessling-Kranzelmayer" year={2024} />
          
         </div>
          
