@@ -1,6 +1,7 @@
 import "./css/HomePage.css";
 import React from 'react';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import background from "../images/ganz_sitz.jpg";
 
 
@@ -21,7 +22,6 @@ import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import HomeFirstPart from "./HomeFirstPart";
 import { useLanguage } from '../effekts/LanguageProvider.js';
 
-import PreloadImages from '../effekts/PreloadImages'; 
 
 const HomePage = () => {
 
@@ -116,13 +116,24 @@ const HomePage = () => {
       },
     }
   };
+
+  const image = {
+    src: {background},
+    className:'first'
+  };
   return (
 
     <div >
  
       <article className="article">
         <div className="imagecontainer">
-      <img className="first" src={background} />
+        <LazyLoadImage
+      src={background} // Use your own image file here
+      className="first"
+      width="100%"
+      height="auto"
+      effect="blur" // Optional: use 'blur' effect while loading
+    />
       </div>
         <div className="header">
           <h1 className="firstHead">Angelika</h1>

@@ -19,7 +19,8 @@ import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import heartbrain from '../images/heartbrain_now.svg';
 import glue from '../images/birne.svg';
 import { useLanguage } from '../effekts/LanguageProvider.js';
-import PreloadImages from '../effekts/PreloadImages'; 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const AboutMe = () => {
   const tableElements =  { de: [
     
@@ -81,7 +82,7 @@ const AboutMe = () => {
     
     [
       {
-        title: "WITH HEART",
+        title: "WITH HEART & MIND",
         description: (<ul className={styles.aboutlist}>
         <li>empathetic, warm, courageous, open</li>
         <li>analytical, structured</li>
@@ -120,7 +121,7 @@ const AboutMe = () => {
         <li>Corporate organization & start up</li>
         <li>Consolidation & development of locations</li>
         <li>New work, digital transformation, crisis management</li>
-        <li>reconciliation of family & workinglife</li>
+        <li>Reconciliation of family & workinglife</li>
       </ul>), 
       icon: <GiJourney />
       },
@@ -130,7 +131,7 @@ const AboutMe = () => {
         <li>Development of location and sustainability strategies</li>
         <li>Design & support of organizational changes</li>
         <li>Education, talent development</li>
-        <li>innovation culture, diversity</li>
+        <li>Innovation culture, diversity</li>
       </ul>),
       icon: <MdCompost />
       },
@@ -268,7 +269,13 @@ const { language } = useLanguage(); // 'de' oder 'en'
 
       <article className="article">
          <div className="imagecontainer">
-      <img className="first" src={background} />
+         <LazyLoadImage
+      src={background} // Use your own image file here
+      className="first"
+      width="100%"
+      height="auto"
+      effect="blur" // Optional: use 'blur' effect while loading
+    />
       </div>
         <div className="header2">
           <h1 className="conn">{content[language].heading}</h1>
@@ -289,7 +296,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
               <div key={itemIndex} className={styles.tableElement}>
                 <div className={styles.icon}>{item.icon}</div>
                 <h2 className={styles.h2}>{item.title}</h2>
-                <p className={styles.p}>{item.description}</p>
+                <div className={styles.p}>{item.description}</div>
               </div>
             ))}
           </div>

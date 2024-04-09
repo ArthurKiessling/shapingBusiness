@@ -14,7 +14,7 @@ import { LanguageProvider } from './effekts/LanguageProvider.js';
 
 import './components/css/HomePage.css'
 
-import PreloadImages from './effekts/PreloadImages'; 
+
 
 const App = () => {
 
@@ -43,8 +43,7 @@ const App = () => {
           <button className="loginButton" onClick={handleLogin}>Einloggen</button>
         </div>
       ) : (
-  
-<PreloadImages>
+
     <LanguageProvider>
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
@@ -66,7 +65,7 @@ const App = () => {
       </div>
     </ThemeProvider>
     </LanguageProvider>
-    </PreloadImages>)}
+)}
     
     </div>
   );

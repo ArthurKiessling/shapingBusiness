@@ -2,7 +2,8 @@ import "./css/Beratung.css";
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { ReactComponent as Logo } from '../images/AK.svg'
 import { useTheme } from './ThemeContext.js';
 import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
@@ -229,7 +230,13 @@ const HomePage = () => {
  
     <div>
       <article className="article2">
-        <img className="cover" src={background} />
+      <LazyLoadImage
+      src={background} // Use your own image file here
+      className="cover"
+      width="100%"
+      height="auto"
+      effect="blur" // Optional: use 'blur' effect while loading
+    />
         <div className="header2">
           <h1 className="conn">{content[language].heading}</h1>
         </div>
