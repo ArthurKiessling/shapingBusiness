@@ -138,7 +138,7 @@ const HomePage = () => {
         <div className="imagecontainer">
 
           
-      <img className="first" src={imageUrl} />
+      <img className="first image-with-blur" src={imageUrl} />
       </div>
         <div className="header">
           <h1 className="firstHead">Angelika</h1>

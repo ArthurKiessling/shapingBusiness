@@ -131,7 +131,7 @@ const AboutMe = () => {
         <li>Development of location and sustainability strategies</li>
         <li>Design & support of organizational changes</li>
         <li>Education, talent development</li>
-        <li>Innovation culture, diversity</li>
+        <li>Innovation Culture, diversity</li>
       </ul>),
       icon: <MdCompost />
       },
@@ -284,7 +284,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
 
       <article className="article">
          <div className="imagecontainer">
-         <img className="first" src={imageUrl} />
+          <img className="cover" src={imageUrl} />
       </div>
         <div className="header2">
           <h1 className="conn">{content[language].heading}</h1>
