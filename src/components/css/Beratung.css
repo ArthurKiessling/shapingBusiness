@@ -14,7 +14,26 @@
   height: 102.2vh;
   object-position: center top;
 }
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
+.loading-spinner {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid '#c1b3a5'; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 .services-list {
   font-family: Arial, sans-serif;
   margin: 10px auto;

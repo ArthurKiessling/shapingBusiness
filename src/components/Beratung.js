@@ -1,4 +1,5 @@
 import "./css/Beratung.css";
+
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
@@ -224,12 +225,25 @@ const HomePage = () => {
     var leftColumnServices = currentElements.filter((_, index) => index % 2 === 0);
     var rightColumnServices = currentElements.filter((_, index) => index % 2 !== 0);
   }
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imageUrl = "../images/beratung.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
 
+  useEffect(() => {
+    const image = new Image();
+    image.onload = () => setImageLoaded(true);
+    image.src = imageUrl;
+  }, [imageUrl]);
+
+  if (!imageLoaded) {
+    return  <div className="spinner-container">
+    <div className="loading-spinner"></div>
+  </div>
+  }
   return (
  
     <div>
       <article className="article2">
-        <img className="cover" src={background} />
+        <img className="cover" src={imageUrl} />
         <div className="header2">
           <h1 className="conn">{content[language].heading}</h1>
         </div>

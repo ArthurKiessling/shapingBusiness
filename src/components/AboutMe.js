@@ -264,18 +264,27 @@ const { language } = useLanguage(); // 'de' oder 'en'
       }
     };
   }, []);
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imageUrl = "../images/hoch_ganz.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
+
+  useEffect(() => {
+    const image = new Image();
+    image.onload = () => setImageLoaded(true);
+    image.src = imageUrl;
+  }, [imageUrl]);
+
+  if (!imageLoaded) {
+    return  <div className="spinner-container">
+    <div className="loading-spinner"></div>
+  </div>
+  }
   return (
     <div>
 
       <article className="article">
          <div className="imagecontainer">
-         <LazyLoadImage
-      src={background} // Use your own image file here
-      className="first"
-      width="100%"
-      height="auto"
-      effect="blur" // Optional: use 'blur' effect while loading
-    />
+         <img className="first" src={imageUrl} />
       </div>
         <div className="header2">
           <h1 className="conn">{content[language].heading}</h1>
