@@ -117,8 +117,8 @@ const HomePage = () => {
     }
   };
   const [imageLoaded, setImageLoaded] = useState(false);
-  const imageUrl = "../images/ganz_sitz.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
-
+  const imageUrl = "../images/ganz_sitz_comp.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
+  const [imageClass, setImageClass] = useState("blur");
   useEffect(() => {
     const image = new Image();
     image.onload = () => setImageLoaded(true);
@@ -138,7 +138,7 @@ const HomePage = () => {
         <div className="imagecontainer">
 
           
-      <img className="first image-with-blur" src={imageUrl} />
+      <img className="first" src={imageUrl} />
       </div>
         <div className="header">
           <h1 className="firstHead">Angelika</h1>

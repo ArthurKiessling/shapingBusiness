@@ -94,7 +94,15 @@
     margin-top: 20%;
   }
 
-
+  .blur::after {
+    filter: blur(8px); /* Erhöhe den Wert für mehr Unschärfe */
+    transition: filter 0.5s ease-out; /* Anpassbar für Geschwindigkeit und Effekt */
+  }
+  
+  .clear {
+    filter: blur(0); /* Entfernt den Blureffekt */
+    transition: filter 0.5s ease-out; 
+  }
 .logoSvg {
     width: 30%;
     height: auto;

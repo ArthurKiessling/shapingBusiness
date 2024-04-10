@@ -226,7 +226,7 @@ const HomePage = () => {
     var rightColumnServices = currentElements.filter((_, index) => index % 2 !== 0);
   }
   const [imageLoaded, setImageLoaded] = useState(false);
-  const imageUrl = "../images/beratung.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
+  const imageUrl = "../images/beratung_comp.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
 
   useEffect(() => {
     const image = new Image();

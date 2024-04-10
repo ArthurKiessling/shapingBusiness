@@ -266,7 +266,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
   }, []);
 
   const [imageLoaded, setImageLoaded] = useState(false);
-  const imageUrl = "../images/hoch_ganz.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
+  const imageUrl = "../images/hoch_ganz_comp.jpg"; // Setzen Sie hier den Pfad zu Ihrem Bild ein
 
   useEffect(() => {
     const image = new Image();
