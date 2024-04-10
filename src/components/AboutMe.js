@@ -284,7 +284,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
 
       <article className="article">
          <div className="imagecontainer">
-          <img className="cover" src={imageUrl} />
+          <img className="first" src={imageUrl} />
       </div>
         <div className="header2">
           <h1 className="conn">{content[language].heading}</h1>

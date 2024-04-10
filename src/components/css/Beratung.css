@@ -275,8 +275,8 @@ ul.custom-list li::before {
   }
 
   .column-beratung {
-    width: 90%;
-    margin-inline: 5%;
+    width: 95%;
+    margin-inline: auto;
     /* Die Spalten nehmen die volle Breite ein, sodass sie zu einer Spalte werden */
   }
 
