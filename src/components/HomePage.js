@@ -1,7 +1,6 @@
 import "./css/HomePage.css";
 import React from 'react';
 
-import background from "../images/ganz_sitz.jpg";
 
 
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
@@ -13,15 +12,14 @@ import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
-import seedrandom from 'seedrandom';
+
 
 import Philosophie from "./Philosophie";
 import Content from "./Content.js";
-import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
+
 import HomeFirstPart from "./HomeFirstPart";
 import { useLanguage } from '../effekts/LanguageProvider.js';
 
-import PreloadImages from '../effekts/PreloadImages'; 
 
 const HomePage = () => {
 

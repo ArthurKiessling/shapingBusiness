@@ -16,6 +16,7 @@ body {
   fill:white;
   width: 100px;  /* Breite des SVG */
   height: 120px; 
+  margin-top: 5%;
   align-items: center;
 }
 .nameHead{
@@ -26,6 +27,7 @@ body {
   font-size: 15px;
   margin:auto;
   letter-spacing:2.1px;
+  margin-left: 3px;
 }
 .menuHeader{
   align-items: center;
@@ -173,7 +175,7 @@ body {
   }
   .sloganHead{
     font-size: 11px;
-    margin:auto;
+    
     letter-spacing:1.8px;
   }
   .menuHeader{
@@ -182,7 +184,7 @@ body {
     text-align: center;
   }
   .logo{
-    
+    margin-top: 6%;
     width: 80px;  /* Breite des SVG */
     height: 70px; 
     

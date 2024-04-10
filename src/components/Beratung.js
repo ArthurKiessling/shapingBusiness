@@ -4,23 +4,18 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
 
-import { ReactComponent as Logo } from '../images/AK.svg'
+
 import { useTheme } from './ThemeContext.js';
 import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faStream, faComments, faBusinessTime, faRocket, faHeart, faTrophy } from '@fortawesome/free-solid-svg-icons';
-import background from "../images/beratung.jpg";
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { faLightbulb, faStream, faComments, faBusinessTime, faRocket, faHeart, faTrophy } from '@fortawesome/free-solid-svg-icons';
+
+
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
-import seedrandom from 'seedrandom';
 
-import Philosophie from "./Philosophie";
-import Content from "./Content.js";
-import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
 import { useLanguage } from '../effekts/LanguageProvider.js';
-import PreloadImages from '../effekts/PreloadImages'; 
+
 
 function useIsMobile() {
   // Setze einen initialen Zustand basierend auf der aktuellen Bildschirmbreite

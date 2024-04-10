@@ -1,25 +1,20 @@
 import React from 'react';
 import styles from './css/AboutMe.module.css'; // Stelle sicher, dass der Pfad korrekt ist
-import ganzSitzBild from '../images/ganz_sitz.jpg';
-import background from "../images/hoch_ganz.jpg";
+
 import { ReactComponent as DownArrow } from '../images/downarrow.svg';
 
-import { ReactComponent as Logo } from '../images/AK.svg'
 import { useTheme } from './ThemeContext.js';
 import { smoothScrollTo, getElementY } from '../effekts/scrollUtils.js';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { MdCompost } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
-import { PiCompassToolBold } from "react-icons/pi";
-import ScrollProgressIndicator from '../effekts/ScrollProgressIndicator.js';
+
 import heartbrain from '../images/heartbrain_now.svg';
 import glue from '../images/birne.svg';
 import { useLanguage } from '../effekts/LanguageProvider.js';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 const AboutMe = () => {
   const tableElements =  { de: [
