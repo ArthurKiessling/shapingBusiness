@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import KontaktForm from './KontaktForm.js'; // Pfad anpassen
+import React from 'react';
 import './css/kontakt.css'; // Stellen Sie sicher, dass Sie diese CSS-Datei für das Styling erstellen
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 import { useLanguage } from '../effekts/LanguageProvider.js';
 
 // Inhalte für jede Sprache
@@ -20,7 +19,7 @@ const Kontakt = () => {
       emailAddress: 'office(at)angelikakiessling.com',
       address: (<ul className="about-list">
       <li>Mag. Angelika Kiessling-Kranzelmayer</li>
-      <li>Unternehmensberatung</li>
+      <li>Strategy & Business Consulting</li>
       <li>Leopold Gattringer-Straße 25</li>
       <li>A-2345 Brunn am Gebirge</li>
     </ul>),
@@ -36,7 +35,7 @@ const Kontakt = () => {
       emailAddress: 'office(at)angelikakiessling.com',
       address: (<ul className="about-list">
       <li>Mag. Angelika Kiessling-Kranzelmayer</li>
-      <li>Unternehmensberatung</li>
+      <li>Strategy & Business Consulting</li>
       <li>Leopold Gattringer-Straße 25</li>
       <li>A-2345 Brunn am Gebirge</li>
     </ul>),
