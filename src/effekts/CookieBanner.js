@@ -24,6 +24,11 @@ const CookieBanner = () => {
     localStorage.setItem('cookieAccepted', 'all');
     setIsVisible(false);
     setCookieConsent('all');
+    // eslint-disable-next-line no-undef
+    gtag('consent', 'update', {
+    'ad_storage': 'granted',
+    'analytics_storage': 'granted'
+  });
     //document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
 
@@ -31,6 +36,11 @@ const CookieBanner = () => {
     localStorage.setItem('cookieAccepted', 'necessary');
     setIsVisible(false);
     setCookieConsent('necessary');
+    // eslint-disable-next-line no-undef
+    gtag('consent', 'update', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'granted'
+    });
    // document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
 
