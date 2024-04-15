@@ -13,18 +13,12 @@ import { ThemeProvider } from './components/ThemeContext.js';
 import { LanguageProvider } from './effekts/LanguageProvider.js';
 import CookieBanner from "./effekts/CookieBanner.js";
 import './components/css/HomePage.css'
-
-import { gtag, initDataLayer, install } from 'ga-gtag';
-
-
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-91T6TVCQRG";
+ReactGA.initialize(TRACKING_ID,{ debug: true });
 
 const App = () => {
-  initDataLayer();
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'denied'
-  });
-  install('G-91T6TVCQRG');
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [password, setPassword] = useState('');
 
@@ -37,6 +31,11 @@ const App = () => {
       alert('Falsches Passwort');
     }
   };
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (<div >
      {false ? (
         <div className='login'>

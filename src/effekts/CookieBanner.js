@@ -33,12 +33,7 @@ const CookieBanner = () => {
     'ad_storage': 'granted',
     'analytics_storage': 'granted'
   });
-        var gtagScript = document.createElement('script');
-        gtagScript.async = true;
-        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-91T6TVCQRG';
-
-        var firstScript = document.getElementsByTagName('script')[0];
-        firstScript.parentNode.insertBefore(gtagScript,firstScript);
+  gtag('event', 'page_view');
 
     //document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
@@ -51,12 +46,7 @@ const CookieBanner = () => {
       'ad_storage': 'denied',
       'analytics_storage': 'granted'
     });
-        var gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-91T6TVCQRG';
-
-    var firstScript = document.getElementsByTagName('script')[0];
-    firstScript.parentNode.insertBefore(gtagScript,firstScript);
+    gtag('event', 'page_view');
 
    // document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
