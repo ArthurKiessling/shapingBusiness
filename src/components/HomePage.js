@@ -128,6 +128,7 @@ const HomePage = () => {
     <div className="loading-spinner"></div>
   </div>
   }
+  console.log(isInView);
   return (
 
     <div >
@@ -191,12 +192,12 @@ const HomePage = () => {
               
     
     <div id="point1" className="first-part" >
-        <div ref={ref} className="section-text">
+        <div  className="section-text">
           <span
             style={{
               transform: isInView ? "none" : "none",
               opacity: isInView ? 1 : 0,
-              transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
             }}
           >
             <motion.div

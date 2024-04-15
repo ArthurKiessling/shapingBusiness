@@ -11,7 +11,7 @@ import Datenschutz from './components/Datenschutz.js';
 import Beratung from './components/Beratung.js';
 import { ThemeProvider } from './components/ThemeContext.js'; 
 import { LanguageProvider } from './effekts/LanguageProvider.js';
-
+import CookieBanner from "./effekts/CookieBanner.js";
 import './components/css/HomePage.css'
 
 
@@ -45,6 +45,7 @@ const App = () => {
       ) : (
 
     <LanguageProvider>
+   
     <ThemeProvider>
       <div className="flex flex-col min-h-screen">
         <BrowserRouter basename="/">
@@ -58,6 +59,7 @@ const App = () => {
             <Route  path="/Impressum" element={<Impressum/>}/>
             <Route  path="/Datenschutz" element={<Datenschutz/>}/>
           </Routes>
+          <CookieBanner />
         </BrowserRouter>
         <div className="mt-auto">
           <Footer />

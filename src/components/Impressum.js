@@ -54,7 +54,7 @@ const Impressum = () => {
 				<p>&nbsp;</p>
 				<p><strong>Berufsbezeichnung / Unternehmensgegenstand:<br /> </strong>Unternehmensberatung einschlie&szlig;lich der Unternehmensorganisation</p>
 				<p>&nbsp;</p>
-				<p><strong>UID-Nr:</strong><br /> <strong>Gewerbeaufsichtbeh&ouml;rde:</strong>&nbsp;BH M&ouml;dling<br /> <strong>Mitgliedschaften: </strong>WKN&Ouml;</p>
+				<p><strong>UID-Nr:</strong><br /> <strong>Gewerbeaufsichtbeh&ouml;rde:</strong>&nbsp;BH M&ouml;dling<br /><strong>GISA-Zahl:</strong> 37011987<br />  <strong>Mitgliedschaften: </strong>Wirtschaftskammer Niederösterreich, Fachgruppe Unternehmensberatung</p>
 				<p>&nbsp;</p>
 				<p><strong>Kontaktdaten:</strong><br /> Telefon: +436644268508<br /> Email: <a href="mailto:office@angelikakiessling.com">office@angelikakiessling.com</a></p>
 				<p>&nbsp;</p>
@@ -70,6 +70,7 @@ const Impressum = () => {
 				<p><strong>Haftungsausschluss:</strong>&nbsp;Trotz sorgf&auml;ltiger inhaltlicher Kontrolle &uuml;bernimmt der Webseitenbetreiber dieser Webseite keine Haftung f&uuml;r die Inhalte externer Links. F&uuml;r den Inhalt der verlinkten Seiten sind ausschlie&szlig;lich deren Betreiber verantwortlich. Sollten Sie dennoch auf ausgehende Links aufmerksam werden, welche auf eine Webseite mit rechtswidriger T&auml;tigkeit/Information verweisen, ersuchen wir um dementsprechenden Hinweis, um diese nach &sect; 17 Abs. 2 ECG umgehend zu entfernen.<br /> Die Urheberrechte Dritter werden vom Betreiber dieser Webseite mit gr&ouml;&szlig;ter Sorgfalt beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden derartiger Rechtsverletzungen werden wir den betroffenen Inhalt umgehend entfernen.</p>
 				<p>&nbsp;</p>
 				<p>Quelle:&nbsp;<a href="https://www.fairesrecht.at/"><strong>fairesRecht.at</strong></a></p>
+        <br></br>
 				<p><strong>Fotocredit: </strong>Andrea Sojka</p>
 				<p>&nbsp;</p>
  </div>

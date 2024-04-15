@@ -320,6 +320,7 @@ const { language } = useLanguage(); // 'de' oder 'en'
    <div>
    <h1  className={styles.hLang} >{content[language].sprachenHeading}</h1>
   <h1  className={styles.h3} >{content[language].sprachen}</h1>
+  <br></br>
   <h1  className={styles.hLang} >{content[language].ausbildung}</h1>
   {
   content[language].ausbildungen.map(ausbildung => (
