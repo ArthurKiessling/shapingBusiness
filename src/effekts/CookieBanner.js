@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './cookieBanner.css'; // Stelle sicher, dass der Pfad korrekt ist
 import { NavLink } from 'react-router-dom';
+window.dataLayer = window.dataLayer || [];
 
+// Diese Funktion schiebt die übergebenen Argumente in das dataLayer für Google Tag Manager
+function gtag() {
+  window.dataLayer.push(arguments);
+}
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [cookieConsent, setCookieConsent] = useState(null); // null, 'all', oder 'necessary'
@@ -24,11 +29,17 @@ const CookieBanner = () => {
     localStorage.setItem('cookieAccepted', 'all');
     setIsVisible(false);
     setCookieConsent('all');
-    // eslint-disable-next-line no-undef
     gtag('consent', 'update', {
     'ad_storage': 'granted',
     'analytics_storage': 'granted'
   });
+        var gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-91T6TVCQRG';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(gtagScript,firstScript);
+
     //document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
 
@@ -41,6 +52,13 @@ const CookieBanner = () => {
       'ad_storage': 'denied',
       'analytics_storage': 'granted'
     });
+        var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-91T6TVCQRG';
+
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(gtagScript,firstScript);
+
    // document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
 
