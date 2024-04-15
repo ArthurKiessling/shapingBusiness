@@ -14,11 +14,17 @@ import { LanguageProvider } from './effekts/LanguageProvider.js';
 import CookieBanner from "./effekts/CookieBanner.js";
 import './components/css/HomePage.css'
 
+import { gtag, initDataLayer, install } from 'ga-gtag';
+
 
 
 const App = () => {
-
-
+  initDataLayer();
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  });
+  install('G-91T6TVCQRG');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [password, setPassword] = useState('');
 

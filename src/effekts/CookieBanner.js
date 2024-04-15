@@ -47,7 +47,6 @@ const CookieBanner = () => {
     localStorage.setItem('cookieAccepted', 'necessary');
     setIsVisible(false);
     setCookieConsent('necessary');
-    // eslint-disable-next-line no-undef
     gtag('consent', 'update', {
       'ad_storage': 'denied',
       'analytics_storage': 'granted'
