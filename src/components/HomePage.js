@@ -43,7 +43,7 @@ const HomePage = () => {
   const handleScroll3 = () => {
     if (targetRef3.current) {
       const targetY = getElementY(targetRef3.current);
-      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+      smoothScrollTo(targetY+30, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
 
@@ -60,15 +60,17 @@ const HomePage = () => {
       },
     }),
   };
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const [ref, isInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.6  // 1.0 bedeutet, dass das gesamte Element sichtbar sein muss
+  });
   const [animateState, setAnimateState] = useState("hidden");
   useEffect(() => {
     if (isInView) {
       setAnimateState("visible");
     }
   }, [isInView]);
-
+  const [contentOpacity, setContentOpacity] = useState(0);
   const [reveal, setReveal] = useState(false);
   const sectionRef = useRef(null);
 
@@ -128,7 +130,7 @@ const HomePage = () => {
     <div className="loading-spinner"></div>
   </div>
   }
-  console.log(isInView);
+
   return (
 
     <div >
@@ -192,7 +194,7 @@ const HomePage = () => {
               
     
     <div id="point1" className="first-part" >
-        <div  className="section-text">
+        <div ref={ref}  className="section-text">
           <span
             style={{
               transform: isInView ? "none" : "none",
@@ -211,7 +213,14 @@ const HomePage = () => {
                   initial="hidden"
                   animate={animateState}
                   className="leftText"
-                  onAnimationComplete={() => i === 4 && setStartAnimation(true)}
+                  onAnimationComplete={() => {
+                    if (i === 4) {
+                      setStartAnimation(true);
+                    }
+                    if (i === 10) {
+                      setContentOpacity(1);
+                    }
+                  }}
                 >
                   {i === 1 && content[language].animatedLines.one}
                   {i === 2 && content[language].animatedLines.two}
@@ -219,7 +228,7 @@ const HomePage = () => {
                   {i === 4 && content[language].animatedLines.three}
              
                   {i === 5 && <HomeFirstPart startAnimation={startAnimation} />}
-                  {i === 10 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
+                  {i === 8 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
                  
                 </motion.h1>
               ))}
@@ -231,7 +240,7 @@ const HomePage = () => {
       </div >  
     {/*<div style={{ backgroundColor: themeColor }} className="banner"></div>
   {/**/}
-      <div className="mid-part" ref={targetRef2} >
+      <div className="mid-part" ref={targetRef2} style={{ opacity: contentOpacity ,transition: 'opacity 1s ease-in-out' }} >
 
         <Content />
         <div className="scroll-down-arrow arrow-third" onClick={handleScroll3}><DownArrow width="40" height="40" /></div>
