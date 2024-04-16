@@ -25,7 +25,7 @@ const CookieBanner = () => {
     const cookieAccepted = getCookie('cookieAccepted');
     if (!cookieAccepted) {
       setIsVisible(true);
-      document.body.style.overflow = 'hidden'; // Prevents scrolling
+      //document.body.style.overflow = 'hidden'; // Prevents scrolling
     } else {
       setCookieConsent(cookieAccepted);
     }
