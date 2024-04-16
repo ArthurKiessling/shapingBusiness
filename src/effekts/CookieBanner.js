@@ -15,38 +15,75 @@ const CookieBanner = () => {
     window.scrollTo(0, 0);
   };
 
+  const getCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+  }
   useEffect(() => {
-    const cookieAccepted = localStorage.getItem('cookieAccepted');
+    const cookieAccepted = getCookie('cookieAccepted');
     if (!cookieAccepted) {
       setIsVisible(true);
-      //document.body.style.overflow = 'hidden'; // Verhindert das Scrollen
+      document.body.style.overflow = 'hidden'; // Prevents scrolling
     } else {
       setCookieConsent(cookieAccepted);
     }
   }, []);
 
+  const setCookie = (name, value, days) => {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
   const handleAcceptAll = () => {
-    localStorage.setItem('cookieAccepted', 'all');
+    setCookie('cookieAccepted', 'all', 365); // Sets a cookie for 1 year
     setIsVisible(false);
     setCookieConsent('all');
-    gtag('consent', 'update', {
-    'ad_storage': 'granted',
-    'analytics_storage': 'granted'
-  });
-  gtag('event', 'page_view');
 
+    localStorage.setItem("consentGranted", "true");
+
+    gtag('consent', 'update', {
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted'
+    });
+
+    gtag('event', 'page_view');
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-91T6TVCQRG';
+  
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(gtagScript,firstScript);
+  
     //document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
 
   const handleAcceptNecessary = () => {
-    localStorage.setItem('cookieAccepted', 'necessary');
+    setCookie('cookieAccepted', 'necessary');
     setIsVisible(false);
     setCookieConsent('necessary');
+    
     gtag('consent', 'update', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'granted'
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      ad_storage: 'denied',
+      analytics_storage: 'denied'
     });
     gtag('event', 'page_view');
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-91T6TVCQRG';
+  
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(gtagScript,firstScript);
+  
 
    // document.body.style.overflow = 'auto'; // Erlaubt das Scrollen wieder
   };
