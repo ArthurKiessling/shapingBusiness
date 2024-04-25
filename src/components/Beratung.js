@@ -125,9 +125,9 @@ const HomePage = () => {
     {
       title: "Strategie & Change",
       description:(<ul className="custom-list">
-        <li>Planung und Begleitung von Change- und Transformationsprozessen</li>
-        <li>Gestaltung und Entwicklung von Unternehmenskultur und Innovationskultur</li>
         <li>Entwicklung und Implementierung von Geschäftsstrategien</li>
+        <li>Planung und Begleitung von Change- und Transformationsprozessen</li>
+        <li>Gestaltung von Unternehmenskultur und Innovationskultur</li>
       </ul>) 
       ,
       icon: faBusinessTime,
@@ -136,9 +136,9 @@ const HomePage = () => {
     {
       title: "Kommunikation & Reputation",
       description: (<ul className="custom-list">
-        <li>Erarbeitung integrierter Kommunikationsstrategien und -konzepte für interne und externe Zielgruppen</li>
-        <li>Professionelle Krisenkommunikation bei kritischen Ereignissen</li>
-        <li>Positionierung von Personen, Organisationen, Standorten, Produkten & Dienstleitungen inklusive Employer Branding</li>
+        <li>Integrierte Kommunikationsstrategien und -konzepte</li>
+        <li>Professionelle Krisenkommunikation</li>
+        <li>Positionierung von Organisationen, Personen, Standorten, Produkten & Dienstleitungen </li>
       </ul>) 
       ,icon: faComments,
       id:"tab2"

@@ -2,15 +2,18 @@
 
 
 .grid-container {
-  padding-top: 10%;
+  padding-top: 3%;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns:2fr ;
   /* Mittlere Spalte doppelt so breit */
- 
+  max-width: 55%;
+  margin-inline: auto;
+
   /* Drei Zeilen mit gleicher Höhe */
   gap: 10px;
   /* Abstand zwischen den Zellen */
-  align-items: start;
+  align-items: center;
+  justify-content: center;
   /* Beginnt Inhalte am Anfang der Zelle */
   margin-bottom: 0%;
 
@@ -134,7 +137,7 @@
 .main {
   margin: 3%;
   /* Maximale Breite des Fließtextes */
-  text-align: center;
+  text-align: left;
   /* Zentrierter Text */
   
   /* Abstand zum unteren Inhalt */
@@ -216,7 +219,7 @@
     /* Abstand zwischen den Zellen */
     align-items: center;
     margin-bottom: 20%;
-
+    max-width: 100%;
   }
 
   .grid-container>.left {
@@ -270,6 +273,10 @@
     font-size: 8vw;
   }
 
+  .main{
+    margin-inline: 8%;
+   
+  }
 }
 @keyframes fadeIn {
   from {
@@ -281,7 +288,23 @@
     transform: translateY(0); /* Endposition */
   }
 }
+ul.pointList {
+  font-weight: 300;
 
+  list-style-type: none; /* Entfernt Standard-Listensymbole */
+/* Entfernt Standard-Padding der Liste */
+}
+ul.pointList  li {
+
+  position: relative; /* Ermöglicht die korrekte Positionierung des ::before Inhalts */
+  text-indent: 0; /* Zieht die erste Zeile jedes Listenelements nach links */
+  padding-left: 1em; /* Fügt links Padding hinzu, damit der Text nicht über den Bindestrich geht */
+}
+ul.pointList  li::before {
+  content: "-"; /* Fügt den Bindestrich hinzu */
+  position: absolute; /* Ermöglicht die absolute Positionierung des Bindestrichs */
+  left: 0; /* Positioniert den Bindestrich am Anfang des Elements */
+}
 .initial-hide {
   opacity: 0;
   transform: translateY(20px); /* Stellen Sie sicher, dass Elemente ursprünglich verschoben sind */

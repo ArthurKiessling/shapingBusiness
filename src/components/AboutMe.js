@@ -39,9 +39,9 @@ const AboutMe = () => {
         description: (<ul className={styles.aboutlist}>
         <li>Kommunikation & Public Affairs</li>
         <li>Reputation-, Stakeholder Management</li>
+        <li>Effizienz & Verantwortung in Unternehmensführung</li>
         <li>Change - und Krisenmanagement</li>
         <li>Nachhaltigkeit & Digitalisierung</li>
-        <li>Technologie & Innovation</li>
       </ul>),icon: <img 
       src={glue}
       alt="Herz- und Gehirn-Icon" 
@@ -55,7 +55,7 @@ const AboutMe = () => {
       {
         title: "ERFAHREN",
         description: (<ul className={styles.aboutlist}>
-        <li>Konzernorganisation & Start-Up</li>
+        <li>Konzernorganisation & Start-Up in Industrie/Technologie</li>
         <li>Konsolidierung & Entwicklung von Standorten</li>
         <li>New Work, Digitale Transformation, Krisenmanagement</li>
         <li>Vereinbarkeit von Beruf & Familie</li>

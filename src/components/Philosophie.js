@@ -36,16 +36,28 @@ const Philosophie = () => {
   const { language, toggleLanguage } = useLanguage();
   const texts = {
     de: {
-      mainText: "In einer dynamischen Zeit mit Veränderungen in Geopolitik, Klimawandel, digitaler Transformation unterstütze ich Organisationen und Entscheider dabei, Komplexität zu reduzieren, Strategien für die Geschäftsentwicklung zu erarbeiten, relevante Stakeholder einzubinden und diese durch professionelle Kommunikationsmaßnahmen auf den gemeinsamen Weg mitzunehmen.",
-      mainText2:"Die Kombination aus Know-How, interdisziplinärer Erfahrung und einem sehr guten persönlichen Netzwerk in Industrie, Wirtschaft und öffentlicher Hand in Österreich und über die Grenzen hinaus bringe ich in die Beratung und in die Begleitung von Veränderungen ein.",
+      mainText: "In einer dynamischen Zeit mit Veränderungen in Geopolitik, Klimawandel, digitaler Transformation unterstütze ich Sie dabei,",
+      mainPoint: (<ul className="pointList">
+        <li>Strategien für Ihre Geschäftsentwicklung neu zu denken,</li>
+        <li>Veränderungen in Ihrer Organisation aktiv zu gestalten,</li>
+        <li>relevante Stakeholder einzubinden und diese durch</li>
+        <li>professionelle Kommunikationsmaßnahmen auf den gemeinsamen Weg mitzunehmen.</li>
+      </ul>),
+      mainText2:"Die Kombination aus Know-How, interdisziplinärer Erfahrung und einem sehr guten persönlichen Netzwerk in Industrie, Wirtschaft, öffentlicher Hand – national wie international - bringe ich in die Beratung und in die Begleitung von Veränderungen ein.",
       SloganFirst: "Connecting People,",
       SloganSecond: "Shaping Business.",
       philosophy: "Philosophie",
       standsFor: "Dafür Steht",
     },
     en: {
-      mainText: "In a dynamic era marked by changes in geopolitics, climate change, and digital transformation, I assist organizations and decision-makers in reducing complexity, developing business strategies, engaging relevant stakeholders, and navigating professional communication measures onto a shared path.",
-      mainText2:"Leveraging a combination of expertise, interdisciplinary experience, and a strong personal network in industry, business, and the public sector - both domestically and internationally - I contribute to advising and facilitating change.",
+      mainText: "In a dynamic time with changes in geopolitics, climate change and digital transformation, I support you in this,",
+      mainPoint: (<ul className="pointList">
+      <li>rethink strategies for your business development,</li>
+      <li>actively shape change in your organization,</li>
+      <li>relevant stakeholders and to involve them through</li>
+      <li>professional communication measures along the way.</li>
+    </ul>),
+      mainText2:"The combination of know-how, interdisciplinary experience and a very good personal network in industry, business and the public sector - both nationally and internationally - is what I bring to consulting and change management.",
       SloganFirst: "Connecting People,",
       SloganSecond: "Shaping Business.",
       philosophy: "Philosophy",
@@ -55,30 +67,17 @@ const Philosophie = () => {
 
   return (
     <div className="grid-container">
-      {/*<div  ref={ref} className={`left ${inView ? 'fade-in fade-in-delay-2'  : 'initial-hide'}`}>
-        {textsLeft.map((item, index) => {
-          const { xOffset, yOffset } = calculateOffset(index, true);
-          return (
-            <div key={`left-${index}`} className="left felder" style={{
-              transform: `translate(${xOffset}px, ${yOffset}px)`
-            }}>
-              <div className="icon-wrapper">
-                <FontAwesomeIcon icon={item.icon} className='icon-style' />
-              </div>
-              <div className="text-wrapper">
-                {item.text}
-              </div>
-            </div>
-          );
-        })}
-      </div>*/}
      <div ref={ref}className="center">
       <div  className={`${inView ? 'fade-in fade-in-delay-1' : 'initial-hide'}`}>
         <h1 className='heading3' id="endElement">{texts[language].philosophy}</h1>
-        <p className='main'>{texts[language].mainText}
-        <br/> <br/>
+        <div className='main'>
+          {texts[language].mainText}
+        <br></br>
+        <br></br>
+        {texts[language].mainPoint}
+        <br></br>
         {texts[language].mainText2}
-        </p>
+        </div>
       </div>
       <div ref={ref} className={` main end ${inView ? 'fade-in fade-in-delay-3' : 'initial-hide'}`}>
         <p >{texts[language].standsFor}</p>
@@ -88,23 +87,6 @@ const Philosophie = () => {
           </div>
       </div>
     </div>
-      {/*<div  ref={ref} className={`right ${inView ? 'fade-in fade-in-delay-2'  : 'initial-hide'}`}>
-        {textsRight.map((item, index) => {
-          const { xOffset, yOffset } = calculateOffset(index, false);
-          return (
-            <div key={`right-${index}`} className="right felder" style={{
-              transform: `translate(${xOffset}px, ${yOffset}px)`
-            }}>
-              <div className="icon-wrapper">
-                <FontAwesomeIcon icon={item.icon} className='icon-style' />
-              </div>
-              <div className="text-wrapper">
-                {item.text}
-              </div>
-            </div>
-          );
-        })}
-      </div >*/}
     </div>
   )
 };

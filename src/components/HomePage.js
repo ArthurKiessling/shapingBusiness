@@ -24,7 +24,7 @@ import { useLanguage } from '../effekts/LanguageProvider.js';
 const HomePage = () => {
 
   const targetRef = useRef(null);
-  const targetRef2 = useRef(null);
+
   const targetRef3 = useRef(null);
   // Scroll-Funktion
   const handleScroll = () => {
@@ -33,17 +33,12 @@ const HomePage = () => {
       smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
-  const handleScroll2 = () => {
-    if (targetRef2.current) {
-      const targetY = getElementY(targetRef2.current);
-      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
-    }
-  };
+
 
   const handleScroll3 = () => {
     if (targetRef3.current) {
       const targetY = getElementY(targetRef3.current);
-      smoothScrollTo(targetY+30, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
 
@@ -70,30 +65,35 @@ const HomePage = () => {
       setAnimateState("visible");
     }
   }, [isInView]);
+
+
   const [contentOpacity, setContentOpacity] = useState(0);
-  const [reveal, setReveal] = useState(false);
-  const sectionRef = useRef(null);
+  const [ref2, isInView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.7  // 1.0 bedeutet, dass das gesamte Element sichtbar sein muss
+  });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setReveal(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (isInView2) {
+      setContentOpacity(1);
     }
+  }, [isInView2]);
+  const targetRef2 = useRef(null);
+  const handleScroll2 = () => {
+    if (targetRef2.current) {
+      const targetY = getElementY(targetRef2.current);
+      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+    }
+  };
+  const setRefs = (node) => {
+    // Setze dein eigenes ref
+    targetRef2.current = node;
+    // Setze das ref von useInView
+    ref2(node);
+  };
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+
+
 
 
   const [startAnimation, setStartAnimation] = useState(false);
@@ -103,16 +103,15 @@ const HomePage = () => {
   const content = {
     de: {
       animatedLines: {
-        one:"Erfolg liegt in der Kraft der Menschen,",
-        two:"die gemeinsam an einem Strang ziehen.",
-        three:"Dabei sind drei Faktoren wesentlich:",
+        one:"Erfolg liegt in der Kraft der Menschen, die gemeinsam an einem Strang ziehen.",
+        two:"Dabei sind drei Faktoren wesentlich:",
       },
      
     },
     en: {
       animatedLines: {
         one:"Success lies in the power of people pulling together.",
-        three:"Three factors are essential here:",
+        two:"Three factors are essential here:",
       },
     }
   };
@@ -214,21 +213,19 @@ const HomePage = () => {
                   animate={animateState}
                   className="leftText"
                   onAnimationComplete={() => {
-                    if (i === 4) {
+                    if (i === 2) {
                       setStartAnimation(true);
                     }
-                    if (i === 10) {
+                    if (i === 7) {
                       setContentOpacity(1);
                     }
                   }}
                 >
                   {i === 1 && content[language].animatedLines.one}
                   {i === 2 && content[language].animatedLines.two}
-                  {i === 3 && <li className="listli"></li> }
-                  {i === 4 && content[language].animatedLines.three}
              
-                  {i === 5 && <HomeFirstPart startAnimation={startAnimation} />}
-                  {i === 8 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
+                  {i === 3 && <HomeFirstPart startAnimation={startAnimation} />}
+                  {i === 6 && <div className="scroll-down-arrow arrow-second" onClick={handleScroll2}><DownArrow width="40" height="40" /></div>}
                  
                 </motion.h1>
               ))}
@@ -238,21 +235,22 @@ const HomePage = () => {
       
 
       </div >  
-    {/*<div style={{ backgroundColor: themeColor }} className="banner"></div>
-  {/**/}
-      <div className="mid-part" ref={targetRef2} style={{ opacity: contentOpacity ,transition: 'opacity 1s ease-in-out' }} >
-
-        <Content />
-        <div className="scroll-down-arrow arrow-third" onClick={handleScroll3}><DownArrow width="40" height="40" /></div>
-      </div>
-
-
-
-      <div className="philo" ref={targetRef3} >
+      <div className="philo" ref={setRefs} style={{ opacity: contentOpacity ,transition: 'opacity 0.5s ease-in-out' }}>
 
         <Philosophie />
-
+        <div className="scroll-down-arrow arrow-third" onClick={handleScroll3}><DownArrow width="40" height="40" /></div>
       </div>
+    {/*<div style={{ backgroundColor: themeColor }} className="banner"></div>
+  {/**/}
+      <div className="mid-part" ref={targetRef3} style={{ opacity: contentOpacity ,transition: 'opacity 1s ease-in-out' }} >
+
+        <Content />
+        
+      </div>
+
+
+
+      
 
       <div style={{ backgroundColor: themeColor }} className="banner" id="endElement"></div>
      
