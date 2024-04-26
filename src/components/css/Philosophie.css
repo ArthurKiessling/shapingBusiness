@@ -137,7 +137,7 @@
 .main {
   margin: 3%;
   /* Maximale Breite des Fließtextes */
-  text-align: left;
+  text-align: center;
   /* Zentrierter Text */
   
   /* Abstand zum unteren Inhalt */
@@ -205,9 +205,29 @@
 
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+ul.pointList {
+  text-align: left;
+  font-weight: 300;
+  width: 65%;
+  margin-inline: auto;
+  list-style-type: none; /* Entfernt Standard-Listensymbole */
+/* Entfernt Standard-Padding der Liste */
+}
+ul.pointList  li {
 
+  position: relative; /* Ermöglicht die korrekte Positionierung des ::before Inhalts */
+  text-indent: 0; /* Zieht die erste Zeile jedes Listenelements nach links */
+  padding-left: 1em; /* Fügt links Padding hinzu, damit der Text nicht über den Bindestrich geht */
+}
+ul.pointList  li::before {
+  content: "-"; /* Fügt den Bindestrich hinzu */
+  position: absolute; /* Ermöglicht die absolute Positionierung des Bindestrichs */
+  left: 0; /* Positioniert den Bindestrich am Anfang des Elements */
+}
 @media (max-width: 768px) {
-
+  ul.pointList{
+    width: 100%;
+  }
  
 
   .grid-container {
@@ -277,6 +297,8 @@
     margin-inline: 8%;
    
   }
+
+ 
 }
 @keyframes fadeIn {
   from {
@@ -288,23 +310,7 @@
     transform: translateY(0); /* Endposition */
   }
 }
-ul.pointList {
-  font-weight: 300;
 
-  list-style-type: none; /* Entfernt Standard-Listensymbole */
-/* Entfernt Standard-Padding der Liste */
-}
-ul.pointList  li {
-
-  position: relative; /* Ermöglicht die korrekte Positionierung des ::before Inhalts */
-  text-indent: 0; /* Zieht die erste Zeile jedes Listenelements nach links */
-  padding-left: 1em; /* Fügt links Padding hinzu, damit der Text nicht über den Bindestrich geht */
-}
-ul.pointList  li::before {
-  content: "-"; /* Fügt den Bindestrich hinzu */
-  position: absolute; /* Ermöglicht die absolute Positionierung des Bindestrichs */
-  left: 0; /* Positioniert den Bindestrich am Anfang des Elements */
-}
 .initial-hide {
   opacity: 0;
   transform: translateY(20px); /* Stellen Sie sicher, dass Elemente ursprünglich verschoben sind */

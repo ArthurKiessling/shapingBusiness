@@ -46,7 +46,7 @@ const Philosophie = () => {
       mainText2:"Die Kombination aus Know-How, interdisziplinärer Erfahrung und einem sehr guten persönlichen Netzwerk in Industrie, Wirtschaft, öffentlicher Hand – national wie international - bringe ich in die Beratung und in die Begleitung von Veränderungen ein.",
       SloganFirst: "Connecting People,",
       SloganSecond: "Shaping Business.",
-      philosophy: "Philosophie",
+      philosophy: "Mein Angebot",
       standsFor: "Dafür Steht",
     },
     en: {
