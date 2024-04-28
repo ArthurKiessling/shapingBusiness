@@ -169,9 +169,9 @@ const HomePage = () => {
     {
       title: "Strategy & Change",
       description: (<ul className="custom-list">
+      <li>Developing and implementing business strategies</li>
       <li>Planning and guiding change and transformation processes</li>
       <li>Designing and developing corporate culture and innovation culture</li>
-      <li>Developing and implementing business strategies</li>
     </ul>) 
     ,icon: faBusinessTime,
       id:"tab1"
@@ -179,9 +179,9 @@ const HomePage = () => {
     {
       title: "Communication & Reputation",
       description: (<ul className="custom-list">
-        <li>Developing integrated communication strategies and concepts for internal and external target groups</li>
-        <li>Professional crisis communication during critical events</li>
-        <li>Positioning of individuals, organizations, locations, products & services, including employer branding</li>
+        <li>Integrated communication strategies and concepts </li>
+        <li>Professional crisis communication </li>
+        <li>Positioning of organizations, individuals, locations, products & services</li>
       </ul>) 
       ,icon: faComments,
       id:"tab2"

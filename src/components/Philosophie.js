@@ -50,17 +50,17 @@ const Philosophie = () => {
       standsFor: "Dafür Steht",
     },
     en: {
-      mainText: "In a dynamic time with changes in geopolitics, climate change and digital transformation, I support you in this,",
+      mainText: "In a dynamic era marked by changes in geopolitics, climate change, and digital transformation, I assist you in",
       mainPoint: (<ul className="pointList">
-      <li>rethink strategies for your business development,</li>
-      <li>actively shape change in your organization,</li>
-      <li>relevant stakeholders and to involve them through</li>
-      <li>professional communication measures along the way.</li>
+      <li>rethinking strategies for your business development,</li>
+      <li>actively shaping changes within your organization,</li>
+      <li>engaging relevant stakeholders and </li>
+      <li>guiding them through this journey with professional communication measures.</li>
     </ul>),
-      mainText2:"The combination of know-how, interdisciplinary experience and a very good personal network in industry, business and the public sector - both nationally and internationally - is what I bring to consulting and change management.",
+      mainText2:"Leveraging a combination of expertise, interdisciplinary experience, and a strong personal network in industry, business, and the public sector - both domestically and internationally - I contribute to advising and facilitating change.",
       SloganFirst: "Connecting People,",
       SloganSecond: "Shaping Business.",
-      philosophy: "Philosophy",
+      philosophy: "My Offer",
       standsFor: "This is what I stand for:",
     }
   };

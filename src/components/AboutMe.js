@@ -96,9 +96,9 @@ const AboutMe = () => {
         description: (<ul className={styles.aboutlist}>
         <li>Communication & public affairs</li>
         <li>Reputation management, stakeholder management</li>
+        <li>Efficiency & Responsibility in Corporate Leadership</li>
         <li>Change and crisis management</li>
         <li>Sustainability & digitalization</li>
-        <li>Technology & Innovation</li>
       </ul>),
       icon: <img 
       src={glue}
@@ -113,7 +113,7 @@ const AboutMe = () => {
       {
         title: "EXPERIENCED",
         description:(<ul className={styles.aboutlist}>
-        <li>Corporate organization & start up</li>
+        <li>Corporate organization & start up in industry/technology</li>
         <li>Consolidation & development of locations</li>
         <li>New work, digital transformation, crisis management</li>
         <li>Reconciliation of family & workinglife</li>
