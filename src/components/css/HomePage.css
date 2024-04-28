@@ -169,7 +169,7 @@
 
 .scroll-down-arrow {
     position: absolute;
-    bottom: 40px; /* Anpassen basierend auf Ihrem Layout */
+    bottom: 70px; /* Anpassen basierend auf Ihrem Layout */
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px; /* Größe des Pfeils anpassen */
@@ -206,7 +206,7 @@
     
     text-align: center;
 
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     position: relative;

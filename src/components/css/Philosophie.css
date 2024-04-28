@@ -2,7 +2,7 @@
 
 
 .grid-container {
-  padding-top: 3%;
+  padding-top: 1%;
   display: grid;
   grid-template-columns:2fr ;
   /* Mittlere Spalte doppelt so breit */
