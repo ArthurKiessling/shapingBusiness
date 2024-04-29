@@ -30,7 +30,7 @@ const HomePage = () => {
   const handleScroll = () => {
     if (targetRef.current) {
       const targetY = getElementY(targetRef.current);
-      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+      smoothScrollTo(targetY+2, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
 
@@ -38,7 +38,7 @@ const HomePage = () => {
   const handleScroll3 = () => {
     if (targetRef3.current) {
       const targetY = getElementY(targetRef3.current);
-      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+      smoothScrollTo(targetY+2, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
 
@@ -82,7 +82,7 @@ const HomePage = () => {
   const handleScroll2 = () => {
     if (targetRef2.current) {
       const targetY = getElementY(targetRef2.current);
-      smoothScrollTo(targetY, 1000); // 1000 ms = 1 Sekunde für das Scrollen
+      smoothScrollTo(targetY+2, 1000); // 1000 ms = 1 Sekunde für das Scrollen
     }
   };
   const setRefs = (node) => {
