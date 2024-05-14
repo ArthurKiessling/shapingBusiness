@@ -54,7 +54,7 @@ const Impressum = () => {
 				<p>&nbsp;</p>
 				<p><strong>Berufsbezeichnung / Unternehmensgegenstand:<br /> </strong>Unternehmensberatung einschlie&szlig;lich der Unternehmensorganisation</p>
 				<p>&nbsp;</p>
-				<p><strong>UID-Nr:</strong><br /> <strong>Gewerbeaufsichtbeh&ouml;rde:</strong>&nbsp;BH M&ouml;dling<br /><strong>GISA-Zahl:</strong> 37011987<br />  <strong>Mitgliedschaften: </strong>Wirtschaftskammer Niederösterreich, Fachgruppe Unternehmensberatung</p>
+				<p><strong>UID-Nr: ATU68954107</strong><br /> <strong>Gewerbeaufsichtbeh&ouml;rde:</strong>&nbsp;BH M&ouml;dling<br /><strong>GISA-Zahl:</strong> 37011987<br />  <strong>Mitgliedschaften: </strong>Wirtschaftskammer Niederösterreich, Fachgruppe Unternehmensberatung</p>
 				<p>&nbsp;</p>
 				<p><strong>Kontaktdaten:</strong><br /> Telefon: +436644268508<br /> Email: <a href="mailto:office@angelikakiessling.com">office@angelikakiessling.com</a></p>
 				<p>&nbsp;</p>
