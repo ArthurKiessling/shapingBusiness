@@ -57,7 +57,7 @@ const HomePage = () => {
   };
   const [ref, isInView] = useInView({
     triggerOnce: true,
-    threshold: 0.6  // 1.0 bedeutet, dass das gesamte Element sichtbar sein muss
+    threshold: 0.1  // 1.0 bedeutet, dass das gesamte Element sichtbar sein muss
   });
   const [animateState, setAnimateState] = useState("hidden");
   useEffect(() => {
@@ -70,7 +70,7 @@ const HomePage = () => {
   const [contentOpacity, setContentOpacity] = useState(0);
   const [ref2, isInView2] = useInView({
     triggerOnce: true,
-    threshold: 0.7  // 1.0 bedeutet, dass das gesamte Element sichtbar sein muss
+    threshold: 0.4  // 1.0 bedeutet, dass das gesamte Element sichtbar sein muss
   });
 
   useEffect(() => {
@@ -198,7 +198,7 @@ const HomePage = () => {
             style={{
               transform: isInView ? "none" : "none",
               opacity: isInView ? 1 : 0,
-              transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+              transition: "all 0.1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
             }}
           >
             <motion.div
