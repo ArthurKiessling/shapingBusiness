@@ -149,7 +149,7 @@ const HomePage = () => {
         <Logo /*style={{ fill: themeColor }}*/ className="logoSvg"></Logo>
         <div className="scroll-down-arrow" onClick={handleScroll}><DownArrow width="40" height="40" /></div>
       </article>
-      <div  style={{ backgroundColor: themeColor }} id="startElement"className="banner"ref={targetRef}></div>
+      <div  style={{ backgroundColor: themeColor }} id="startElement"className="banner" ref={targetRef}></div>
 
 
       {/*<div id="point1" className="first-part" ref={targetRef}>

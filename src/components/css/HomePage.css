@@ -44,7 +44,8 @@
     height: 80%;
     
     position: relative;
-    overflow: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
     z-index: 2;
 }
 .spinner-container {
@@ -177,6 +178,7 @@
     /* Optional: Stilisierung für bessere Sichtbarkeit */
     stroke: #FFF; /* Oder eine andere Farbe, die zu Ihrem Design passt */
     text-shadow: 0 0 8px rgba(0,0,0,0.5); /* Sorgt für bessere Lesbarkeit auf unterschiedlichen Hintergründen */
+    z-index: 1000; 
   }
   .arrow-second{
     stroke:black;
