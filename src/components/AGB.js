@@ -17,7 +17,7 @@ const AGB = () => {
       anschrift: 'Anschrift',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
+      emailAddress: 'ak@angelikakiessling.com',
       address: 'Musterstraße 1, 12345 Musterstadt',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
 	 
@@ -29,7 +29,7 @@ const AGB = () => {
       anschrift: 'Address',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
+      emailAddress: 'ak@angelikakiessling.com',
       address: 'Sample Street 1, 12345 Sample City',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
     }

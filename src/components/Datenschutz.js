@@ -17,7 +17,7 @@ const Datenschutz = () => {
       anschrift: 'Anschrift',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
+      emailAddress: 'ak@angelikakiessling.com',
       address: 'Musterstraße 1, 12345 Musterstadt',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
 	 
@@ -29,7 +29,7 @@ const Datenschutz = () => {
       anschrift: 'Address',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
+      emailAddress: 'ak@angelikakiessling.com',
       address: 'Sample Street 1, 12345 Sample City',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
     }
@@ -98,10 +98,10 @@ const Datenschutz = () => {
       <li>Wiederruf und Widerspruch zur Datenverarbeitung</li>
       <li>Einschr&auml;nkung</li>
       </ul>
-      <p>Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verst&ouml;&szlig;e gegen das Datenschutzrecht passiert sind, so haben Sie die M&ouml;glichkeit sich bei uns (office@angelikakiessling.com) oder der Datenschutzbeh&ouml;rde zu beschweren.</p>
+      <p>Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verst&ouml;&szlig;e gegen das Datenschutzrecht passiert sind, so haben Sie die M&ouml;glichkeit sich bei uns (ak@angelikakiessling.com) oder der Datenschutzbeh&ouml;rde zu beschweren.</p>
       <p>&nbsp;</p>
       <h5>Sie erreichen uns unter folgenden Kontaktdaten:</h5>
-      <p><strong>Webseitenbetreiber:</strong> Mag. Angelika Kiessling-Kranzelmayer<br /> <strong>Telefonnummer:</strong> +436644268508<br /> <strong>Email:</strong> office@angelikakiessling.com</p>
+      <p><strong>Webseitenbetreiber:</strong> Mag. Angelika Kiessling-Kranzelmayer<br /> <strong>Telefonnummer:</strong> +436644268508<br /> <strong>Email:</strong> ak@angelikakiessling.com</p>
       <p>Quelle: <strong><a href="https://www.fairesrecht.at/">fairesRecht.at</a></strong></p>
 
 </div>
@@ -152,7 +152,7 @@ Leopold Gattringer-Straße 25, 2345 Brunn am Gebirge</span>
 <br />
 <span style={{fontWeight: 400}}>Vertretungsberechtigt: Mag. Angelika Kiessling-Kranzelmaye</span>
 <br />
-E-Mail: <a href="mailto:office@angelikakiessling.com">office@angelikakiessling.com</a>
+E-Mail: <a href="mailto:ak@angelikakiessling.com">ak@angelikakiessling.com</a>
 <br />
 Telefon: <a href="tel:+436644268508">+436644268508</a>
 <br />
