@@ -16,7 +16,7 @@ const Kontakt = () => {
       anschrift: 'Anschrift',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office(at)angelikakiessling.com',
+      emailAddress: 'ak(at)angelikakiessling.com',
       address: (<ul className="about-list">
       <li>Mag. Angelika Kiessling-Kranzelmayer</li>
       <li>Strategy & Business Consulting</li>
@@ -32,7 +32,7 @@ const Kontakt = () => {
       anschrift: 'Address',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office(at)angelikakiessling.com',
+      emailAddress: 'ak(at)angelikakiessling.com',
       address: (<ul className="about-list">
       <li>Mag. Angelika Kiessling-Kranzelmayer</li>
       <li>Strategy & Business Consulting</li>
@@ -51,7 +51,7 @@ const Kontakt = () => {
  
     <div className="contact-info-konakt">
     <div className="felder-kontakt">
-    <a href={`mailto:office@angelikakiessling.com`}>
+    <a href={`mailto:ak@angelikakiessling.com`}>
         
         <div className="text-wrapper-kontakt">{content[language].emailAddress}</div>
         </a>

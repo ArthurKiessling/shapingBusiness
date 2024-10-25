@@ -17,7 +17,7 @@ const Impressum = () => {
       anschrift: 'Anschrift',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
+      emailAddress: 'ak@angelikakiessling.com',
       address: 'Musterstraße 1, 12345 Musterstadt',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
 	 
@@ -29,7 +29,7 @@ const Impressum = () => {
       anschrift: 'Address',
       linkedin: 'LinkedIn',
       phone: '+43 664 426 85 08',
-      emailAddress: 'office@shapingbusiness.at',
+      emailAddress: 'ak@angelikakiessling.com',
       address: 'Sample Street 1, 12345 Sample City',
       linkedinName: 'Angelika Kiessling-Kranzelmayer',
     }
@@ -56,7 +56,7 @@ const Impressum = () => {
 				<p>&nbsp;</p>
 				<p><strong>UID-Nr: ATU68954107</strong><br /> <strong>Gewerbeaufsichtbeh&ouml;rde:</strong>&nbsp;BH M&ouml;dling<br /><strong>GISA-Zahl:</strong> 37011987<br />  <strong>Mitgliedschaften: </strong>Wirtschaftskammer Niederösterreich, Fachgruppe Unternehmensberatung</p>
 				<p>&nbsp;</p>
-				<p><strong>Kontaktdaten:</strong><br /> Telefon: +436644268508<br /> Email: <a href="mailto:office@angelikakiessling.com">office@angelikakiessling.com</a></p>
+				<p><strong>Kontaktdaten:</strong><br /> Telefon: +436644268508<br /> Email: <a href="mailto:ak@angelikakiessling.com">ak@angelikakiessling.com</a></p>
 				<p>&nbsp;</p>
 				<p><strong>Anwendbare Rechtsvorschrift:</strong>&nbsp;</p>
 				<ul>
